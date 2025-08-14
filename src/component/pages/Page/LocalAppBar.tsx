@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { SmallAppBar } from "../../smallScreen/Appbar/SmallAppBar";
+import { SmallAppBar } from "../Appbar/SmallAppBar";
 
 export function LocalAppBar() : JSX.Element {
         if (window.innerWidth > 1920) {

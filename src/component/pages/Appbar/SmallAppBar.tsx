@@ -2,6 +2,7 @@ import { Stack, type SxProps } from "@mui/material"
 
 import { AppBarLink } from "./AppBarLink"
 import { SmallTitle } from "./SmallTitle"
+import { Colors } from "../../../assets/colors/Colors"
 
 export const SmallAppBar : React.FC = () => {
 
@@ -11,7 +12,7 @@ export const SmallAppBar : React.FC = () => {
       paddingTop : '5%',
       paddingInline : '2%',
       paddingBottom : '2%',
-      background : '#AFFFAF',
+      background : Colors.PaleGreen,
     }
 
     

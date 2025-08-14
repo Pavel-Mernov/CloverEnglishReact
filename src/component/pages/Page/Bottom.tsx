@@ -1,7 +1,9 @@
+import type { JSX } from "react";
 import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Colors } from "../../../assets/colors/Colors";
 
-export function SmallBottom() {
+export function Bottom() : JSX.Element {
     return (
     <Stack
         // position="fixed"
@@ -10,7 +12,7 @@ export function SmallBottom() {
         right="0"
         zIndex="overlay"
         sx={{
-            background : "#DFDFDF"
+            background : Colors.PaleGreen,
         }}
         padding="2%"
         spacing="2%"

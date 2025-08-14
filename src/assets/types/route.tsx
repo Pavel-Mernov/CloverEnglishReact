@@ -1,6 +1,7 @@
 import type { JSX } from "react";
-import { Page } from "../../component/allScreen/Page/Page";
-import SmallMainPageContent from "../../component/smallScreen/MainPage/SmallMainPageContent";
+import { Page } from "../../component/pages/Page/Page";
+import MainPageContent from "../../component/pages/MainPage/MainPageContent";
+import { Policy } from "../../component/pages/Page/Policy";
 
 export type SiteRoute = "/" |
           
@@ -11,6 +12,8 @@ export type SiteRoute = "/" |
           "/englishlanguage" |
 
           "/familyclass" |
+
+          "/price" |
 
           "/articles" |
 
@@ -29,43 +32,46 @@ type SiteMap = {
 };
 
 const mainPage = <Page 
-  mediumScreenChild={<SmallMainPageContent />}
+  content = {<MainPageContent />}
 />
 
 const letsMeet = <Page 
-  // mediumScreenChild={<MediumLetsMeet />}
+  // content = {<MediumLetsMeet />}
 />
 
-const policyPage = <Page />
+const policyPage = Policy()
 
-const englishPage = <Page />
+const englishPage = Page({  })
 
-const famClassPage = <Page />
+const famClassPage = Page({  })
 
-const articlesPage = <Page />
+const articlesPage = Page({  })
 
-const teachersPage = <Page />
+const teachersPage = Page({  })
 
-const feedbackPage = <Page />
+const feedbackPage = Page({  })
 
-const faqPage = <Page />
+const faqPage = Page({  })
 
-const galleryPage = <Page />
+const galleryPage = Page({  })
 
-const additionalPage = <Page />
+const additionalPage = Page({  })
+
+const pricePage = Page({  })
 
 export const siteMap : SiteMap = {
-    "/": mainPage,
-    "/letsmeet": letsMeet,
-    "/policy": policyPage,
-    "/englishlanguage": englishPage,
-    "/familyclass": famClassPage,
-    "/articles": articlesPage,
-    "/teachers": teachersPage,
-    "/feedback": feedbackPage,
-    "/faq": faqPage,
-    "/gallery": galleryPage,
-    "/additional": additionalPage,
+  "/": mainPage,
+  "/letsmeet": letsMeet,
+  "/policy": policyPage,
+  "/englishlanguage": englishPage,
+  "/familyclass": famClassPage,
+  "/articles": articlesPage,
+  "/teachers": teachersPage,
+  "/feedback": feedbackPage,
+  "/faq": faqPage,
+  "/gallery": galleryPage,
+  "/additional": additionalPage,
+  "/price": pricePage,
 }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);

@@ -1,5 +1,5 @@
 import { CardMedia, Stack, Typography, type SxProps } from "@mui/material";
-import type { FC } from "react";
+import { useState, type FC } from "react";
 
 import logoMain from "../../../assets/images/logo/logomain.png"
 import { useNavigate } from "react-router-dom";
@@ -7,10 +7,16 @@ import { useNavigate } from "react-router-dom";
 export const SmallTitle : FC = () => {
     const navigate = useNavigate();
     
+    const [isMouseEntered, setMouseEntered] = useState(false)
+
     const ImageStyle : SxProps = 
     { 
         width: '10%',
         objectFit: "contain" 
+    }
+
+    const textSx : SxProps = {
+        transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
     }
 
     const navToMainPage = () => {
@@ -23,6 +29,7 @@ export const SmallTitle : FC = () => {
             direction='row'
             alignItems='center'
             spacing='2%'
+            
             >
                 <CardMedia 
                         sx={ImageStyle}
@@ -31,7 +38,14 @@ export const SmallTitle : FC = () => {
                         // height="100px"
                         image={logoMain}/>
 
-                <Typography variant="h2">АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"</Typography>
+                <Typography 
+                    variant="h2"
+                    sx={textSx}
+                    onMouseEnter={ () => setMouseEntered(true) }
+                    onMouseLeave={ () => setMouseEntered(false) }
+                    >
+                        АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
+                </Typography>
         </Stack>
 
         

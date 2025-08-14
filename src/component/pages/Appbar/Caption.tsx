@@ -1,11 +1,12 @@
 import { createTheme, ThemeProvider, Typography, type SxProps } from "@mui/material";
-import type { FC } from "react";
+import { useState, type FC } from "react";
 
 interface Props {
     text : string
 }
 
 export const Caption : FC<Props> = ({ text }) => {
+    const [isMouseEntered, setMouseEntered] = useState(false);
 
     const theme = createTheme({
         palette:  {
@@ -14,8 +15,11 @@ export const Caption : FC<Props> = ({ text }) => {
     })
 
     const captionProps : SxProps = {
-        fontSize : '25px'
+        fontSize : '25px',
+        transform : isMouseEntered ? 'scale(1.03)' : 'scale(1.0)'
     }
+
+    
 
     return (
 
@@ -23,7 +27,11 @@ export const Caption : FC<Props> = ({ text }) => {
             <Typography
                 sx={captionProps}
                 color="primary" 
-                component="div">
+                component="div"
+                fontSize='15px'
+                onMouseEnter={() => setMouseEntered(true)}
+                onMouseLeave={() => setMouseEntered(false)}
+                >
 
                 {text}
             </Typography>
