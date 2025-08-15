@@ -1,41 +1,61 @@
-import { Button } from "@mui/material";
+import { Stack, Typography, type TypographyVariant } from "@mui/material";
 import { useState, type JSX } from "react";
 import type { SiteRoute } from "../../assets/types/route";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
 
+type SizeValue = string | number
+
 interface Props {
-    color : string,
+    color ?: string,
     backgroundColor : string,
-    text : string,
-    link : SiteRoute,
-    width ?: string | number,
-    height ?: string | number,
-    fontSize ?: string | number,
-    fontWeight ?: string | number,
-    borderRadius ?: string | number,
-    margin ?: string | number,
-    marginTop ?: string | number,
+    content : string | JSX.Element | JSX.Element[],
+    link ?: SiteRoute,
+    width ?: SizeValue,
+    height ?: SizeValue,
+    fontSize ?: SizeValue,
+    fontWeight ?: SizeValue,
+    borderRadius ?: SizeValue,
+    margin ?: SizeValue,
+    spacing ?: SizeValue,
+    marginTop ?: SizeValue,
+    padding ?: SizeValue,
+    paddingTop ?: SizeValue,
+    paddingBlock ?: SizeValue,
+    paddingInline ?: SizeValue,
+    maxWidth ?: SizeValue,
+    variant ?: TypographyVariant
 }
 
 export function ColorButton(props : Props) : JSX.Element {
     const { 
+        width,
+        maxWidth,
+        height,
         color, 
-        text, 
+        content, 
         link, 
         backgroundColor, 
         fontWeight, 
         fontSize, 
         borderRadius, 
         margin, 
+        spacing,
         marginTop,
+        padding,
+        paddingTop,
+        paddingInline,
+        paddingBlock,
+        variant,
+
     } = props;
 
     const [isMouseEntered, setMouseEntered] = useState(false);
 
-    const ColorButton = styled(Button) ({
-        width : props.width == undefined ? 'auto' : props.width,
-        height : props.height == undefined ? 'auto' : props.height,
+    const ColorButton = styled(Stack) ({
+        width : width,
+        height : height,
+        maxWidth : maxWidth,
         backgroundColor : backgroundColor,
         color : color,
         fontWeight : fontWeight,
@@ -44,48 +64,69 @@ export function ColorButton(props : Props) : JSX.Element {
         borderRadius : borderRadius,
         marginTop : marginTop,
         overflowY : 'hidden',
-        //paddingInline : '10%',
+        alignItems : 'center',
+        paddingBlock : paddingBlock,
+        padding : padding,
+        paddingInline : paddingInline,
+        paddingTop : paddingTop,
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
     });
 
     const navigate = useNavigate();
 
     const onNavigate = () => {
-        navigate(link)
+        if (link) {
+            navigate(link)
+        }
     }
 
     return (
-        <ColorButton 
-            variant="contained"
-            
+        <ColorButton
+            spacing={spacing}
             onClick={onNavigate}
             onMouseEnter={() => setMouseEntered(true)}
             onMouseLeave={() => setMouseEntered(false)}
-            >{text}
+            >
+                {
+                    typeof content === 'string' ?
+                    <Typography 
+                        variant={variant}
+                        fontWeight={fontWeight}
+                        fontSize={fontSize}
+                        >
+                            {content}
+                    </Typography> :
+                        content
+                }
         </ColorButton>
     );
 }
 
-type RoundedProps = Omit<Props, 'borderRadius'>
+type RoundedProps = Omit<Props, 'borderRadius' | 'paddingBlock'>
 
 export function RoundedButton(props : RoundedProps) {
     const { 
         color, 
         backgroundColor, 
-        text, 
+        content, 
         link, 
         width, 
         height, 
         fontSize, 
         fontWeight, 
         margin, 
-        marginTop 
+        marginTop,
+        variant, 
+        padding,
+        paddingTop,
+        paddingInline,
+        spacing,
     } = props
 
     return ColorButton({
         color: color,
         backgroundColor: backgroundColor,
-        text: text,
+        content: content,
         link: link,
         width : width,
         height : height,
@@ -93,6 +134,12 @@ export function RoundedButton(props : RoundedProps) {
         fontWeight : fontWeight,
         borderRadius : '50vh',
         margin : margin,
-        marginTop : marginTop
+        marginTop : marginTop,
+        paddingBlock : '2%',
+        paddingTop : paddingTop,
+        paddingInline : paddingInline,
+        spacing : spacing,
+        padding : padding,
+        variant : variant
     })
 }
