@@ -1,4 +1,24 @@
-import { Stack } from "@mui/material";
+
+import { CardMedia, Stack } from "@mui/material";
+import map from "../../../../assets/images/main/map.png"
+import { Info } from "./Info";
+import type { KeyProps } from "../../../../assets/types/keyProps";
+
+
+const MapImage = (_ : KeyProps) => {
+    return <CardMedia 
+        sx={{ objectFit : 'contain', width : '40%' }}
+        component='img'
+        image={map}
+        // width='20px'
+        />
+    
+    
+}
+
+
+
+
 
 export function ContactsAndMap() {
     return (
@@ -10,6 +30,11 @@ export function ContactsAndMap() {
             spacing='10%'
             alignSelf='center'
         >
+            <MapImage key='0' />
+
+            <Info key='1' />
+
+            
             
         </Stack>
     )

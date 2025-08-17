@@ -5,4 +5,6 @@ export const Colors = {
     RoseDark : '#C22B81' as const,
     LightGray : '#dfdfdf' as const,
     White : '#fff' as const,
+    LightGreen : '#6EC445' as const,
+    DarkGreen : '#2E9840' as const,
 }

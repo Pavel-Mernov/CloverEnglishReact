@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 type SizeValue = string | number
 
-interface Props {
+export interface ColorButtonProps {
     color ?: string,
     backgroundColor : string,
     content : string | JSX.Element | JSX.Element[],
@@ -24,8 +24,11 @@ interface Props {
     paddingBlock ?: SizeValue,
     paddingInline ?: SizeValue,
     maxWidth ?: SizeValue,
+    upperCase ?: boolean,
     variant ?: TypographyVariant
 }
+
+type Props = ColorButtonProps
 
 export function ColorButton(props : Props) : JSX.Element {
     const { 
@@ -46,6 +49,7 @@ export function ColorButton(props : Props) : JSX.Element {
         paddingTop,
         paddingInline,
         paddingBlock,
+        upperCase,
         variant,
 
     } = props;
@@ -69,7 +73,7 @@ export function ColorButton(props : Props) : JSX.Element {
         padding : padding,
         paddingInline : paddingInline,
         paddingTop : paddingTop,
-        transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
+        transform : isMouseEntered ? 'scale(1.03)' : 'scale(1)',
     });
 
     const navigate = useNavigate();
@@ -93,6 +97,7 @@ export function ColorButton(props : Props) : JSX.Element {
                         variant={variant}
                         fontWeight={fontWeight}
                         fontSize={fontSize}
+                        sx={upperCase ? { textTransform : 'uppercase' } : {}}
                         >
                             {content}
                     </Typography> :
@@ -102,44 +107,3 @@ export function ColorButton(props : Props) : JSX.Element {
     );
 }
 
-type RoundedProps = Omit<Props, 'borderRadius' | 'paddingBlock'>
-
-export function RoundedButton(props : RoundedProps) {
-    const { 
-        color, 
-        backgroundColor, 
-        content, 
-        link, 
-        width, 
-        height, 
-        fontSize, 
-        fontWeight, 
-        margin, 
-        marginTop,
-        variant, 
-        padding,
-        paddingTop,
-        paddingInline,
-        spacing,
-    } = props
-
-    return ColorButton({
-        color: color,
-        backgroundColor: backgroundColor,
-        content: content,
-        link: link,
-        width : width,
-        height : height,
-        fontSize : fontSize,
-        fontWeight : fontWeight,
-        borderRadius : '50vh',
-        margin : margin,
-        marginTop : marginTop,
-        paddingBlock : '2%',
-        paddingTop : paddingTop,
-        paddingInline : paddingInline,
-        spacing : spacing,
-        padding : padding,
-        variant : variant
-    })
-}

@@ -2,6 +2,7 @@ import { CardMedia, Stack, Typography, type SxProps } from "@mui/material";
 import { Colors } from "../../../../assets/colors/Colors";
 import { ColorButton } from "../../../elements/ColorButton";
 import photo from "../../../../assets/images/main/letsmeet3.jpg"
+import type { Key } from "react";
 
 
 const Photo = () => {
@@ -17,7 +18,7 @@ const Photo = () => {
     )
 }
 
-const UpperButton = () => { 
+const UpperButton = (_ : { key ?: Key }) => { 
     const sxProps : SxProps = {
         paddingInline : '10%',
         paddingBlock : '5%',
@@ -66,9 +67,9 @@ export function LeftLink() {
                         paddingInline='3%'
                         paddingTop='2%'
                         content={[
-                            <UpperButton />,
+                            <UpperButton key='0' />,
 
-                            <Photo />
+                            <Photo key='1' />
                         ]}
                     />    
     )

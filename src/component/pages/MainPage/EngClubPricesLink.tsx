@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack"
 import { Colors } from "../../../assets/colors/Colors";
-import { RoundedButton } from "../../elements/ColorButton";
+import { RoundedButton } from "../../elements/RoundedButton";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import logo from "../../../assets/images/logo/logobig.png"
@@ -45,20 +45,22 @@ export function EngClubPricesLink() {
 
                   <Typography 
                     alignSelf='center'
-                    variant="h1" fontWeight='bold' color={Colors.RoseDark}
+                    variant="h1" fontWeight='bold' 
+                    color={Colors.RoseDark}
                     >
                     Клевер
                   </Typography>
                   
                   <RoundedButton
-                    marginTop='25px'
-                    variant="h1"
-                    fontSize='150%'
-                    fontWeight='bold' 
-                    color={Colors.Gray} 
-                    backgroundColor={Colors.PaleGreen} 
-                    content="ЦЕНЫ 2025 - 2026" 
-                    link="/price"            
+                      upperCase
+                      marginTop='25px'
+                      variant="h1"
+                      fontSize='150%'
+                      fontWeight='bold' 
+                      color={Colors.Gray} 
+                      backgroundColor={Colors.PaleGreen} 
+                      content="цены 2025 - 2026" 
+                      link="/price"            
                   /> 
                 </Stack>
 

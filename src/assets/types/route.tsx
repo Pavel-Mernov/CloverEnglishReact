@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import { Page } from "../../component/pages/Page/Page";
 import MainPageContent from "../../component/pages/MainPage/MainPageContent";
 import { Policy } from "../../component/pages/Page/Policy";
+import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
 
 export type SiteRoute = "/" |
           
@@ -25,7 +26,15 @@ export type SiteRoute = "/" |
 
           "/gallery" |
 
-          "/additional";
+          "/additional" |
+          
+          "/learneng" |
+          
+          "/howwelearn" |
+          
+          "/actual" |
+          
+          "/aboutfem";
 
 type SiteMap = {
   [route in SiteRoute]: JSX.Element
@@ -36,7 +45,7 @@ const mainPage = <Page
 />
 
 const letsMeet = <Page 
-  // content = {<MediumLetsMeet />}
+  content={ <LetsMeetPage /> }
 />
 
 const policyPage = Policy()
@@ -59,6 +68,14 @@ const additionalPage = Page({  })
 
 const pricePage = Page({  })
 
+const learnEngPage = Page({  })
+
+const howwelearnPage = Page({  })
+
+const actualPage = Page({  })
+
+const aboutFemPage = Page({  })
+
 export const siteMap : SiteMap = {
   "/": mainPage,
   "/letsmeet": letsMeet,
@@ -72,6 +89,11 @@ export const siteMap : SiteMap = {
   "/gallery": galleryPage,
   "/additional": additionalPage,
   "/price": pricePage,
+  "/learneng" : learnEngPage,
+  "/howwelearn" : howwelearnPage,
+  "/actual" : actualPage,
+  "/aboutfem" : aboutFemPage,
+  
 }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);
