@@ -1,10 +1,7 @@
 import { Stack } from "@mui/material";
 import { TopTitle } from "./TopTitle";
 import { TextBlock, type TextBlockProps } from "../../elements/TextBlock";
-import { StandardTextBlock } from "../../elements/StandardTextBlock";
 import { Colors } from "../../../assets/colors/Colors";
-import styled from "@emotion/styled";
-import type { KeyProps } from "../../../assets/types/keyProps";
 import { TextGroup } from "../../elements/TextGroup";
 import { ButtonsStack } from "./ButtonsStack";
 
@@ -18,12 +15,14 @@ const RoseText = (props : TextBlockProps) => {
      />
 }
 
+`
 const QuoteImage = styled("img") ({
     objectFit : 'contain',
     maxWidth : '70%',
     alignSelf : 'center',
 
 })
+`
 
 const text3 = `Мои первые ученики, которые пришли ко мне в возрасте 6-7 лет, уже стали взрослыми людьми, живут самостоятельной жизнью. Я помню, как проходили наши первые уроки, каксильно по своему содержанию они отличались от тех, что провожу сейчас. За это время многое изменилось в методике преподавания английского языка, сменилось несколько поколений учебников. Из всех изученных и отработанных за эти годы материалов я собрала самые эффективные методы, приемы и практики.`
 

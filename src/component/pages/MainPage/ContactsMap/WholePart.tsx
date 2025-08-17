@@ -32,10 +32,7 @@ export function ContactsAndMap() {
         >
             <MapImage key='0' />
 
-            <Info key='1' />
-
-            
-            
+            <Info key='1' />  
         </Stack>
     )
 }
