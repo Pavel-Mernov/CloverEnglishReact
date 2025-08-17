@@ -52,11 +52,11 @@ export function EngClubPricesLink() {
                   </Typography>
                   
                   <RoundedButton
-                      upperCase
+                      // upperCase
                       marginTop='25px'
-                      variant="h1"
-                      fontSize='150%'
-                      fontWeight='bold' 
+                      // variant="h1"
+                      // fontWeight='bold'
+                      fontSize='35px' 
                       color={Colors.Gray} 
                       backgroundColor={Colors.PaleGreen} 
                       content="цены 2025 - 2026" 

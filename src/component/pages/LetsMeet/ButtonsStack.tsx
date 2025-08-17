@@ -2,56 +2,56 @@ import { Stack } from "@mui/material";
 import type { KeyProps } from "../../../assets/types/keyProps";
 import { RoundedButton } from "../../elements/RoundedButton";
 import { Colors } from "../../../assets/colors/Colors";
-import styled from "@emotion/styled";
+import type { SiteRoute } from "../../../assets/types/route";
+
+type Props = KeyProps & { backgroundColor : string, content : string, link : SiteRoute  }
+
+const LocalRoundedButton = (props : Props) => 
+    RoundedButton({
+        width: '100%',
+        fontSize: '25px',
+        color: '#fff',
+        backgroundColor: props.backgroundColor,
+        content: props.content
+    })
 
 export function ButtonsStack(_ : KeyProps) {
-    const ButtonStyle = styled(RoundedButton) ({
-                    upperCase : true,
-                    width : '100%',
-                    marginTop : '25px',
-                    variant : "h3",
-                    fontSize : '150%',
-                    paddingInline : '10%',
-                    fontWeight : 'bold' ,
-                    color : Colors.White, 
-                    backgroundColor : Colors.LightGreen, 
-                    link : "/price", 
-    })
+
 
     return <Stack 
         spacing='1%'
         alignItems='center'
         alignSelf='center'
-        width='35%'
+        // width='60%'
         >
-                <ButtonStyle 
+                <LocalRoundedButton 
                     backgroundColor={Colors.LightGreen} 
                     content={"изучение языка с нами"}
                     link="/learneng"                    
                 />
 
-                <ButtonStyle 
+                <LocalRoundedButton
                     backgroundColor={Colors.LightGreen} 
                     content={"как мы учим"}
                     link="/howwelearn"                    
                 />
 
-                <ButtonStyle
+                <LocalRoundedButton
                     backgroundColor={Colors.LightGreen}
                     content="актуальность знаний английского"
                     link="/actual" />
 
-                <ButtonStyle
+                <LocalRoundedButton
                     backgroundColor={Colors.DarkGreen}
                     content="о семейных классах"
                     link="/aboutfem" />
 
-                <ButtonStyle
+                <LocalRoundedButton
                     backgroundColor={Colors.RoseDark}
                     content="наши преподаватели"
                     link="/teachers" />
 
-                <ButtonStyle
+                <LocalRoundedButton
                     backgroundColor={Colors.RoseDark}
                     content="отзывы"
                     link="/feedback" />

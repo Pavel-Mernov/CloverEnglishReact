@@ -1,6 +1,15 @@
 import { ColorButton, type ColorButtonProps } from "./ColorButton"
 
-type RoundedProps = Omit<ColorButtonProps, 'borderRadius' | 'paddingBlock'>
+type ExcludedProps = 'borderRadius' | 
+    'paddingBlock' | 
+    'variant' | 
+    'padding' | 
+    'paddingInline' | 
+    'upperCase' |
+    'spacing' |
+    'fontWeight'
+
+type RoundedProps = Omit<ColorButtonProps, ExcludedProps>
 
 export function RoundedButton(props : RoundedProps) {
     const { 
@@ -11,18 +20,19 @@ export function RoundedButton(props : RoundedProps) {
         width, 
         height, 
         fontSize, 
-        fontWeight, 
+        // fontWeight, 
         margin, 
         marginTop,
-        variant, 
-        padding,
-        paddingTop,
-        paddingInline,
-        spacing,
-        upperCase,
+        // variant, 
+        // padding,
+        // paddingTop,
+        // paddingInline,
+        // spacing,
+        // upperCase,
     } = props
 
     return ColorButton({
+        
         color: color,
         backgroundColor: backgroundColor,
         content: content,
@@ -30,16 +40,15 @@ export function RoundedButton(props : RoundedProps) {
         width : width,
         height : height,
         fontSize : fontSize,
-        fontWeight : fontWeight,
+        fontWeight : 'bold',
         borderRadius : '50vh',
         margin : margin,
         marginTop : marginTop,
         paddingBlock : '2%',
-        paddingTop : paddingTop,
-        paddingInline : paddingInline,
-        spacing : spacing,
-        padding : padding,
-        variant : variant,
-        upperCase : upperCase,
+        // paddingTop : paddingTop,
+        paddingInline : '5%',
+        // spacing : spacing,
+        variant : 'h1',
+        upperCase : true,
     })
 }
