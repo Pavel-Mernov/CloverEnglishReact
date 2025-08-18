@@ -3,6 +3,7 @@ import { Page } from "../../component/pages/Page/Page";
 import MainPageContent from "../../component/pages/MainPage/MainPageContent";
 import { Policy } from "../../component/pages/Page/Policy";
 import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
+import { EnglishPage } from "../../component/pages/EnglishLanguage/EnglishPage";
 
 export type SiteRoute = "/" |
           
@@ -50,7 +51,7 @@ const letsMeet = <Page
 
 const policyPage = Policy()
 
-const englishPage = Page({  })
+const englishPage = Page({ content : <EnglishPage />  })
 
 const famClassPage = Page({  })
 

@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import type { KeyProps } from "../../assets/types/keyProps";
+import type { KeyProps } from "../../../assets/types/keyProps";
 import { StandardTextBlock } from "./StandardTextBlock";
 
 export function TextGroup(props : KeyProps & { items ?: string | string[] }) {

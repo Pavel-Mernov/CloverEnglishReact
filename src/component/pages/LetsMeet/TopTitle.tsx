@@ -2,7 +2,7 @@ import { CardMedia, Stack, Typography } from "@mui/material";
 import type { KeyProps } from "../../../assets/types/keyProps";
 import letsmeetTeacher from "../../../assets/images/letsMeet/letsmeet_teacher.png"
 import { Colors } from "../../../assets/colors/Colors";
-import { StandardTextBlock } from "../../elements/StandardTextBlock";
+import { StandardTextBlock } from "../../elements/TextBlock/StandardTextBlock";
 
 const RightCol = (_ : KeyProps) => {
 

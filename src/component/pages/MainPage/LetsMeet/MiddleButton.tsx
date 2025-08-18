@@ -1,6 +1,6 @@
 import { Colors } from "../../../../assets/colors/Colors";
 import type { SiteRoute } from "../../../../assets/types/route";
-import { ColorButton } from "../../../elements/ColorButton";
+import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
 interface Props {
     link : SiteRoute,

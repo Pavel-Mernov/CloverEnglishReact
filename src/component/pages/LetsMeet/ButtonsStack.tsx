@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import type { KeyProps } from "../../../assets/types/keyProps";
-import { RoundedButton } from "../../elements/RoundedButton";
+import { RoundedButton } from "../../elements/ColorButton/RoundedButton";
 import { Colors } from "../../../assets/colors/Colors";
 import type { SiteRoute } from "../../../assets/types/route";
 

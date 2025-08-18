@@ -1,9 +1,9 @@
 import { Stack } from "@mui/material";
 import { TopTitle } from "./TopTitle";
-import { TextBlock, type TextBlockProps } from "../../elements/TextBlock";
 import { Colors } from "../../../assets/colors/Colors";
-import { TextGroup } from "../../elements/TextGroup";
+import { TextGroup } from "../../elements/TextBlock/TextGroup";
 import { ButtonsStack } from "./ButtonsStack";
+import { TextBlock, type TextBlockProps } from "../../elements/TextBlock/TextBlock";
 
 const RoseText = (props : TextBlockProps) => {
     return <TextBlock

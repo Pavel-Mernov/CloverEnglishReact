@@ -1,10 +1,10 @@
 
 import { Stack, type SxProps } from "@mui/material"
 import { Colors } from "../../../../assets/colors/Colors";
-import { ColorButton } from "../../../elements/ColorButton";
 import type { SiteRoute } from "../../../../assets/types/route";
 import { LeftLink } from "./LeftLink";
 import { MiddleButton } from "./MiddleButton";
+import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
 const MainStackProps : SxProps = {
     display : 'flex',
@@ -13,7 +13,7 @@ const MainStackProps : SxProps = {
     paddingInline : '2%',
     paddingBottom : '2%',
     background : Colors.PaleGreen,
-    maxWidth : '100%',
+    width : '100%',
 }
 
 

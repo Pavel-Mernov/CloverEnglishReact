@@ -1,8 +1,8 @@
 import { Stack, Typography, type TypographyVariant } from "@mui/material";
 import { useState, type JSX } from "react";
-import type { SiteRoute } from "../../assets/types/route";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
+import type { SiteRoute } from "../../../assets/types/route";
 
 type SizeValue = string | number
 
@@ -106,4 +106,3 @@ export function ColorButton(props : Props) : JSX.Element {
         </ColorButton>
     );
 }
-

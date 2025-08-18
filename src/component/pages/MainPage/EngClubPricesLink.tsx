@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack"
 import { Colors } from "../../../assets/colors/Colors";
-import { RoundedButton } from "../../elements/RoundedButton";
+import { RoundedButton } from "../../elements/ColorButton/RoundedButton";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import logo from "../../../assets/images/logo/logobig.png"

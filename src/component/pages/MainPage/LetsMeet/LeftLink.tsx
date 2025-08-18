@@ -1,8 +1,8 @@
 import { CardMedia, Stack, Typography, type SxProps } from "@mui/material";
 import { Colors } from "../../../../assets/colors/Colors";
-import { ColorButton } from "../../../elements/ColorButton";
 import photo from "../../../../assets/images/main/letsmeet3.jpg"
 import type { Key } from "react";
+import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
 
 const Photo = () => {

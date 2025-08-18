@@ -1,0 +1,45 @@
+import type { StackBaseProps, StackProps, SxProps, TypographyProps } from "@mui/system";
+import type { OwnProps } from "../../../assets/types/OwnProps";
+import { Stack, Typography } from "@mui/material";
+import { Colors } from "../../../assets/colors/Colors";
+
+interface LocalProps {
+    text : string,
+} 
+
+type OmitProps = 'color' | 'background' | 'backgroundColor' | "sx" | "component" 
+    | "children" | 'alignItems' | 'alignContent' | 'alignSelf' | 'minWidth' | 'width' | 'maxWidth'
+
+type Props = OwnProps<StackProps & StackBaseProps, LocalProps, OmitProps>
+
+export function Header(props : Props) {
+        const { text } = props
+
+        const newProps : SxProps = {
+            ...props,
+            backgroundColor : Colors.LightGreen,
+        } as SxProps
+
+        return (
+            <Stack
+                component='a'
+                color="#fff"
+                minWidth='60%'
+                maxWidth='80%'
+                alignContent='center'
+                alignItems='center'
+                alignSelf='center'
+                paddingBlock='2vh'
+                borderRadius='50vh'
+                
+                // backgroundColor=""
+                sx={newProps} >
+                    <Typography
+                        variant="h1"
+                        fontSize='30px'
+                        fontWeight='bold'>
+                            { text }
+                        </Typography>
+            </Stack>
+        )
+}
