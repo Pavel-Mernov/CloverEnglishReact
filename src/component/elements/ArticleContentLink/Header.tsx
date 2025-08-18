@@ -1,4 +1,4 @@
-import type { StackBaseProps, StackProps, SxProps, TypographyProps } from "@mui/system";
+import type { StackBaseProps, StackProps, SxProps } from "@mui/system";
 import type { OwnProps } from "../../../assets/types/OwnProps";
 import { Stack, Typography } from "@mui/material";
 import { Colors } from "../../../assets/colors/Colors";
