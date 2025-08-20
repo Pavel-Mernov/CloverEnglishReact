@@ -36,7 +36,13 @@ export type SiteRoute = "/" |
           
           "/actual" |
           
-          "/aboutfem" |
+          "/aboutfam" |
+
+          "/ourpath" |
+
+          "/aovsfgos" |
+
+          "/homework" |
 
           "/price/english" |
 
@@ -58,7 +64,7 @@ const policyPage = Policy()
 
 const englishPage = Page({ content : BigTitlePage({ store : Store.english })  })
 
-const famClassPage = Page({  })
+const famClassPage = Page({ content : BigTitlePage({ store : Store.familyClass })  })
 
 const articlesPage = Page({  })
 
@@ -80,11 +86,17 @@ const howwelearnPage = Page({  })
 
 const actualPage = Page({  })
 
-const aboutFemPage = Page({  })
+const aboutFamPage = Page({  })
 
 const familyPricesPage = Page({  })
 
 const englishPricesPage = Page({  })
+
+const ourPathPage = Page({  })
+
+const aovsfgosPage = Page({  })
+
+const homeworkPage = Page({  })
 
 export const siteMap : SiteMap = {
   "/": mainPage,
@@ -102,9 +114,13 @@ export const siteMap : SiteMap = {
   "/learneng": learnEngPage,
   "/howwelearn": howwelearnPage,
   "/actual": actualPage,
-  "/aboutfem": aboutFemPage,
+  "/aboutfam": aboutFamPage,
+
   "/price/english": englishPricesPage,
   "/prices/family": familyPricesPage,
+  "/ourpath": ourPathPage,
+  "/aovsfgos": aovsfgosPage,
+  "/homework": homeworkPage,
 }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);
