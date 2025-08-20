@@ -46,7 +46,7 @@ export type SiteRoute = "/" |
 
           "/price/english" |
 
-          "/prices/family"
+          "/price/family"
 
 type SiteMap = {
   [route in SiteRoute]: JSX.Element
@@ -117,7 +117,7 @@ export const siteMap : SiteMap = {
   "/aboutfam": aboutFamPage,
 
   "/price/english": englishPricesPage,
-  "/prices/family": familyPricesPage,
+  "/price/family": familyPricesPage,
   "/ourpath": ourPathPage,
   "/aovsfgos": aovsfgosPage,
   "/homework": homeworkPage,

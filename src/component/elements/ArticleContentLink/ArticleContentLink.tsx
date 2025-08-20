@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
 import type { SiteRoute } from "../../../assets/types/route"
 import { Header } from "./Header"
+import { width, type SystemCssProperties } from "@mui/system"
 
 interface SpecialProps {
     caption ?: string,
@@ -68,17 +69,18 @@ export function ArticleContentLink(props : OuterProps) {
     //const ownProps = 
 */
     const outerProps = {
-        ...(props as Omit<OuterProps, 'marginTop' | 'top'>),
+        ...(props as Omit<OuterProps, 'marginTop' | 'top' | 'width' | 'minWidth' | 'maxWidth' >),
         border : '3px solid',
         borderRadius : '20px',
         borderColor : Colors.LightGreen,
         alignContent : 'start',
         paddingTop : '3%', 
+        width : '100%',
         'alignItems' : 'start',
         // transform : `translateY(${ caption ? (- prevH) : 0 })px`,
         // transition : '120 ms'
         
-    } as SxProps
+    } // as SxProps
 
     const innerProps = {
         alignContent : 'stretch',
@@ -86,7 +88,7 @@ export function ArticleContentLink(props : OuterProps) {
     } as SxProps
 
     return (
-        <Stack alignContent='center' alignItems='center'>
+        <Stack alignContent='center' alignItems='center' width={ props.width }>
 
             {   caption &&
                     <Header
@@ -96,7 +98,7 @@ export function ArticleContentLink(props : OuterProps) {
                         text={ caption } />
             }
 
-            <Stack sx={ outerProps }>
+            <Stack sx={ outerProps as SxProps }>
 
                 <Stack sx={ innerProps } >
 
