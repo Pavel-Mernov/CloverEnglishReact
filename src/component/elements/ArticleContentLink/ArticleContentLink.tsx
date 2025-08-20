@@ -5,7 +5,6 @@ import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
 import type { SiteRoute } from "../../../assets/types/route"
 import { Header } from "./Header"
-import { width, type SystemCssProperties } from "@mui/system"
 
 interface SpecialProps {
     caption ?: string,
