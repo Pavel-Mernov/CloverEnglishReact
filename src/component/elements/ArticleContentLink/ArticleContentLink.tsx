@@ -46,30 +46,61 @@ const GrayButton = styled(RoundedButton) ({
 export function ArticleContentLink(props : OuterProps) {
     const { caption, link } = props
 
-    //const ownProps = 
+    /*
+    const [prevH, setPrevH] = useState(0);
 
+    const prevRef = useRef<any>(null);
+    const obsRef = useRef<any>(null);
+    useEffect(() => {
+        obsRef.current = new ResizeObserver(entries => {
+        const entry = entries[0];
+        const h = entry?.contentRect?.height ?? 0;
+        setPrevH(h);
+        });
+        return () => obsRef.current?.disconnect();
+    }, );
+    useEffect(() => {
+        const el = prevRef.current;
+        if (el) obsRef.current.observe(el);
+        return () => el && obsRef.current.unobserve(el);
+    }, prevRef.current);
+
+    //const ownProps = 
+*/
     const outerProps = {
-        ...(props as Omit<OuterProps, ''>),
+        ...(props as Omit<OuterProps, 'marginTop' | 'top'>),
         border : '3px solid',
         borderRadius : '20px',
         borderColor : Colors.LightGreen,
-        alignContent : 'center', 
-        'alignItems' : 'center',
+        alignContent : 'start',
+        paddingTop : '3%', 
+        'alignItems' : 'start',
+        // transform : `translateY(${ caption ? (- prevH) : 0 })px`,
+        // transition : '120 ms'
+        
     } as SxProps
 
     const innerProps = {
-        alignItems : 'revert',
+        alignContent : 'stretch',
         padding : '2%',
     } as SxProps
 
     return (
+        <Stack alignContent='center' alignItems='center'>
+
+            {   caption &&
+                    <Header
+                        // ref={prevRef}
+                        // position='absolute'
+                        sx={{ transform : 'translateY(50%)' }}
+                        text={ caption } />
+            }
+
             <Stack sx={ outerProps }>
+
                 <Stack sx={ innerProps } >
 
-                    {
-                        caption && <Header text={caption} />
 
-                    }
 
                     <Content text={props.text} />
 
@@ -82,6 +113,8 @@ export function ArticleContentLink(props : OuterProps) {
                         color="#fff"
                         fontSize='25px' />
                 </Stack>
-            </Stack>
+            </Stack>            
+        </Stack>
+
     )
 }

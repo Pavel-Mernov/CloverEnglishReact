@@ -7,30 +7,35 @@ interface LocalProps {
     text : string,
 } 
 
-type OmitProps = 'color' | 'background' | 'backgroundColor' | "sx" | "component" 
+type OmitProps = 'color' | 'background' | 'backgroundColor' | "component" 
     | "children" | 'alignItems' | 'alignContent' | 'alignSelf' | 'minWidth' | 'width' | 'maxWidth'
 
 type Props = OwnProps<StackProps & StackBaseProps, LocalProps, OmitProps>
 
+type OmitSxProps = Omit<SxProps, OmitProps>
+
 export function Header(props : Props) {
-        const { text } = props
+        const { text, sx } = props
+
+        const omitSx = sx as OmitSxProps
 
         const newProps : SxProps = {
-            ...props,
+            ...(props as OmitSxProps),
+            ...omitSx,
             backgroundColor : Colors.LightGreen,
+            color : "#fff",
+            minWidth : '60%',
+            maxWidth : '80%',
+            alignContent : 'center',
+            alignItems : 'center',
+            alignSelf : 'center',
+            paddingBlock : '2vh',
+            borderRadius : '50vh',
         } as SxProps
 
         return (
             <Stack
                 component='a'
-                color="#fff"
-                minWidth='60%'
-                maxWidth='80%'
-                alignContent='center'
-                alignItems='center'
-                alignSelf='center'
-                paddingBlock='2vh'
-                borderRadius='50vh'
                 
                 // backgroundColor=""
                 sx={newProps} >

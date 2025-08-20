@@ -3,7 +3,8 @@ import { Page } from "../../component/pages/Page/Page";
 import MainPageContent from "../../component/pages/MainPage/MainPageContent";
 import { Policy } from "../../component/pages/Page/Policy";
 import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
-import { EnglishPage } from "../../component/pages/EnglishLanguage/EnglishPage";
+import { BigTitlePage } from "../../component/pages/BigTitlePage/BigTitlePage";
+import { Store } from "../store/store";
 
 export type SiteRoute = "/" |
           
@@ -35,7 +36,11 @@ export type SiteRoute = "/" |
           
           "/actual" |
           
-          "/aboutfem";
+          "/aboutfem" |
+
+          "/price/english" |
+
+          "/prices/family"
 
 type SiteMap = {
   [route in SiteRoute]: JSX.Element
@@ -51,7 +56,7 @@ const letsMeet = <Page
 
 const policyPage = Policy()
 
-const englishPage = Page({ content : <EnglishPage />  })
+const englishPage = Page({ content : BigTitlePage({ store : Store.english })  })
 
 const famClassPage = Page({  })
 
@@ -77,6 +82,10 @@ const actualPage = Page({  })
 
 const aboutFemPage = Page({  })
 
+const familyPricesPage = Page({  })
+
+const englishPricesPage = Page({  })
+
 export const siteMap : SiteMap = {
   "/": mainPage,
   "/letsmeet": letsMeet,
@@ -90,11 +99,12 @@ export const siteMap : SiteMap = {
   "/gallery": galleryPage,
   "/additional": additionalPage,
   "/price": pricePage,
-  "/learneng" : learnEngPage,
-  "/howwelearn" : howwelearnPage,
-  "/actual" : actualPage,
-  "/aboutfem" : aboutFemPage,
-  
+  "/learneng": learnEngPage,
+  "/howwelearn": howwelearnPage,
+  "/actual": actualPage,
+  "/aboutfem": aboutFemPage,
+  "/price/english": englishPricesPage,
+  "/prices/family": familyPricesPage,
 }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);

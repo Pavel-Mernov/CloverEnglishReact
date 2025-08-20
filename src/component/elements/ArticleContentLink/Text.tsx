@@ -8,8 +8,7 @@ const LocalTextBlock = (props : KeyProps & { text : string }) => (
     <StandardTextBlock                
         variant="body1" 
         text={ props.text } 
-        fontWeight='semiBold'
-                        
+        fontWeight='semiBold'         
     />
 )
 

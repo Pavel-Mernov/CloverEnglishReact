@@ -7,4 +7,5 @@ export const Colors = {
     White : '#fff' as const,
     LightGreen : '#6EC445' as const,
     DarkGreen : '#2E9840' as const,
+    Yellow : '#efef00' as const,
 }
