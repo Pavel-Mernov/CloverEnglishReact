@@ -25,7 +25,7 @@ export function TextBlock(props : TextBlockProps) {
     return (
         <Typography
             variant={props.variant}
-            display='flex'
+            display='inline'
 
             alignContent='stretch'
             justifyContent='stretch'

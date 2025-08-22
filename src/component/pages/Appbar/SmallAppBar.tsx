@@ -1,8 +1,8 @@
 import { Stack, type SxProps } from "@mui/material"
 
-import { AppBarLink } from "./AppBarLink"
 import { SmallTitle } from "./SmallTitle"
 import { Colors } from "../../../assets/colors/Colors"
+import { LocalLink } from "../../elements/Link/LocalLink"
 
 export const SmallAppBar : React.FC = () => {
 
@@ -31,28 +31,28 @@ export const SmallAppBar : React.FC = () => {
           // display='flex'
           justifyContent='space-between'
           >     
-              <AppBarLink caption="Давайте знакомиться" to="/letsmeet"/>
+              <LocalLink caption="Давайте знакомиться" to="/letsmeet"/>
 
-              <AppBarLink caption="Английский язык" to="/englishlanguage" />
+              <LocalLink caption="Английский язык" to="/englishlanguage" />
 
-              <AppBarLink caption="Семейные классы" to="/familyclass"/>
+              <LocalLink caption="Семейные классы" to="/familyclass"/>
 
-              <AppBarLink caption="Статьи" to="/articles"/>
+              <LocalLink caption="Статьи" to="/articles"/>
 
-              <AppBarLink caption="Отзывы" to="/feedback"/>
+              <LocalLink caption="Отзывы" to="/feedback"/>
 
         </Stack>
         <Stack
           direction='row'
           justifyContent='space-between'
           >
-              <AppBarLink caption="Преподаватели" to="/teachers"/>
+              <LocalLink caption="Преподаватели" to="/teachers"/>
               
-              <AppBarLink caption="Ответы на вопросы" to="/faq"/>
+              <LocalLink caption="Ответы на вопросы" to="/faq"/>
 
-              <AppBarLink caption="Галерея" to="/gallery"/>
+              <LocalLink caption="Галерея" to="/gallery"/>
 
-              <AppBarLink caption="Дополнительные услуги" to="/additional"/>
+              <LocalLink caption="Дополнительные услуги" to="/additional"/>
 
           </Stack>
       </Stack>

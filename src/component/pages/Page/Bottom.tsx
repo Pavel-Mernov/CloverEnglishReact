@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { Stack, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
 import { Colors } from "../../../assets/colors/Colors";
+import { LocalLink } from "../../elements/Link/LocalLink";
 
 export function Bottom() : JSX.Element {
     return (
@@ -28,10 +28,7 @@ export function Bottom() : JSX.Element {
                 Любые упоминания статей с сайта требуют указания сайта www.cloverenglish.ru
             </Typography>
 
-        <Link to="/policy"
-            >
-            <Typography variant="h4" align="center">Политика конфиденциальности</Typography>
-        </Link>
+        <LocalLink to="/policy" variant="h4" caption="Политика Конфиденциальности" />
 
         <Typography variant="h4" align="center">
             2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"

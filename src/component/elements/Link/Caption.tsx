@@ -1,11 +1,13 @@
-import { createTheme, ThemeProvider, Typography, type SxProps } from "@mui/material";
+import { createTheme, ThemeProvider, Typography, type SxProps, type TypographyVariant } from "@mui/material";
 import { useState, type FC } from "react";
 
 interface Props {
-    text : string
+    text : string,
+    variant ?: TypographyVariant, 
+    fontSize ?: string | number,
 }
 
-export const Caption : FC<Props> = ({ text }) => {
+export const Caption : FC<Props> = ({ text, variant, fontSize }) => {
     const [isMouseEntered, setMouseEntered] = useState(false);
 
     const theme = createTheme({
@@ -26,9 +28,11 @@ export const Caption : FC<Props> = ({ text }) => {
         <ThemeProvider theme={theme}>
             <Typography
                 sx={captionProps}
-                color="primary" 
+                color={ "primary" } 
                 component="div"
-                fontSize='15px'
+                variant={ variant }
+                fontSize={ fontSize }
+                // display='inline'
                 onMouseEnter={() => setMouseEntered(true)}
                 onMouseLeave={() => setMouseEntered(false)}
                 >

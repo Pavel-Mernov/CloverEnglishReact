@@ -1,19 +1,10 @@
 import { Stack } from "@mui/material";
 import { TopTitle } from "./TopTitle";
-import { Colors } from "../../../assets/colors/Colors";
 import { TextGroup } from "../../elements/TextBlock/TextGroup";
 import { ButtonsStack } from "./ButtonsStack";
-import { TextBlock, type TextBlockProps } from "../../elements/TextBlock/TextBlock";
+import { RoseTextBlock } from "../../elements/TextBlock/RoseTextBlock";
 
-const RoseText = (props : TextBlockProps) => {
-    return <TextBlock
-        text = {props.text} 
-        color = {Colors.RoseDark}
-        fontSize = '30px'
-        fontWeight = 'bold'
-        upperCase
-     />
-}
+
 
 `
 const QuoteImage = styled("img") ({
@@ -50,6 +41,14 @@ const text7 = "Когда я предлагаю ученикам 12-13 лет н
 const text7_1 = `Постепенно ребята привыкают к тому, что есть выбор, и охотно принимают участие
                     в обсуждении того, что мы будем читать и разбирать на занятиях: книгу или журнал, художественную литературу или нон-фикшн.`
 
+const roseFontSize = '25px'
+
+const LocalRoseText = ( props : { text : string } ) => {
+
+    return <RoseTextBlock 
+        text={props.text} upperCase variant="h4" fontWeight='bold' fontSize={ roseFontSize } />
+}
+
 export function LetsMeetPage() {
     
     return (
@@ -59,11 +58,11 @@ export function LetsMeetPage() {
 
         <TextGroup key='1' items={[ text3, text3_2 ]} />
 
-        <RoseText text={roseText1} key='2' />
+        <LocalRoseText text={roseText1} key='2' />
 
         <TextGroup key='3' items={[ text4, text5 ]} />
 
-        <RoseText text={rose2} key='4' />
+        <LocalRoseText text={rose2} key='4' />
 
         <TextGroup key='5' items={[ text6, text6_1 ]} />
 
