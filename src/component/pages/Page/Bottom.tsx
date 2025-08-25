@@ -28,7 +28,7 @@ export function Bottom() : JSX.Element {
                 Любые упоминания статей с сайта требуют указания сайта www.cloverenglish.ru
             </Typography>
 
-        <LocalLink to="/policy" variant="h4" caption="Политика Конфиденциальности" />
+        <LocalLink to="/policy" variant="h4" text="Политика Конфиденциальности" />
 
         <Typography variant="h4" align="center">
             2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"

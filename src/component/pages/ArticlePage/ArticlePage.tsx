@@ -43,6 +43,7 @@ export function ArticlePage(props : Props) {
 
         <Stack 
             spacing='5%'
+            key='1'
             >
         {
             contents.map((item, idx) => <ItemView item={ item } key={`content_${ idx }`} />)
@@ -54,6 +55,7 @@ export function ArticlePage(props : Props) {
             width='70%' 
             marginTop='50px'
             spacing='1%'
+            key='2'
             alignContent='center'
             alignItems='center'
             alignSelf='center'
