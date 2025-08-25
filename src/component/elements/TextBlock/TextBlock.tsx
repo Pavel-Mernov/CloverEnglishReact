@@ -10,7 +10,8 @@ type TextBlockOwnProps = StandardTextBlockProps & {
     text : string,
     variant ?: TypographyVariant,
     color ?: string,
-    sx ?: SxProps
+    sx ?: SxProps,
+    component ?: 'span' | 'p' | 'div' 
 }
 
 type OmitProps = 'display' | 'justifyContent' | 'textAlign' | 'alignContent'
@@ -21,12 +22,13 @@ export type TextBlockProps = OwnProps<TypographyProps & TypographyOwnProps,
 export function TextBlock(props : TextBlockProps) {
 
     const sx = props.upperCase ? { textTransform : 'upperCase'  } : {}
+    const { variant, component } = props
 
     return (
         <Typography
-            variant={props.variant}
+            variant={variant}
             display='inline'
-
+            component={ component ? component : 'p' }
             alignContent='stretch'
             justifyContent='stretch'
             textAlign='justify'

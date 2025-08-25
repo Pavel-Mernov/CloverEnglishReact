@@ -9,14 +9,21 @@ export function ItemView(props : { item : ItemType } & KeyProps) {
     const { item } = props
 
     if (item.type == 'text') {
-        return <StandardTextBlock width='100%' text={ item.text } />
+        return <StandardTextBlock 
+            component="span" 
+            alignSelf='start' 
+            alignItems='self-start'
+            width='100%' 
+            text={ item.text } 
+            />
     }
 
-    if (item.type == 'rosetext') {
+    if (item.type == 'roseText') {
         return <RoseTextBlock 
             text={ item.text } 
             width='100%' 
             variant="h3" 
+            fontSize='25px'
             fontWeight='bold' 
         />
     }
@@ -31,7 +38,7 @@ export function ItemView(props : { item : ItemType } & KeyProps) {
         return <CardMedia
             component='img'
             src={ item.src }
-            width='50%'
+            width={ item.width }
             sx={{ objectFit : 'contain' }}
         />
     }

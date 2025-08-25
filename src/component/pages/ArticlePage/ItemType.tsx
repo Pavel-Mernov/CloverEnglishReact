@@ -6,7 +6,7 @@ interface TextItemType {
 }
 
 interface RoseTextItemType {
-    type : 'rosetext',
+    type : 'roseText',
     text : string,
 }
 
@@ -18,6 +18,7 @@ interface MultiTextItemType {
 interface ImageItemType {
     type : 'image',
     src : string,
+    width ?: string,
 }
 
 export type ItemType = TextItemType | RoseTextItemType | MultiTextItemType | ImageItemType

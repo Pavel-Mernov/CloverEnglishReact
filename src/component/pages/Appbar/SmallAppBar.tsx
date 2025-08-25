@@ -31,28 +31,28 @@ export const SmallAppBar : React.FC = () => {
           // display='flex'
           justifyContent='space-between'
           >     
-              <LocalLink caption="Давайте знакомиться" to="/letsmeet"/>
+              <LocalLink text="Давайте знакомиться" to="/letsmeet"/>
 
-              <LocalLink caption="Английский язык" to="/englishlanguage" />
+              <LocalLink text="Английский язык" to="/englishlanguage" />
 
-              <LocalLink caption="Семейные классы" to="/familyclass"/>
+              <LocalLink text="Семейные классы" to="/familyclass"/>
 
-              <LocalLink caption="Статьи" to="/articles"/>
+              <LocalLink text="Статьи" to="/articles"/>
 
-              <LocalLink caption="Отзывы" to="/feedback"/>
+              <LocalLink text="Отзывы" to="/feedback"/>
 
         </Stack>
         <Stack
           direction='row'
           justifyContent='space-between'
           >
-              <LocalLink caption="Преподаватели" to="/teachers"/>
+              <LocalLink text="Преподаватели" to="/teachers"/>
               
-              <LocalLink caption="Ответы на вопросы" to="/faq"/>
+              <LocalLink text="Ответы на вопросы" to="/faq"/>
 
-              <LocalLink caption="Галерея" to="/gallery"/>
+              <LocalLink text="Галерея" to="/gallery"/>
 
-              <LocalLink caption="Дополнительные услуги" to="/additional"/>
+              <LocalLink text="Дополнительные услуги" to="/additional"/>
 
           </Stack>
       </Stack>
