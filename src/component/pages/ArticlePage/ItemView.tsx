@@ -3,24 +3,26 @@ import { MultiTextBlock } from "../../elements/TextBlock/MultitextBlock"
 import { StandardTextBlock } from "../../elements/TextBlock/StandardTextBlock"
 import type { KeyProps } from "../../../assets/types/keyProps"
 import { RoseTextBlock } from "../../elements/TextBlock/RoseTextBlock"
-import type { ItemType } from "./ItemType"
+import { normalize, type ItemType } from "./ItemType"
 
 export function ItemView(props : { item : ItemType } & KeyProps) {
     const { item } = props
 
-    if (item.type == 'text') {
+    const normalizedItem = normalize(item)
+
+    if (normalizedItem.type == 'text') {
         return <StandardTextBlock 
             component="span" 
             alignSelf='start' 
             alignItems='self-start'
             width='100%' 
-            text={ item.text } 
+            text={ normalizedItem.text } 
             />
     }
 
-    if (item.type == 'roseText') {
+    if (normalizedItem.type == 'roseText') {
         return <RoseTextBlock 
-            text={ item.text } 
+            text={ normalizedItem.text } 
             width='100%' 
             variant="h3" 
             fontSize='25px'
@@ -28,17 +30,27 @@ export function ItemView(props : { item : ItemType } & KeyProps) {
         />
     }
 
-    if (item.type == 'multitext') {
+    if (normalizedItem.type == 'boldText') {
+            return <StandardTextBlock 
+                text={ normalizedItem.text } 
+                // variant='h4' 
+                fontWeight='bold' 
+                // fontSize={ item.fontSize ? item.fontSize : '25px' } 
+            
+            />
+        }
+
+    if (normalizedItem.type == 'multitext') {
         return <MultiTextBlock
-            children={ item.text } 
+            children={ normalizedItem.text } 
         />
     }
 
-    if (item.type == 'image') {
+    if (normalizedItem.type == 'image') {
         return <CardMedia
             component='img'
-            src={ item.src }
-            width={ item.width }
+            src={ normalizedItem.src }
+            width={ normalizedItem.width }
             sx={{ objectFit : 'contain' }}
         />
     }

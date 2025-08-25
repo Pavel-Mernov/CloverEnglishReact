@@ -8,6 +8,7 @@ import { Store } from "../store/store";
 import { ArticlePage } from "../../component/pages/ArticlePage/ArticlePage";
 import { LearnEngPageContent } from "../../component/pages/ArticlePage/PageContents/English/LearnEngPage";
 import { HowWeLearnPage } from "../../component/pages/ArticlePage/PageContents/English/HowWeLearn";
+import { ActualPageContent } from "../../component/pages/ArticlePage/PageContents/English/Actual";
 
 export type SiteRoute = "/" |
           
@@ -87,7 +88,7 @@ const learnEngPage = Page({ content : ArticlePage( LearnEngPageContent) })
 
 const howwelearnPage = Page({ content : ArticlePage( HowWeLearnPage )  })
 
-const actualPage = Page({  })
+const actualPage = Page({ content : ArticlePage( ActualPageContent ) })
 
 const aboutFamPage = Page({  })
 

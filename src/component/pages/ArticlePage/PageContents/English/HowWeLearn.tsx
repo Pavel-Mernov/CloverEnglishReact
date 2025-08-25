@@ -1,9 +1,9 @@
 import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
 import type { ItemType } from "../../ItemType";
 import title from "../../../../../assets/images/English/HowWeLearn/Title.png"
-import carroll from "../../../../../assets/images/English/HowWeLearn/Karrol.png"
-import cicero from "../../../../../assets/images/English/HowWeLearn/Ciciron.png"
-import ruskin from "../../../../../assets/images/English/HowWeLearn/Reskin.png"
+import carroll from "../../../../../assets/images/English/HowWeLearn/Carrol.png"
+import cicero from "../../../../../assets/images/English/HowWeLearn/Cicero.png"
+import ruskin from "../../../../../assets/images/English/HowWeLearn/Ruskin.png"
 import { Colors } from "../../../../../assets/colors/Colors";
 
 const contents : ItemType[] = [
