@@ -5,7 +5,7 @@ import { ItemView } from "./ItemView";
 import { WhiteTextButton } from "../../elements/ColorButton/DefaultRoundedButton";
 import type { SiteRoute } from "../../../assets/types/route";
 
-interface ButtonItem {
+export interface ButtonItem {
     text : string,
     link ?: SiteRoute,
     backgroundColor : string,

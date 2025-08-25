@@ -1,4 +1,4 @@
-import type { ArticlePageProps } from "../../ArticlePage";
+import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
 import type { ItemType } from "../../ItemType";
 import title from "../../../../../assets/images/English/HowWeLearn/Title.png"
 import carroll from "../../../../../assets/images/English/HowWeLearn/Karrol.png"
@@ -86,16 +86,16 @@ const contents : ItemType[] = [
     },
 ]
 
-const footerButtons : any[] = [
+const footerButtons : ButtonItem[] = [
         {
             text: "Давайте Знакомиться",
             backgroundColor: Colors.Gray,
             link: '/letsmeet'
         },
         {
-            text: "Как мы учим",
+            text: "Изучение языка с нами",
             backgroundColor: Colors.LightGreen,
-            link: '/howwelearn',
+            link: '/learneng',
         },
         {
             text: "Актуальность знаний английского",
