@@ -28,7 +28,7 @@ export function ArticlePage(props : Props) {
         alignSelf='center'
         alignItems='center'
         alignContent='center'
-        spacing='5%'
+        spacing='2%'
     >
     
         <CardMedia
@@ -42,8 +42,8 @@ export function ArticlePage(props : Props) {
             />
 
         <Stack 
-            spacing='5%'
-            key='1'
+            spacing='2%'
+            key='01'
             >
         {
             contents.map((item, idx) => <ItemView item={ item } key={`content_${ idx }`} />)
@@ -65,7 +65,8 @@ export function ArticlePage(props : Props) {
                         <WhiteTextButton 
                             key={ `fb_${idx}` }
                             content={ item.text } 
-                            backgroundColor={ item.backgroundColor }                            
+                            backgroundColor={ item.backgroundColor }   
+                            link={ item.link }                         
                         />
                     )
                 }

@@ -15,7 +15,8 @@ const DefaultRoundedButton = (props : DefaultProps) =>
         fontSize: '25px',
         color: props.color,
         backgroundColor: props.backgroundColor,
-        content: props.content
+        content: props.content,
+        link : props.link,
     })
 
 export const WhiteTextButton = (props : Props) => 
