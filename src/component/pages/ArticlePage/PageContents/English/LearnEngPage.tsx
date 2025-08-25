@@ -1,10 +1,11 @@
-import type { ArticlePageProps } from "../ArticlePage";
-import title from "../../../../assets/images/English/learnEngWithUs/Title.png"
-import { Colors } from "../../../../assets/colors/Colors";
-import wilde from "../../../../assets/images/English/learnEngWithUs/Wilde.png"
-import { Break } from "../../../elements/TextBlock/MultitextBlock";
-import mallen from "../../../../assets/images/English/learnEngWithUs/Mallen.png"
-import kushner from '../../../../assets/images/English/learnEngWithUs/Kushner.png'
+
+import title from "../../../../../assets/images/English/learnEngWithUs/Title.png"
+import wilde from "../../../../../assets/images/English/learnEngWithUs/Wilde.png"
+import mallen from "../../../../../assets/images/English/learnEngWithUs/Mallen.png"
+import kushner from '../../../../../assets/images/English/learnEngWithUs/Kushner.png'
+import type { ArticlePageProps } from "../../ArticlePage"
+import { Break } from "../../../../elements/TextBlock/MultitextBlock"
+import { Colors } from "../../../../../assets/colors/Colors"
 
 // const defaultTextSize = '25px'
 const roseTextSize = '25px'

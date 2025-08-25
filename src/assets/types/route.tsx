@@ -6,7 +6,8 @@ import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
 import { BigTitlePage } from "../../component/pages/BigTitlePage/BigTitlePage";
 import { Store } from "../store/store";
 import { ArticlePage } from "../../component/pages/ArticlePage/ArticlePage";
-import { LearnEngPageContent } from "../../component/pages/ArticlePage/PageContents/LearnEngPage";
+import { LearnEngPageContent } from "../../component/pages/ArticlePage/PageContents/English/LearnEngPage";
+import { HowWeLearnPage } from "../../component/pages/ArticlePage/PageContents/English/HowWeLearn";
 
 export type SiteRoute = "/" |
           
@@ -82,13 +83,9 @@ const additionalPage = Page({  })
 
 const pricePage = Page({  })
 
-const learnEngPage = Page({ content : ArticlePage( {
-    headerImage: LearnEngPageContent.headerImage,
-    contents: LearnEngPageContent.contents,
-    footerButtonItems: LearnEngPageContent.footerButtonItems,
-} )})
+const learnEngPage = Page({ content : ArticlePage( LearnEngPageContent) })
 
-const howwelearnPage = Page({  })
+const howwelearnPage = Page({ content : ArticlePage( HowWeLearnPage )  })
 
 const actualPage = Page({  })
 
