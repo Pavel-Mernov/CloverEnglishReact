@@ -8,6 +8,7 @@ export const RoseTextBlock = (props : Props) => {
         text = {props.text} 
         color = {Colors.RoseDark}
         fontSize = { props.fontSize }
+        component={ props.component }
         fontFamily={ props.fontFamily }
         fontWeight = { props.fontWeight }
         upperCase

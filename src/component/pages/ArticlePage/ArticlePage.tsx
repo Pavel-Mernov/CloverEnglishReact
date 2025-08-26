@@ -1,9 +1,8 @@
 import { Stack } from "@mui/system";
-import type { ItemType } from "./ItemType";
 import { CardMedia } from "@mui/material";
-import { ItemView } from "./ItemView";
 import { WhiteTextButton } from "../../elements/ColorButton/DefaultRoundedButton";
 import type { SiteRoute } from "../../../assets/types/route";
+import { TextItem, type MultitextItem } from "../../elements/TextBlock/MultiText/MultitextBlock";
 
 export interface ButtonItem {
     text : string,
@@ -13,7 +12,7 @@ export interface ButtonItem {
 
 export interface ArticlePageProps {
     headerImage : string,
-    contents : ItemType[],
+    contents : MultitextItem[],
     footerButtonItems : ButtonItem[],
 }
 
@@ -46,7 +45,7 @@ export function ArticlePage(props : Props) {
             key='01'
             >
         {
-            contents.map((item, idx) => <ItemView item={ item } key={`content_${ idx }`} />)
+            contents.map((item, idx) => <TextItem item={ item } key={`content_${ idx }`} />)
         }
         </Stack>
 

@@ -2,18 +2,18 @@ import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
 import title from "../../../../../assets/images/English/Actual/Title.png"
 import fellini from "../../../../../assets/images/English/Actual/Fellini.png"
 import vitkg from "../../../../../assets/images/English/Actual/Vitkgstein.png"
-import type { ItemType } from "../../ItemType";
 import { Colors } from "../../../../../assets/colors/Colors";
+import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultitextBlock";
 
-const contents : ItemType[] = [
+const contents : any[] = [
     {
+        
         imageSource : fellini,
         width : '40%',
-    },
+    } as MultitextItem,
     
-    {
-        text : `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,
-    },
+    `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,
+,
     {
         multitext : [
             `обязательный ЕГЭ в школе отменили;`,
@@ -23,15 +23,16 @@ const contents : ItemType[] = [
             return {
                 type : 'listItem' as const,
                 text : item
-            }
+            } as MultitextItem
         })
      },
     {
-        boldText : 'Тогда зачем?'
-    },
+        type : 'bold',
+        bold : 'Тогда зачем?'
+    } as MultitextItem,
     {
         roseText : `МОГУ С УВЕРЕННОСТЬЮ СКАЗАТЬ, ЧТО ЗНАНИЕ АНГЛИЙСКОГО ЯЗЫКА ПО-ПРЕЖНЕМУ НЕОБХОДИМО КАК ДЛЯ УСПЕШНОЙ КАРЬЕРЫ, ТАК И ДЛЯ ИНТЕРЕСНОЙ ЖИЗНИ.`
-    },
+    } as MultitextItem,
     {
         multitext : [
             `Со многими своими выпускниками я поддерживаю связь.
@@ -41,17 +42,16 @@ const contents : ItemType[] = [
                 text : 'Примеров много.'
             }
     ]
-    },
+    } as MultitextItem,
     {
         imageSource : vitkg,
         width : '50%',
-    },
-    {
-        text : `Несмотря на глобальные перемены, происходящие в мире, есть факторы, которые сложились давно и вряд ли изменятся в обозримом будущем. Один из них – это статус английского, как языка международного общения. Научное, деловое и культурное взаимодействие в мире происходит на английском языке – самом распространенном на всех континентах. И если мы хотим быть частью мирового сообщества, нам нужно знать английский.`,
-    },
+    } as MultitextItem,
+    `Несмотря на глобальные перемены, происходящие в мире, есть факторы, которые сложились давно и вряд ли изменятся в обозримом будущем. Один из них – это статус английского, как языка международного общения. Научное, деловое и культурное взаимодействие в мире происходит на английском языке – самом распространенном на всех континентах. И если мы хотим быть частью мирового сообщества, нам нужно знать английский.`,
+    
     {
         roseText : `ВЫВОД ПРОСТОЙ: ЗНАНИЕ АНГЛИЙСКОГО ЯЗЫКА ПО-ПРЕЖНЕМУ ОСТАЕТСЯ ОБЯЗАТЕЛЬНОЙ ЧАСТЬЮ ХОРОШЕГО ОБРАЗОВАНИЯ. ЕГО АКТУАЛЬНОСТЬ НИКУДА НЕ ИСЧЕЗЛА.`,
-    }
+    } as MultitextItem
 ]
 
 const footerButtons : ButtonItem[] = [

@@ -11,7 +11,7 @@ type TextBlockOwnProps = StandardTextBlockProps & {
     variant ?: TypographyVariant,
     color ?: string,
     sx ?: SxProps,
-    component ?: 'span' | 'p' | 'div' 
+    component ?: any 
 }
 
 type OmitProps = 'display' | 'justifyContent' | 'textAlign' | 'alignContent'
@@ -28,7 +28,7 @@ export function TextBlock(props : TextBlockProps) {
         <Typography
             variant={variant}
             display='inline'
-            component={ component ? component : 'p' }
+            component={ component  }
             alignContent='stretch'
             justifyContent='stretch'
             textAlign='justify'

@@ -6,6 +6,7 @@ export function StandardTextBlock(props : Omit<TextBlockProps, 'color' | 'fontSi
     return <TextBlock 
         text={props.text} 
         fontSize={ fontSize }
+        component={ props.component ? props.component : 'p' }
         fontWeight={ props.fontWeight } 
         sx={ props.sx }
         />

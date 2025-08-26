@@ -1,14 +1,14 @@
 import { Stack, type StackProps, type SxProps } from "@mui/material"
 import { Colors } from "../../../assets/colors/Colors"
-import { Content } from "./Content"
 import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
 import type { SiteRoute } from "../../../assets/types/route"
 import { Header } from "./Header"
+import { MultiTextBlock, type MultitextItem } from "../TextBlock/MultiText/MultitextBlock"
 
 interface SpecialProps {
     caption ?: string,
-    text ?: string | string[],
+    text ?: MultitextItem | MultitextItem[],
     image ?: string,
     link ?: SiteRoute,
 }
@@ -44,29 +44,10 @@ const GrayButton = styled(RoundedButton) ({
 })
 
 export function ArticleContentLink(props : OuterProps) {
-    const { caption, link } = props
+    const { caption, link, text } = props
 
-    /*
-    const [prevH, setPrevH] = useState(0);
+    // const normalizedItem : NormalizedItem = normalize(text as ItemType) 
 
-    const prevRef = useRef<any>(null);
-    const obsRef = useRef<any>(null);
-    useEffect(() => {
-        obsRef.current = new ResizeObserver(entries => {
-        const entry = entries[0];
-        const h = entry?.contentRect?.height ?? 0;
-        setPrevH(h);
-        });
-        return () => obsRef.current?.disconnect();
-    }, );
-    useEffect(() => {
-        const el = prevRef.current;
-        if (el) obsRef.current.observe(el);
-        return () => el && obsRef.current.unobserve(el);
-    }, prevRef.current);
-
-    //const ownProps = 
-*/
     const outerProps = {
         ...(props as Omit<OuterProps, 'marginTop' | 'top' | 'width' | 'minWidth' | 'maxWidth' >),
         border : '3px solid',
@@ -102,13 +83,19 @@ export function ArticleContentLink(props : OuterProps) {
                 <Stack sx={ innerProps } >
 
 
-
-                    <Content text={props.text} />
+                    { text && <MultiTextBlock 
+                        key='001' 
+                        children={ Array.isArray(text) 
+                        ? 
+                        text 
+                        : [ text ] } 
+                        /> 
+                    }
 
                     <GrayButton 
                         link={link} 
                         marginTop='3%'
-                        
+                        key='02'
                         backgroundColor={Colors.Gray} 
                         content="Читать полностью" 
                         color="#fff"
