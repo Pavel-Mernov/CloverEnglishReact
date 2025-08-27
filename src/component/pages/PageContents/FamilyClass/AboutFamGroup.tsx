@@ -1,9 +1,9 @@
-import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
-import title from "../../../../../assets/images/FamilyClass/AboutFamGroup/title.png"
-import einstine from "../../../../../assets/images/FamilyClass/AboutFamGroup/Enshtine2.png"
-import montesq from "../../../../../assets/images/FamilyClass/AboutFamGroup/Montesq.png"
-import { Break, type MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem";
-import { Colors } from "../../../../../assets/colors/Colors";
+import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import title from "../../../../assets/images/FamilyClass/AboutFamGroup/title.png"
+import einstine from "../../../../assets/images/FamilyClass/AboutFamGroup/Enshtine2.png"
+import montesq from "../../../../assets/images/FamilyClass/AboutFamGroup/Montesq.png"
+import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Colors } from "../../../../assets/colors/Colors";
 
 const contents : MultitextItem[] = [
     {
@@ -133,7 +133,7 @@ const footerItems : ButtonItem[] = [
     },    
 ]
 
-export const AboutFamGroup : ArticlePageProps = {
+export const AboutFamGroup : ParaLinkPageProps = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerItems,

@@ -6,6 +6,7 @@ import type { SiteRoute } from "../../../assets/types/route"
 import { Header } from "./Header"
 import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
 import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
+import { ImgMedia } from "./ImgMedia"
 
 interface SpecialProps {
     caption ?: string,
@@ -20,6 +21,7 @@ type OmitProps = 'children' |
         'stroke' | 
         'component' | 
         'sx' | 
+        'direction' |
         'border' | 
         'borderRadius' |
         'borderColor' |
@@ -44,8 +46,8 @@ const GrayButton = styled(RoundedButton) ({
     
 })
 
-export function ArticleContentLink(props : OuterProps) {
-    const { caption, link, text } = props
+export function ParaContentLink(props : OuterProps) {
+    const { caption, link, text, image } = props
 
     // const normalizedItem : NormalizedItem = normalize(text as ItemType) 
 
@@ -55,9 +57,11 @@ export function ArticleContentLink(props : OuterProps) {
         borderRadius : '20px',
         borderColor : Colors.LightGreen,
         alignContent : 'start',
-        paddingTop : '3%', 
+        paddingTop : '2%', 
         width : '100%',
+        padding : '2%',
         'alignItems' : 'start',
+        
         // transform : `translateY(${ caption ? (- prevH) : 0 })px`,
         // transition : '120 ms'
         
@@ -66,6 +70,7 @@ export function ArticleContentLink(props : OuterProps) {
     const innerProps = {
         alignContent : 'stretch',
         padding : '2%',
+        
     } as SxProps
 
     return (
@@ -79,9 +84,18 @@ export function ArticleContentLink(props : OuterProps) {
                         text={ caption } />
             }
 
-            <Stack sx={ outerProps as SxProps }>
+            <Stack sx={ outerProps as SxProps } direction='row' spacing='10%'>
 
-                <Stack sx={ innerProps } >
+                {
+                    image && <ImgMedia 
+                        image={ image }
+                        // maxWidth='25%'
+                        // height='100%'
+                        sx={{ alignSelf : 'center', marginTop : '50px', maxWidth : '25%' }}                    
+                    />
+                }
+
+                <Stack sx={ innerProps } spacing='6%' >
 
 
                     { text && <MultiTextBlock 

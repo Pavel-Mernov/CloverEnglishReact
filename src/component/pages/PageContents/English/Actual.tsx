@@ -1,9 +1,9 @@
-import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
-import title from "../../../../../assets/images/English/Actual/Title.png"
-import fellini from "../../../../../assets/images/English/Actual/Fellini.png"
-import vitkg from "../../../../../assets/images/English/Actual/Vitkgstein.png"
-import { Colors } from "../../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem";
+import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import title from "../../../../assets/images/English/Actual/Title.png"
+import fellini from "../../../../assets/images/English/Actual/Fellini.png"
+import vitkg from "../../../../assets/images/English/Actual/Vitkgstein.png"
+import { Colors } from "../../../../assets/colors/Colors";
+import type { MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : any[] = [
     {
@@ -87,7 +87,7 @@ const footerButtons : ButtonItem[] = [
         },
     ]
 
-export const ActualPageContent : ArticlePageProps = {
+export const ActualPageContent : ParaLinkPageProps = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerButtons,

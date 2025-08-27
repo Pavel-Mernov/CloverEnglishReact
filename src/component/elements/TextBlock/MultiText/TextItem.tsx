@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material"
-import { ImgMedia } from "../../ArticleContentLink/ImgMedia"
+import { ImgMedia } from "../../ParaContentLink/ImgMedia"
 import { MultiTextBlock,  } from "./MultitextBlock"
 import { StandardTextBlock } from "../StandardTextBlock"
 import { Colors } from "../../../../assets/colors/Colors"

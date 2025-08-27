@@ -1,11 +1,11 @@
 
-import title from "../../../../../assets/images/English/learnEngWithUs/Title.png"
-import wilde from "../../../../../assets/images/English/learnEngWithUs/Wilde.png"
-import mallen from "../../../../../assets/images/English/learnEngWithUs/Mallen.png"
-import kushner from '../../../../../assets/images/English/learnEngWithUs/Kushner.png'
-import type { ArticlePageProps } from "../../ArticlePage"
-import { Colors } from "../../../../../assets/colors/Colors"
-import { Break, type MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem"
+import title from "../../../../assets/images/English/learnEngWithUs/Title.png"
+import wilde from "../../../../assets/images/English/learnEngWithUs/Wilde.png"
+import mallen from "../../../../assets/images/English/learnEngWithUs/Mallen.png"
+import kushner from '../../../../assets/images/English/learnEngWithUs/Kushner.png'
+import type { ParaLinkPageProps } from "../../ParaLinkPage/ParaLinkPage"
+import { Colors } from "../../../../assets/colors/Colors"
+import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem"
 
 // const defaultTextSize = '25px'
 const roseTextSize = '25px'
@@ -18,7 +18,7 @@ const listItems = [
     'Статус призера или победителя олимпиады 1-го или 2-го уровня.',
 ]
 
-export const LearnEngPageContent : ArticlePageProps = {
+export const LearnEngPageContent : ParaLinkPageProps = {
     headerImage: title,
     contents: [
         {

@@ -25,11 +25,12 @@ export function Header(props : Props) {
             backgroundColor : Colors.LightGreen,
             color : "#fff",
             minWidth : '60%',
-            maxWidth : '80%',
+            // maxWidth : '80%',
             alignContent : 'center',
             alignItems : 'center',
             alignSelf : 'center',
             paddingBlock : '2vh',
+            paddingInline : '2%',
             borderRadius : '50vh',
         } as SxProps
 
@@ -41,7 +42,7 @@ export function Header(props : Props) {
                 sx={newProps} >
                     <Typography
                         variant="h1"
-                        fontSize='30px'
+                        fontSize='25px'
                         fontWeight='bold'>
                             { text }
                         </Typography>

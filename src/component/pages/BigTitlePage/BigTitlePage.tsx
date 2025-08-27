@@ -1,6 +1,6 @@
 import { Stack } from "@mui/system";
 import type { KeyProps } from "../../../assets/types/keyProps";
-import { ArticleContentLink } from "../../elements/ArticleContentLink/ArticleContentLink";
+import { ParaContentLink } from "../../elements/ParaContentLink/ParaContentLink";
 import { CardMedia } from "@mui/material";
 import type { PageStore } from "../../../assets/store/store";
 import { YellowButton } from "../../elements/ColorButton/DefaultRoundedButton";
@@ -29,9 +29,10 @@ export function BigTitlePage(props : Props) {
             }
 
             {
-                texts?.map(({ caption, link, text }, i) =>
-                    <ArticleContentLink 
+                texts?.map(({ caption, link, text, image }, i) =>
+                    <ParaContentLink 
                         key={ i }
+                        image={ image }
                         width='70%'
                         alignSelf='center'
                         paddingBottom='2%'

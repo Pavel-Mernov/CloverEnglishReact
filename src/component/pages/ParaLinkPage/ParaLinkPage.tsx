@@ -12,15 +12,15 @@ export interface ButtonItem {
     backgroundColor : string,
 }
 
-export interface ArticlePageProps {
+export interface ParaLinkPageProps {
     headerImage : string,
     contents : MultitextItem[],
     footerButtonItems : ButtonItem[],
 }
 
-type Props = ArticlePageProps
+type Props = ParaLinkPageProps
 
-export function ArticlePage(props : Props) {
+export function ParaLinkPage(props : Props) {
     const { headerImage, contents, footerButtonItems } = props
     
     return <Stack

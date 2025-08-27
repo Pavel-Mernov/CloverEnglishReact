@@ -1,10 +1,10 @@
-import type { ArticlePageProps, ButtonItem } from "../../ArticlePage";
-import title from "../../../../../assets/images/English/HowWeLearn/Title.png"
-import carroll from "../../../../../assets/images/English/HowWeLearn/Carrol.png"
-import cicero from "../../../../../assets/images/English/HowWeLearn/Cicero.png"
-import ruskin from "../../../../../assets/images/English/HowWeLearn/Ruskin.png"
-import { Colors } from "../../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem";
+import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import title from "../../../../assets/images/English/HowWeLearn/Title.png"
+import carroll from "../../../../assets/images/English/HowWeLearn/Carrol.png"
+import cicero from "../../../../assets/images/English/HowWeLearn/Cicero.png"
+import ruskin from "../../../../assets/images/English/HowWeLearn/Ruskin.png"
+import { Colors } from "../../../../assets/colors/Colors";
+import type { MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : MultitextItem[] = [
     {
@@ -103,7 +103,7 @@ const footerButtons : ButtonItem[] = [
         },
     ]
 
-export const HowWeLearnPage : ArticlePageProps = {
+export const HowWeLearnPage : ParaLinkPageProps = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerButtons,

@@ -5,11 +5,11 @@ import { Policy } from "../../component/pages/Page/Policy";
 import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
 import { BigTitlePage } from "../../component/pages/BigTitlePage/BigTitlePage";
 import { Store } from "../store/store";
-import { ArticlePage } from "../../component/pages/ArticlePage/ArticlePage";
-import { LearnEngPageContent } from "../../component/pages/ArticlePage/PageContents/English/LearnEngPage";
-import { HowWeLearnPage } from "../../component/pages/ArticlePage/PageContents/English/HowWeLearn";
-import { ActualPageContent } from "../../component/pages/ArticlePage/PageContents/English/Actual";
-import { AboutFamGroup } from "../../component/pages/ArticlePage/PageContents/FamilyClass/AboutFamGroup";
+import { ParaLinkPage } from "../../component/pages/ParaLinkPage/ParaLinkPage";
+import { LearnEngPageContent } from "../../component/pages/PageContents/English/LearnEngPage";
+import { HowWeLearnPage } from "../../component/pages/PageContents/English/HowWeLearn";
+import { ActualPageContent } from "../../component/pages/PageContents/English/Actual";
+import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/AboutFamGroup";
 
 export type SiteRoute = "/" |
           
@@ -24,6 +24,10 @@ export type SiteRoute = "/" |
           "/price" |
 
           "/articles" |
+
+          "/articles/project" |
+
+          "/articles/7habits" |
 
           "/teachers" |
 
@@ -71,9 +75,13 @@ const englishPage = Page({ content : BigTitlePage({ store : Store.english })  })
 
 const famClassPage = Page({ content : BigTitlePage({ store : Store.familyClass })  })
 
-const articlesPage = Page({  })
+const articlesPage = Page({ content : BigTitlePage({ store : Store.articles })  })
 
-const teachersPage = Page({  })
+const articleProjPage = Page({  })
+
+const article7habitsPage = Page({  })
+
+const teachersPage = Page({   })
 
 const feedbackPage = Page({  })
 
@@ -85,13 +93,13 @@ const additionalPage = Page({  })
 
 const pricePage = Page({  })
 
-const learnEngPage = Page({ content : ArticlePage( LearnEngPageContent) })
+const learnEngPage = Page({ content : ParaLinkPage( LearnEngPageContent) })
 
-const howwelearnPage = Page({ content : ArticlePage( HowWeLearnPage )  })
+const howwelearnPage = Page({ content : ParaLinkPage( HowWeLearnPage )  })
 
-const actualPage = Page({ content : ArticlePage( ActualPageContent ) })
+const actualPage = Page({ content : ParaLinkPage( ActualPageContent ) })
 
-const aboutFamPage = Page({ content : ArticlePage( AboutFamGroup ) })
+const aboutFamPage = Page({ content : ParaLinkPage( AboutFamGroup ) })
 
 const familyPricesPage = Page({  })
 
@@ -110,6 +118,8 @@ export const siteMap : SiteMap = {
   "/englishlanguage": englishPage,
   "/familyclass": famClassPage,
   "/articles": articlesPage,
+  "/articles/7habits" : article7habitsPage,
+  "/articles/project" : articleProjPage,
   "/teachers": teachersPage,
   "/feedback": feedbackPage,
   "/faq": faqPage,
