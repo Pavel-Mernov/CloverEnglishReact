@@ -4,7 +4,7 @@ import carroll from "../../../../../assets/images/English/HowWeLearn/Carrol.png"
 import cicero from "../../../../../assets/images/English/HowWeLearn/Cicero.png"
 import ruskin from "../../../../../assets/images/English/HowWeLearn/Ruskin.png"
 import { Colors } from "../../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultitextBlock";
+import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : MultitextItem[] = [
     {

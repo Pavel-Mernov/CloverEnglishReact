@@ -4,8 +4,8 @@ import wilde from "../../../../../assets/images/English/learnEngWithUs/Wilde.png
 import mallen from "../../../../../assets/images/English/learnEngWithUs/Mallen.png"
 import kushner from '../../../../../assets/images/English/learnEngWithUs/Kushner.png'
 import type { ArticlePageProps } from "../../ArticlePage"
-import { Break, type MultitextItem } from "../../../../elements/TextBlock/MultiText/MultitextBlock"
 import { Colors } from "../../../../../assets/colors/Colors"
+import { Break, type MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem"
 
 // const defaultTextSize = '25px'
 const roseTextSize = '25px'

@@ -1,0 +1,74 @@
+import type { KeyProps } from "../../../../assets/types/keyProps"
+import type { SiteRoute } from "../../../../assets/types/route"
+
+type TextProps = KeyProps & {
+    
+    fontWeight ?: string,
+    fontSize ?: string,
+    variant ?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body1',
+}
+
+type RoseTextProps = TextProps & ({
+    type : 'roseText',
+    text : string,
+    component ?: any,
+} | {
+    roseText : string,
+    component ?: any,    
+})
+
+type LinkProps = TextProps & { to ?: SiteRoute } & ({
+    type : 'link',
+    text : string,
+} | {
+    link : string,
+})
+
+type ListItemProps = TextProps & ({
+    type : 'listItem',
+    text : string,
+} | {
+    listItem : string,
+})
+
+type BoldTextProps = TextProps & ({
+    type : 'bold',
+    text : string,
+    component ?: any,
+} | {
+    bold : string,
+    component ?: any,
+})
+
+type ImageItemProps = {
+    imageSource : string,
+    width ?: string | number
+}
+
+type MultiTextType = {
+    multitext : MultitextItem[],
+} | {
+    type : 'multitext',
+    text : MultitextItem[],
+}
+
+type ListProps = TextProps & {
+    list : string[],
+}
+
+export const Break = { 
+                        type : 'break' as const,
+                    } as const
+
+type BreakType = typeof Break
+
+export type MultitextItem = 
+        string | 
+        RoseTextProps | 
+        BoldTextProps | 
+        LinkProps | 
+        MultiTextType |
+        ImageItemProps |
+        ListItemProps | 
+        ListProps |
+        BreakType

@@ -4,7 +4,8 @@ import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
 import type { SiteRoute } from "../../../assets/types/route"
 import { Header } from "./Header"
-import { MultiTextBlock, type MultitextItem } from "../TextBlock/MultiText/MultitextBlock"
+import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
+import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
 
 interface SpecialProps {
     caption ?: string,

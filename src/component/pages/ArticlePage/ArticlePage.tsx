@@ -2,7 +2,9 @@ import { Stack } from "@mui/system";
 import { CardMedia } from "@mui/material";
 import { WhiteTextButton } from "../../elements/ColorButton/DefaultRoundedButton";
 import type { SiteRoute } from "../../../assets/types/route";
-import { TextItem, type MultitextItem } from "../../elements/TextBlock/MultiText/MultitextBlock";
+import type { MultitextItem } from "../../elements/TextBlock/MultiText/MultiTextItem";
+import { TextItem } from "../../elements/TextBlock/MultiText/TextItem";
+
 
 export interface ButtonItem {
     text : string,

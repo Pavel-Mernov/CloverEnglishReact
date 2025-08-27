@@ -1,7 +1,8 @@
 import type { SiteRoute } from "../types/route"
 import engTitle from "../images/English/FileTitle.png"
 import familyTitle from "../images/FamilyClass/Title.png"
-import { Break, type MultitextItem } from "../../component/elements/TextBlock/MultiText/MultitextBlock"
+import { Break, type MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem"
+
 
 interface LinkInfo {
     caption ?: string,

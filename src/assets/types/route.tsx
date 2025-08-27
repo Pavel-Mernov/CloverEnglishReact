@@ -9,6 +9,7 @@ import { ArticlePage } from "../../component/pages/ArticlePage/ArticlePage";
 import { LearnEngPageContent } from "../../component/pages/ArticlePage/PageContents/English/LearnEngPage";
 import { HowWeLearnPage } from "../../component/pages/ArticlePage/PageContents/English/HowWeLearn";
 import { ActualPageContent } from "../../component/pages/ArticlePage/PageContents/English/Actual";
+import { AboutFamGroup } from "../../component/pages/ArticlePage/PageContents/FamilyClass/AboutFamGroup";
 
 export type SiteRoute = "/" |
           
@@ -90,7 +91,7 @@ const howwelearnPage = Page({ content : ArticlePage( HowWeLearnPage )  })
 
 const actualPage = Page({ content : ArticlePage( ActualPageContent ) })
 
-const aboutFamPage = Page({  })
+const aboutFamPage = Page({ content : ArticlePage( AboutFamGroup ) })
 
 const familyPricesPage = Page({  })
 

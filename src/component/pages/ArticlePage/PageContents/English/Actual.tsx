@@ -3,7 +3,7 @@ import title from "../../../../../assets/images/English/Actual/Title.png"
 import fellini from "../../../../../assets/images/English/Actual/Fellini.png"
 import vitkg from "../../../../../assets/images/English/Actual/Vitkgstein.png"
 import { Colors } from "../../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultitextBlock";
+import type { MultitextItem } from "../../../../elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : any[] = [
     {
