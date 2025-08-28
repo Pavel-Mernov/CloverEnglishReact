@@ -16,7 +16,7 @@ const DefaultRoundedButton = (props : DefaultProps) =>
         color: props.color,
         backgroundColor: props.backgroundColor,
         content: props.content,
-        link : props.link,
+        onClick : props.link,
     })
 
 export const WhiteTextButton = (props : Props) => 

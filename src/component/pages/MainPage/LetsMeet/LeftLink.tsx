@@ -59,7 +59,7 @@ export function LeftLink() {
                     <ColorButton 
                         key='0'
                         maxWidth='15%'
-                        link="/letsmeet"
+                        onClick="/letsmeet"
                         backgroundColor={Colors.White}
                         borderRadius='3vh'
                         spacing='2%'

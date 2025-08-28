@@ -32,7 +32,7 @@ const RightColButton = (props : RightColProps) =>
         variant: "h5",
         fontSize: '130%',
         padding: '2vh',
-        link: props.link,
+        onClick: props.link,
         content: props.content,
 })
 

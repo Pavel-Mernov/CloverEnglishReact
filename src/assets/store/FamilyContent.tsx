@@ -9,7 +9,7 @@ export const FamilyContent : PageStore = {
         [
             {
                 caption : 'О семейных классах',
-                link : `/aboutfam`,
+                onClick : `/aboutfam`,
                 text : [
                     {
                         multitext : [
@@ -26,7 +26,7 @@ export const FamilyContent : PageStore = {
 
             {
                 caption : 'Наш подход к обучению',
-                link : `/ourpath`,
+                onClick : `/ourpath`,
                 text : [
                     'Познавая мир, ребёнок проявляет интерес к чему-то важному именно для него. Из ящика...',
                 ]
@@ -34,12 +34,12 @@ export const FamilyContent : PageStore = {
 
             {
                 caption : 'АО vs. ФГОС',
-                link : `/aovsfgos`,
+                onClick : `/aovsfgos`,
                 text : 'Почему сейчас количество семейных школ растет? Потому что увеличивается спрос на альтернативные образовательные услуги...'
             },
             {
                 caption : 'Домашнее задание',
-                link : `/homework`,
+                onClick : `/homework`,
                 text : 'Споры о том, нужно ли задавать детям задание на дом или нет, ведутся давно. Есть аргументы и за, и против ...',
             },
         ],

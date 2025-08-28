@@ -2,7 +2,7 @@ import { Stack, type StackProps, type SxProps } from "@mui/material"
 import { Colors } from "../../../assets/colors/Colors"
 import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
-import type { SiteRoute } from "../../../assets/types/route"
+import type { Action } from "../../../assets/types/route"
 import { Header } from "./Header"
 import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
 import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
@@ -12,7 +12,9 @@ interface SpecialProps {
     caption ?: string,
     text ?: MultitextItem | MultitextItem[],
     image ?: string,
-    link ?: SiteRoute,
+    imageWidth ?: string | number,
+    imageHeight ?: string | number,
+    onButtonClick ?: Action,
 }
 
 type OmitProps = 'children' | 
@@ -21,6 +23,7 @@ type OmitProps = 'children' |
         'stroke' | 
         'component' | 
         'sx' | 
+        'height' |
         'direction' |
         'border' | 
         'borderRadius' |
@@ -47,7 +50,7 @@ const GrayButton = styled(RoundedButton) ({
 })
 
 export function ParaContentLink(props : OuterProps) {
-    const { caption, link, text, image } = props
+    const { caption, onButtonClick, text, image, imageWidth, imageHeight } = props
 
     // const normalizedItem : NormalizedItem = normalize(text as ItemType) 
 
@@ -89,9 +92,14 @@ export function ParaContentLink(props : OuterProps) {
                 {
                     image && <ImgMedia 
                         image={ image }
-                        // maxWidth='25%'
-                        // height='100%'
-                        sx={{ alignSelf : 'center', marginTop : '50px', maxWidth : '25%' }}                    
+                        
+                        
+                        sx={{ 
+                                alignSelf : 'center', 
+                                marginTop : '50px', 
+                                maxWidth : imageWidth ? imageWidth :'30%',
+                                maxHeight : imageHeight, 
+                            }}                    
                     />
                 }
 
@@ -108,7 +116,7 @@ export function ParaContentLink(props : OuterProps) {
                     }
 
                     <GrayButton 
-                        link={link} 
+                        onClick={ onButtonClick } 
                         marginTop='3%'
                         key='02'
                         backgroundColor={Colors.Gray} 

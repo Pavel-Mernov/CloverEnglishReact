@@ -2,7 +2,7 @@ import { Stack, Typography, type TypographyVariant } from "@mui/material";
 import { useState, type JSX } from "react";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
-import type { SiteRoute } from "../../../assets/types/route";
+import type { Action } from "../../../assets/types/route";
 
 type SizeValue = string | number
 
@@ -10,7 +10,7 @@ export interface ColorButtonProps {
     color ?: string,
     backgroundColor : string,
     content : string | JSX.Element | JSX.Element[],
-    link ?: SiteRoute,
+    onClick ?: Action,
     width ?: SizeValue,
     height ?: SizeValue,
     fontSize ?: SizeValue,
@@ -37,7 +37,7 @@ export function ColorButton(props : Props) : JSX.Element {
         height,
         color, 
         content, 
-        link, 
+        onClick, 
         backgroundColor, 
         fontWeight, 
         fontSize, 
@@ -78,16 +78,32 @@ export function ColorButton(props : Props) : JSX.Element {
 
     const navigate = useNavigate();
 
-    const onNavigate = () => {
-        if (link) {
-            navigate(link)
+    const onAction = () => {
+        if (!onClick) {
+            return
         }
+
+        if (typeof onClick == 'string') {
+            navigate(onClick)
+            return
+        }
+
+        if ('link' in onClick) {
+            navigate(onClick.link)
+            return
+        }
+
+        if ('action' in onClick) {
+            onClick.action()
+            return
+        }
+        
     }
 
     return (
         <ColorButton
             spacing={spacing}
-            onClick={onNavigate}
+            onClick={onAction}
             onMouseEnter={() => setMouseEntered(true)}
             onMouseLeave={() => setMouseEntered(false)}
             >

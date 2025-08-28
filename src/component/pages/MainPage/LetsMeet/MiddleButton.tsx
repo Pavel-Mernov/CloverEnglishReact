@@ -13,7 +13,7 @@ export function MiddleButton(props : Props) {
     return (
         <ColorButton
             padding='10%'
-            link={link}
+            onClick={link}
             variant="h5"
             content={caption}
             backgroundColor={Colors.RoseDark}

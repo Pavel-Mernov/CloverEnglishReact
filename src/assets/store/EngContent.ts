@@ -9,7 +9,7 @@ export const EngContent : PageStore = {
         [
             {
                 caption : 'Изучение языка с нами',
-                link : `/learneng`,
+                onClick : `/learneng`,
                 text : [
                         {
                             multitext : [
@@ -39,7 +39,7 @@ export const EngContent : PageStore = {
 
             {
                 caption : 'Как мы учим',
-                link : `/howwelearn`,
+                onClick : `/howwelearn`,
                 text : [
                     'На занятия мы приглашаем школьников со 2-го по 11-й класс.',
 
@@ -57,7 +57,7 @@ export const EngContent : PageStore = {
 
             {
                 caption : 'Актуальность знаний английского',
-                link : `/actual`,
+                onClick : `/actual`,
                 text : [
                     'Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:',
                     

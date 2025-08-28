@@ -10,7 +10,7 @@ type Props = KeyProps & { store : PageStore }
 export function BigTitlePage(props : Props) {
     const { store } = props
 
-    const { titleSource, texts, finalButtons } = store
+    const { titleSource, texts, finalButtons, width } = store
 
     return (
         <Stack
@@ -29,15 +29,15 @@ export function BigTitlePage(props : Props) {
             }
 
             {
-                texts?.map(({ caption, link, text, image }, i) =>
+                texts?.map(({ caption, onClick, text, image }, i) =>
                     <ParaContentLink 
                         key={ i }
                         image={ image }
-                        width='70%'
+                        width={ width ? width : '70%' }
                         alignSelf='center'
                         paddingBottom='2%'
                         caption={ caption } 
-                        link={ link }
+                        onButtonClick={ onClick }
                         text={ text }
                         paddingInline='3%' 
                     />                

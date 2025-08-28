@@ -4,10 +4,12 @@ import mariaP from "../../assets/images/Teachers/Maria_P.png"
 import elizaB from "../../assets/images/Teachers/Eliza_B.jpg"
 
 export const ArticlesContent : PageStore = {
+    width : '90%',
     texts : [
         {
+            
             caption : `Проектная деятельность в семейной школе`,
-            link: "/articles/project",
+            onClick: "/articles/project",
             image : elizaB,
             text : [
                 {
@@ -37,7 +39,7 @@ export const ArticlesContent : PageStore = {
         },
         {
             caption : '7 привычек, чтобы интегрировать английский в свою жизнь',
-            link : '/articles/7habits',
+            onClick : '/articles/7habits',
             image : mariaP,
             text : [
                 {

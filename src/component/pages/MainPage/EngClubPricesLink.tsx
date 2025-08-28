@@ -60,7 +60,7 @@ export function EngClubPricesLink() {
                       color={Colors.Gray} 
                       backgroundColor={Colors.PaleGreen} 
                       content="цены 2025 - 2026" 
-                      link="/price"            
+                      onClick="/price"            
                   /> 
                 </Stack>
 
