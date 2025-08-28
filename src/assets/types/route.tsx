@@ -10,6 +10,7 @@ import { LearnEngPageContent } from "../../component/pages/PageContents/English/
 import { HowWeLearnPage } from "../../component/pages/PageContents/English/HowWeLearn";
 import { ActualPageContent } from "../../component/pages/PageContents/English/Actual";
 import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/AboutFamGroup";
+import type { MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
 
 export type SiteRoute = "/" |
           
@@ -138,12 +139,8 @@ export const siteMap : SiteMap = {
   "/homework": homeworkPage,
 }
 
-export type OnClickAction = SiteRoute | {
-  link : SiteRoute,
-} | {
-  action : () => void,
-}
+export type OnClickAction = SiteRoute | (() => void)
 
-// export type Action = OnClickAction | { addText : string }
+export type Action = OnClickAction | { addText : MultitextItem | MultitextItem[] }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);

@@ -1,4 +1,4 @@
-import type { OnClickAction, SiteRoute } from "../types/route"
+import type { Action, SiteRoute } from "../types/route"
 
 
 import { type MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem"
@@ -13,7 +13,7 @@ interface LinkInfo {
     caption ?: string,
     image ?: string,
     width ?: string | number,
-    onClick : OnClickAction,
+    onClick : Action,
     text ?: MultitextItem | MultitextItem[],
 }
 

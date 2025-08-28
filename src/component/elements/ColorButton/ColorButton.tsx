@@ -88,15 +88,7 @@ export function ColorButton(props : Props) : JSX.Element {
             return
         }
 
-        if ('link' in onClick) {
-            navigate(onClick.link)
-            return
-        }
-
-        if ('action' in onClick) {
-            onClick.action()
-            return
-        }
+        onClick()
         
     }
 

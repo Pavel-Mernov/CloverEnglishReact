@@ -2,11 +2,12 @@ import { Stack, type StackProps, type SxProps } from "@mui/material"
 import { Colors } from "../../../assets/colors/Colors"
 import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
-import type { OnClickAction } from "../../../assets/types/route"
+import type { Action, } from "../../../assets/types/route"
 import { Header } from "./Header"
 import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
 import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
 import { ImgMedia } from "./ImgMedia"
+import { useState } from "react"
 
 interface SpecialProps {
     caption ?: string,
@@ -14,7 +15,7 @@ interface SpecialProps {
     image ?: string,
     imageWidth ?: string | number,
     imageHeight ?: string | number,
-    onButtonClick ?: OnClickAction,
+    onButtonClick ?: Action,
 }
 
 type OmitProps = 'children' | 
@@ -52,7 +53,7 @@ const GrayButton = styled(RoundedButton) ({
 export function ParaContentLink(props : OuterProps) {
     const { caption, onButtonClick, text, image, imageWidth, imageHeight } = props
 
-    // const normalizedItem : NormalizedItem = normalize(text as ItemType) 
+    const [isTextOpen, setTextOpen] = useState(false)
 
     const outerProps = {
         ...(props as Omit<OuterProps, 'marginTop' | 'top' | 'width' | 'minWidth' | 'maxWidth' >),
@@ -75,6 +76,15 @@ export function ParaContentLink(props : OuterProps) {
         padding : '2%',
         
     } as SxProps
+
+    const onLinkClick = (typeof onButtonClick == 'object' && 'addText' in onButtonClick) ?
+    () => {
+        setTextOpen(!isTextOpen)
+    } 
+    : onButtonClick
+
+    const accordionText = (typeof onButtonClick == 'object' && 'addText' in onButtonClick) ?
+        onButtonClick.addText : undefined
 
     return (
         <Stack alignContent='center' alignItems='center' width={ props.width }>
@@ -115,12 +125,33 @@ export function ParaContentLink(props : OuterProps) {
                         /> 
                     }
 
+                    {
+                        accordionText && isTextOpen && 
+
+                        <Stack
+                            border='1px solid'
+                            key='003'
+                            borderColor={ Colors.Gray }
+                            borderRadius='10px'
+                            padding='15px'
+                            width='100%'
+                        >
+                            <MultiTextBlock 
+                                children={ 
+                                    Array.isArray(accordionText) ?
+                                        accordionText :
+                                        [ accordionText ]
+                                }
+                            />
+                        </Stack>
+                    }
+
                     <GrayButton 
-                        onClick={ onButtonClick } 
+                        onClick={ onLinkClick } 
                         marginTop='3%'
                         key='02'
                         backgroundColor={Colors.Gray} 
-                        content="Читать полностью" 
+                        content={ isTextOpen ? 'Свернуть' : "Читать полностью" } 
                         color="#fff"
                         fontSize='25px' />
                 </Stack>
