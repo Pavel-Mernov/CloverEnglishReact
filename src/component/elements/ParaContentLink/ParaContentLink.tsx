@@ -2,7 +2,7 @@ import { Stack, type StackProps, type SxProps } from "@mui/material"
 import { Colors } from "../../../assets/colors/Colors"
 import styled from "@emotion/styled"
 import { RoundedButton } from "../ColorButton/RoundedButton"
-import type { Action } from "../../../assets/types/route"
+import type { OnClickAction } from "../../../assets/types/route"
 import { Header } from "./Header"
 import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
 import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
@@ -14,7 +14,7 @@ interface SpecialProps {
     image ?: string,
     imageWidth ?: string | number,
     imageHeight ?: string | number,
-    onButtonClick ?: Action,
+    onButtonClick ?: OnClickAction,
 }
 
 type OmitProps = 'children' | 

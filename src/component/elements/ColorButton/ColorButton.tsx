@@ -2,7 +2,7 @@ import { Stack, Typography, type TypographyVariant } from "@mui/material";
 import { useState, type JSX } from "react";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
-import type { Action } from "../../../assets/types/route";
+import type { OnClickAction } from "../../../assets/types/route";
 
 type SizeValue = string | number
 
@@ -10,7 +10,7 @@ export interface ColorButtonProps {
     color ?: string,
     backgroundColor : string,
     content : string | JSX.Element | JSX.Element[],
-    onClick ?: Action,
+    onClick ?: OnClickAction,
     width ?: SizeValue,
     height ?: SizeValue,
     fontSize ?: SizeValue,

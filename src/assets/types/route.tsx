@@ -138,10 +138,12 @@ export const siteMap : SiteMap = {
   "/homework": homeworkPage,
 }
 
-export type Action = SiteRoute | {
+export type OnClickAction = SiteRoute | {
   link : SiteRoute,
 } | {
   action : () => void,
 }
+
+// export type Action = OnClickAction | { addText : string }
 
 export const MapListKeys = Object.keys(siteMap).map(key => key as unknown as SiteRoute);
