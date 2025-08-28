@@ -11,6 +11,7 @@ export interface ColorButtonProps {
     backgroundColor : string,
     content : string | JSX.Element | JSX.Element[],
     onClick ?: OnClickAction,
+    alignSelf ?: string,
     width ?: SizeValue,
     height ?: SizeValue,
     fontSize ?: SizeValue,
@@ -51,6 +52,7 @@ export function ColorButton(props : Props) : JSX.Element {
         paddingBlock,
         upperCase,
         variant,
+        alignSelf
 
     } = props;
 
@@ -60,6 +62,7 @@ export function ColorButton(props : Props) : JSX.Element {
         width : width,
         height : height,
         maxWidth : maxWidth,
+        alignSelf : alignSelf, 
         backgroundColor : backgroundColor,
         color : color,
         fontWeight : fontWeight,

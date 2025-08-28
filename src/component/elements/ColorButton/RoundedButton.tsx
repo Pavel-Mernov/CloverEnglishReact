@@ -23,6 +23,7 @@ export function RoundedButton(props : RoundedProps) {
         // fontWeight, 
         margin, 
         marginTop,
+        alignSelf,
         // variant, 
         // padding,
         // paddingTop,
@@ -32,7 +33,7 @@ export function RoundedButton(props : RoundedProps) {
     } = props
 
     return ColorButton({
-        
+        alignSelf : alignSelf,
         color: color,
         backgroundColor: backgroundColor,
         content: content,

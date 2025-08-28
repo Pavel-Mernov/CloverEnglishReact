@@ -4,6 +4,7 @@ import { ParaContentLink } from "../../elements/ParaContentLink/ParaContentLink"
 import { CardMedia } from "@mui/material";
 import type { PageStore } from "../../../assets/store/store";
 import { YellowButton } from "../../elements/ColorButton/DefaultRoundedButton";
+import { TextItem } from "../../elements/TextBlock/MultiText/TextItem";
 
 type Props = KeyProps & { store : PageStore }
 
@@ -20,11 +21,18 @@ export function BigTitlePage(props : Props) {
             spacing='4%'
         >
             {
-                titleSource &&
+                titleSource && typeof titleSource == 'object' && 'image' in titleSource &&
                     <CardMedia
                         component='img'
                         sx={{ objectFit : 'contain', width : '30%' }}
-                        image={ titleSource }
+                        image={ titleSource.image }
+                        />
+            }
+
+            {
+                titleSource && (typeof titleSource == 'string' || typeof titleSource == 'object' && !('image' in titleSource)) &&
+                    <TextItem 
+                        item={titleSource}                        
                         />
             }
 

@@ -7,6 +7,7 @@ import { type MultitextItem } from "../../component/elements/TextBlock/MultiText
 import { EngContent } from "./EngContent"
 import { FamilyContent } from "./FamilyContent"
 import { ArticlesContent } from "./ArticlesStore"
+import { TeachersStore } from "./TeachersStore"
 
 
 interface LinkInfo {
@@ -23,7 +24,7 @@ interface FinalButtonProps {
 }
 
 interface ParaPageStore {
-    titleSource ?: string,
+    titleSource ?: { image : string } | MultitextItem,
     width ?: string | number,
     texts ?: LinkInfo[],
     finalButtons ?: FinalButtonProps[] 
@@ -45,4 +46,5 @@ export const Store = {
     english : EngContent,
     articles : ArticlesContent,
     familyClass : FamilyContent,
+    teachers : TeachersStore,
 } 

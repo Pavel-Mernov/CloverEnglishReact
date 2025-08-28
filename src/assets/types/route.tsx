@@ -82,7 +82,7 @@ const articleProjPage = Page({  })
 
 const article7habitsPage = Page({  })
 
-const teachersPage = Page({   })
+const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
 
 const feedbackPage = Page({  })
 

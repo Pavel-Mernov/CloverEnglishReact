@@ -97,8 +97,9 @@ export function ParaContentLink(props : OuterProps) {
                         text={ caption } />
             }
 
-            <Stack sx={ outerProps as SxProps } direction='row' spacing='10%'>
+            <Stack sx={ outerProps as SxProps } spacing='2%'>
 
+                <Stack direction='row' spacing='2%'>
                 {
                     image && <ImgMedia 
                         image={ image }
@@ -126,6 +127,25 @@ export function ParaContentLink(props : OuterProps) {
                     }
 
                     {
+                        !isTextOpen &&
+                            <GrayButton 
+                                onClick={ onLinkClick } 
+                                marginTop='3%'
+                                key='02'
+                                backgroundColor={Colors.Gray} 
+                                content={ "Читать полностью" } 
+                                color="#fff"
+                                fontSize='25px' />
+                    }
+
+
+                </Stack>
+
+
+
+                </Stack>
+
+                    {
                         accordionText && isTextOpen && 
 
                         <Stack
@@ -134,7 +154,7 @@ export function ParaContentLink(props : OuterProps) {
                             borderColor={ Colors.Gray }
                             borderRadius='10px'
                             padding='15px'
-                            width='100%'
+                            alignSelf='stretch'
                         >
                             <MultiTextBlock 
                                 children={ 
@@ -146,16 +166,22 @@ export function ParaContentLink(props : OuterProps) {
                         </Stack>
                     }
 
-                    <GrayButton 
-                        onClick={ onLinkClick } 
-                        marginTop='3%'
-                        key='02'
-                        backgroundColor={Colors.Gray} 
-                        content={ isTextOpen ? 'Свернуть' : "Читать полностью" } 
-                        color="#fff"
-                        fontSize='25px' />
-                </Stack>
-            </Stack>            
+                    {
+                        isTextOpen &&
+                            <GrayButton 
+                                alignSelf='end'
+                                width='40%'
+                                
+                                onClick={ onLinkClick } 
+                                marginTop='3%'
+                                key='02'
+                                backgroundColor={Colors.Gray} 
+                                content={ "Свернуть" } 
+                                color="#fff"
+                                fontSize='25px' />
+                    }
+
+                </Stack>            
         </Stack>
 
     )
