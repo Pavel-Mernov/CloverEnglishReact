@@ -8,6 +8,7 @@ import { EngContent } from "./EngContent"
 import { FamilyContent } from "./FamilyContent"
 import { ArticlesContent } from "./ArticlesStore"
 import { TeachersStore } from "./TeachersStore"
+import { FeedbackStore } from "./FeedbackStore"
 
 
 interface LinkInfo {
@@ -47,4 +48,5 @@ export const Store = {
     articles : ArticlesContent,
     familyClass : FamilyContent,
     teachers : TeachersStore,
+    feedback : FeedbackStore,
 } 

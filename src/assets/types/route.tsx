@@ -37,8 +37,6 @@ export type SiteRoute = "/" |
           "/faq" |
 
           "/gallery" |
-
-          "/additional" |
           
           "/learneng" |
           
@@ -84,13 +82,13 @@ const article7habitsPage = Page({  })
 
 const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
 
-const feedbackPage = Page({  })
+const feedbackPage = Page({ content : BigTitlePage({ store : Store.feedback })  })
 
 const faqPage = Page({  })
 
 const galleryPage = Page({  })
 
-const additionalPage = Page({  })
+// const additionalPage = Page({  })
 
 const pricePage = Page({  })
 
@@ -125,7 +123,7 @@ export const siteMap : SiteMap = {
   "/feedback": feedbackPage,
   "/faq": faqPage,
   "/gallery": galleryPage,
-  "/additional": additionalPage,
+  // "/additional": additionalPage,
   "/price": pricePage,
   "/learneng": learnEngPage,
   "/howwelearn": howwelearnPage,
