@@ -6,11 +6,21 @@ import { Colors } from "../../../../assets/colors/Colors"
 import { LocalLink } from "../../Link/LocalLink"
 import { RoseTextBlock } from "../RoseTextBlock"
 import type { MultitextItem } from "./MultiTextItem"
+import { TextBlock } from "../TextBlock"
 
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props
 
     if (typeof item === 'object') {
+        if ('text' in item && 'type' in item && (item.type == 'text')) {
+            return <TextBlock 
+                text={ item.text } 
+                color={ item.color } 
+                fontSize={ item.fontSize ? item.fontSize : '25px' } 
+                variant={ item.variant ? item.variant : 'h3' }
+                fontWeight={ item.fontWeight ? item.fontWeight : 'semiBold' }
+                />
+        }
         if ('roseText' in item || 'type' in item && item.type == 'roseText') {
             const text = ('roseText' in item) ? item.roseText : item.text
 
@@ -83,6 +93,7 @@ export function TextItem(props :{ item : MultitextItem }) {
         else if ('type' in item && item.type == 'break') {
             return <Typography component='br' />
         }
+
     }
     return <StandardTextBlock alignSelf='start' component="span" text={ item } />
 }

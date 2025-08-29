@@ -2,10 +2,16 @@ import type { KeyProps } from "../../../../assets/types/keyProps"
 import type { SiteRoute } from "../../../../assets/types/route"
 
 type TextProps = KeyProps & {
-    
+
     fontWeight ?: string,
     fontSize ?: string,
     variant ?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body1',
+}
+
+type DefaultTextProps = TextProps & {
+    type : 'text',
+    color ?: string,
+    text : string,
 }
 
 type RoseTextProps = TextProps & ({
@@ -64,6 +70,7 @@ type BreakType = typeof Break
 
 export type MultitextItem = 
         string | 
+        DefaultTextProps |
         RoseTextProps | 
         BoldTextProps | 
         LinkProps | 

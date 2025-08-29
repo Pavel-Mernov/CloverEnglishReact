@@ -3,7 +3,7 @@ import type { PageStore } from "./store";
 import familyTitle from "../images/FamilyClass/Title.png"
 
 export const FamilyContent : PageStore = {
-        titleSource : familyTitle,
+        titleSource : { imageSource: familyTitle },
 
         texts : 
         [

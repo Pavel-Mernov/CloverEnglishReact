@@ -12,6 +12,7 @@ import { useState } from "react"
 interface SpecialProps {
     caption ?: string,
     text ?: MultitextItem | MultitextItem[],
+    buttonText ?: string,
     image ?: string,
     imageWidth ?: string | number,
     imageHeight ?: string | number,
@@ -51,7 +52,7 @@ const GrayButton = styled(RoundedButton) ({
 })
 
 export function ParaContentLink(props : OuterProps) {
-    const { caption, onButtonClick, text, image, imageWidth, imageHeight } = props
+    const { caption, onButtonClick, text, image, imageWidth, imageHeight, buttonText } = props
 
     const [isTextOpen, setTextOpen] = useState(false)
 
@@ -133,7 +134,7 @@ export function ParaContentLink(props : OuterProps) {
                                 marginTop='3%'
                                 key='02'
                                 backgroundColor={Colors.Gray} 
-                                content={ "Читать полностью" } 
+                                content={ buttonText ? buttonText : "Читать полностью" } 
                                 color="#fff"
                                 fontSize='25px' />
                     }

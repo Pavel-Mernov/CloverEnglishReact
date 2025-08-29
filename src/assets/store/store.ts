@@ -9,11 +9,13 @@ import { FamilyContent } from "./FamilyContent"
 import { ArticlesContent } from "./ArticlesStore"
 import { TeachersStore } from "./TeachersStore"
 import { FeedbackStore } from "./FeedbackStore"
+import { FaqStore } from "./FaqStore"
 
 
 interface LinkInfo {
     caption ?: string,
     image ?: string,
+    buttonText ?: string,
     width ?: string | number,
     onClick : Action,
     text ?: MultitextItem | MultitextItem[],
@@ -25,7 +27,7 @@ interface FinalButtonProps {
 }
 
 interface ParaPageStore {
-    titleSource ?: { image : string } | MultitextItem,
+    titleSource ?: MultitextItem,
     width ?: string | number,
     texts ?: LinkInfo[],
     finalButtons ?: FinalButtonProps[] 
@@ -49,4 +51,5 @@ export const Store = {
     familyClass : FamilyContent,
     teachers : TeachersStore,
     feedback : FeedbackStore,
+    faq : FaqStore,
 } 

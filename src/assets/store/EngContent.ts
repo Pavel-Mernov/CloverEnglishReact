@@ -3,7 +3,7 @@ import type { PageStore } from "./store";
 import engTitle from "../images/English/FileTitle.png"
 
 export const EngContent : PageStore = {
-        titleSource : engTitle,
+        titleSource : { imageSource : engTitle },
 
         texts : 
         [

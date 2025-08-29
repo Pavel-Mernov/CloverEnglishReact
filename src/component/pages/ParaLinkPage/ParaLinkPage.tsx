@@ -40,6 +40,7 @@ export function ParaLinkPage(props : Props) {
                 }}
             component='img'
             src={ headerImage }
+            alt="title"
             />
 
         <Stack 

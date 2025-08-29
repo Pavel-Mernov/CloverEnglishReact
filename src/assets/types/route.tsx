@@ -84,7 +84,7 @@ const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })  
 
 const feedbackPage = Page({ content : BigTitlePage({ store : Store.feedback })  })
 
-const faqPage = Page({  })
+const faqPage = Page({ content : BigTitlePage({ store : Store.faq }) })
 
 const galleryPage = Page({  })
 

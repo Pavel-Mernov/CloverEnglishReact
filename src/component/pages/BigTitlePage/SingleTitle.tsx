@@ -20,24 +20,29 @@ export function SingleTitlePage(props : Props) {
             alignContent= 'center'
             spacing='4%'
         >
+
             {
-                titleSource && typeof titleSource == 'object' && 'image' in titleSource &&
+                titleSource && typeof titleSource == 'object' && 'imageSource' in titleSource &&
                     <CardMedia
                         component='img'
-                        sx={{ objectFit : 'contain', width : '30%' }}
-                        image={ titleSource.image }
+                        sx={{ 
+                            objectFit : 'contain', 
+                            width : titleSource.width ? titleSource.width : '30%' 
+                        }}
+                        width={ titleSource.width ? titleSource.width : '30%' }
+                        image={ titleSource.imageSource }
                         />
             }
 
             {
-                titleSource && (typeof titleSource == 'string' || typeof titleSource == 'object' && !('image' in titleSource)) &&
+                titleSource && (typeof titleSource == 'string' || typeof titleSource == 'object' && !('imageSource' in titleSource)) &&
                     <TextItem 
                         item={titleSource}                        
                         />
             }
 
             {
-                texts?.map(({ caption, onClick, text, image }, i) =>
+                texts?.map(({ caption, onClick, text, image, buttonText }, i) =>
                     <ParaContentLink 
                         key={ i }
                         image={ image }
@@ -45,6 +50,7 @@ export function SingleTitlePage(props : Props) {
                         alignSelf='center'
                         paddingBottom='2%'
                         caption={ caption } 
+                        buttonText={ buttonText }
                         onButtonClick={ onClick }
                         text={ text }
                         paddingInline='3%' 
