@@ -13,6 +13,7 @@ import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/Ab
 import type { MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
 import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurPath";
 import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGOS";
+import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/Homework";
 
 export type SiteRoute = "/" |
           
@@ -110,7 +111,7 @@ const ourPathPage = Page({ content : ParaLinkPage( OurPathPage ) })
 
 const aovsfgosPage = Page({ content : ParaLinkPage( AOvsFGOS )  })
 
-const homeworkPage = Page({  })
+const homeworkPage = Page({ content : ParaLinkPage( HomeworkContent )  })
 
 export const siteMap : SiteMap = {
   "/": mainPage,
