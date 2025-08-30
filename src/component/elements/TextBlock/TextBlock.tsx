@@ -22,7 +22,7 @@ export type TextBlockProps = OwnProps<TypographyProps & TypographyOwnProps,
 export function TextBlock(props : TextBlockProps) {
 
     const sx = props.upperCase ? { textTransform : 'upperCase'  } : {}
-    const { variant, component } = props
+    const { variant, component , alignSelf, fontWeight } = props
 
     return (
         <Typography
@@ -32,7 +32,8 @@ export function TextBlock(props : TextBlockProps) {
             alignContent='stretch'
             justifyContent='stretch'
             textAlign='justify'
-            fontWeight={props.fontWeight}
+            alignSelf={ alignSelf ? alignSelf : 'start' }
+            fontWeight={fontWeight}
             fontSize={props.fontSize}
             color={ props.color }
             sx={sx}

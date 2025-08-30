@@ -12,6 +12,7 @@ import { ActualPageContent } from "../../component/pages/PageContents/English/Ac
 import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/AboutFamGroup";
 import type { MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
 import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurPath";
+import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGOS";
 
 export type SiteRoute = "/" |
           
@@ -107,7 +108,7 @@ const englishPricesPage = Page({  })
 
 const ourPathPage = Page({ content : ParaLinkPage( OurPathPage ) })
 
-const aovsfgosPage = Page({  })
+const aovsfgosPage = Page({ content : ParaLinkPage( AOvsFGOS )  })
 
 const homeworkPage = Page({  })
 

@@ -6,10 +6,11 @@ type TextProps = KeyProps & {
     fontWeight ?: string,
     fontSize ?: string,
     variant ?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body1',
+    alignSelf ?: string,
 }
 
 type DefaultTextProps = TextProps & {
-    type : 'text',
+    type ?: 'text',
     color ?: string,
     text : string,
 }

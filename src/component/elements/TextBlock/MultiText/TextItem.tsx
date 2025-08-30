@@ -59,6 +59,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 variant={ item.variant ? item.variant : 'h5' } 
                 fontWeight={ item.fontWeight } 
                 fontSize={ item.fontSize ? item.fontSize : '25px' }
+                alignSelf={ item.alignSelf ? item.alignSelf : 'start' }
                 >
                     { 'text' in item ? item.text : item.listItem }
                 </Typography>
@@ -82,6 +83,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                                 variant={ item.variant ? item.variant : 'h5' } 
                                 fontWeight={ item.fontWeight } 
                                 fontSize={ item.fontSize ? item.fontSize : '25px' }
+                                alignSelf={ item.alignSelf ? item.alignSelf : 'justify' }
                                 >
                                     { it }
                                 </Typography>
@@ -94,6 +96,20 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <Typography component='br' />
         }
 
+        return <StandardTextBlock
+                text={ item.text }
+                fontSize={ item.fontSize ? item.fontSize : '25px' }
+                fontWeight={ item.fontWeight }
+                variant={ item.variant }
+                // color={ item.color }
+                alignSelf={ item.alignSelf ? item.alignSelf : 'start' }
+            />
     }
-    return <StandardTextBlock alignSelf='start' component="span" text={ item } />
+    
+
+    return <StandardTextBlock 
+        alignSelf='start' 
+        component="span"
+        text={ item } 
+        />
 }

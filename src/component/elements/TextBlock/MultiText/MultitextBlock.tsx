@@ -15,7 +15,7 @@ export function MultiTextBlock(props : MultiTextProps) {
     const { children } = props
 
     return (
-        <Typography component='span' display='inline'>
+        <Typography component='span' alignSelf='start' textAlign='start' display='inline'>
             {
                 children.map( (item, idx) =>
                     <TextItem key={ idx } item={ item } />

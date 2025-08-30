@@ -1,11 +1,11 @@
 import { TextBlock, type TextBlockProps } from "./TextBlock";
 
-const fontSize = '25px'
+const defaultFontSize = '25px'
 
-export function StandardTextBlock(props : Omit<TextBlockProps, 'color' | 'fontSize'>) {
+export function StandardTextBlock(props : Omit<TextBlockProps, 'color'>) {
     return <TextBlock 
         text={props.text} 
-        fontSize={ fontSize }
+        fontSize={ props.fontSize ? props.fontSize : defaultFontSize }
         component={ props.component ? props.component : 'p' }
         fontWeight={ props.fontWeight } 
         sx={ props.sx }
