@@ -13,9 +13,9 @@ export interface ButtonItem {
 }
 
 export interface ParaLinkPageProps {
-    headerImage : string,
+    headerImage ?: string,
     contents : MultitextItem[],
-    footerButtonItems : ButtonItem[],
+    footerButtonItems ?: ButtonItem[],
 }
 
 type Props = ParaLinkPageProps
@@ -32,6 +32,7 @@ export function ParaLinkPage(props : Props) {
         spacing='2%'
     >
     
+        { headerImage &&
         <CardMedia
             key='0'
             sx={{ 
@@ -42,7 +43,7 @@ export function ParaLinkPage(props : Props) {
             src={ headerImage }
             alt="title"
             />
-
+        }
         <Stack 
             spacing='2%'
             key='01'
@@ -63,7 +64,7 @@ export function ParaLinkPage(props : Props) {
             alignSelf='center'
             >
                 {
-                    footerButtonItems.map((item, idx) => 
+                    footerButtonItems?.map((item, idx) => 
                         <WhiteTextButton 
                             key={ `fb_${idx}` }
                             content={ item.text } 

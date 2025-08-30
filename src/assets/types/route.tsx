@@ -11,6 +11,7 @@ import { HowWeLearnPage } from "../../component/pages/PageContents/English/HowWe
 import { ActualPageContent } from "../../component/pages/PageContents/English/Actual";
 import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/AboutFamGroup";
 import type { MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
+import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurPath";
 
 export type SiteRoute = "/" |
           
@@ -104,7 +105,7 @@ const familyPricesPage = Page({  })
 
 const englishPricesPage = Page({  })
 
-const ourPathPage = Page({  })
+const ourPathPage = Page({ content : ParaLinkPage( OurPathPage ) })
 
 const aovsfgosPage = Page({  })
 
