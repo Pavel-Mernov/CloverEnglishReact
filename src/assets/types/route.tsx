@@ -15,6 +15,7 @@ import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurP
 import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGOS";
 import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/Homework";
 import { Page7Habits } from "../../component/pages/PageContents/Articles/7Habits";
+import { ProjectPage } from "../../component/pages/PageContents/Articles/Project";
 
 export type SiteRoute = "/" |
           
@@ -80,7 +81,7 @@ const famClassPage = Page({ content : BigTitlePage({ store : Store.familyClass }
 
 const articlesPage = Page({ content : BigTitlePage({ store : Store.articles })  })
 
-const articleProjPage = Page({  })
+const articleProjPage = Page({ content : ParaLinkPage( ProjectPage ) })
 
 const article7habitsPage = Page({ content : ParaLinkPage( Page7Habits ) })
 
