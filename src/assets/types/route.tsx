@@ -16,6 +16,7 @@ import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGO
 import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/Homework";
 import { Page7Habits } from "../../component/pages/PageContents/Articles/7Habits";
 import { ProjectPage } from "../../component/pages/PageContents/Articles/Project";
+import { PricePage } from "../../component/pages/PricesPage/PricesPage";
 
 export type SiteRoute = "/" |
           
@@ -95,7 +96,7 @@ const galleryPage = Page({  })
 
 // const additionalPage = Page({  })
 
-const pricePage = Page({  })
+const pricePage = Page({ content : PricePage()  })
 
 const learnEngPage = Page({ content : ParaLinkPage( LearnEngPageContent) })
 
