@@ -52,4 +52,8 @@ export const Store = {
     teachers : TeachersStore,
     feedback : FeedbackStore,
     faq : FaqStore,
+    price : {
+        english : null,
+        family : null,
+    },
 } 

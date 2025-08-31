@@ -8,6 +8,8 @@ import { RoseTextBlock } from "../RoseTextBlock"
 import type { MultitextItem } from "./MultiTextItem"
 import { TextBlock } from "../TextBlock"
 import { Stack } from "@mui/system"
+import { LocalTable } from "../../Table/LocalTable"
+
 
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props
@@ -108,6 +110,13 @@ export function TextItem(props :{ item : MultitextItem }) {
         }
         else if ('type' in item && item.type == 'break') {
             return <Typography component='br' />
+        }
+        else if ('header' in item && 'rows' in item) {
+            const { header, rows } = item
+
+            return (
+                LocalTable({ header : header, rows : rows })
+            )
         }
 
         return <StandardTextBlock

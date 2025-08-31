@@ -1,5 +1,6 @@
 import type { KeyProps } from "../../../../assets/types/keyProps"
 import type { SiteRoute } from "../../../../assets/types/route"
+import type { LocalTableProps } from "../../Table/types"
 
 type TextProps = KeyProps & {
 
@@ -86,4 +87,5 @@ export type MultitextItem =
         ImageItemProps |
         ListItemProps | 
         ListProps |
+        LocalTableProps |
         BreakType
