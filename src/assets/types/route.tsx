@@ -14,6 +14,7 @@ import type { MultitextItem } from "../../component/elements/TextBlock/MultiText
 import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurPath";
 import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGOS";
 import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/Homework";
+import { Page7Habits } from "../../component/pages/PageContents/Articles/7Habits";
 
 export type SiteRoute = "/" |
           
@@ -81,7 +82,7 @@ const articlesPage = Page({ content : BigTitlePage({ store : Store.articles })  
 
 const articleProjPage = Page({  })
 
-const article7habitsPage = Page({  })
+const article7habitsPage = Page({ content : ParaLinkPage( Page7Habits ) })
 
 const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
 

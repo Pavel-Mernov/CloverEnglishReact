@@ -52,6 +52,12 @@ type ImageItemProps = {
     width ?: string | number
 }
 
+type ImageTextItemProps = {
+    type ?: 'imagetext',
+    image : string,
+    text : MultitextItem[],
+}
+
 type MultiTextType = {
     multitext : MultitextItem[],
 } | {
@@ -75,6 +81,7 @@ export type MultitextItem =
         RoseTextProps | 
         BoldTextProps | 
         LinkProps | 
+        ImageTextItemProps |
         MultiTextType |
         ImageItemProps |
         ListItemProps | 

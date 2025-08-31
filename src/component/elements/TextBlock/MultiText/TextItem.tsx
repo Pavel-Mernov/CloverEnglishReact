@@ -7,6 +7,7 @@ import { LocalLink } from "../../Link/LocalLink"
 import { RoseTextBlock } from "../RoseTextBlock"
 import type { MultitextItem } from "./MultiTextItem"
 import { TextBlock } from "../TextBlock"
+import { Stack } from "@mui/system"
 
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props
@@ -91,6 +92,19 @@ export function TextItem(props :{ item : MultitextItem }) {
                         }
                 </Typography>
             )
+        }
+        else if (('type' in item && item.type == 'imagetext') 
+            || 
+            ( 'image' in item && 'text' in item )) {
+                return <Stack 
+                    component='div'
+                    direction='row'
+                    spacing='5%'
+                    >
+                        <ImgMedia image={ item.image } width='30%' sx={{ objectFit : 'contain' }} />
+
+                        <MultiTextBlock children={ item.text } />
+                    </Stack>
         }
         else if ('type' in item && item.type == 'break') {
             return <Typography component='br' />
