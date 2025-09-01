@@ -19,6 +19,7 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <TextBlock 
                 text={ item.text } 
                 color={ item.color } 
+                upperCase={ item.uppercase == true }
                 fontSize={ item.fontSize ? item.fontSize : '25px' } 
                 variant={ item.variant ? item.variant : 'h3' }
                 fontWeight={ item.fontWeight ? item.fontWeight : 'semiBold' }
@@ -30,6 +31,7 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <RoseTextBlock 
                 text={ text } 
                 component={ item.component }
+                upperCase={ item.uppercase == true }
                 variant={ item.variant ? item.variant : 'h3' } 
                 fontWeight={ item.fontWeight ? item.fontWeight : 'bold' } 
                 fontSize={ item.fontSize ? item.fontSize : '25px' } 
@@ -40,6 +42,7 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <StandardTextBlock 
                 text={ 'bold' in item ? item.bold : item.text } 
                 component={ item.component }
+                upperCase={ item.uppercase == true }
                 variant={ item.variant ? item.variant : 'h3' } 
                 fontWeight='bold' 
                 // fontSize={ item.fontSize ? item.fontSize : '25px' } 
@@ -59,6 +62,7 @@ export function TextItem(props :{ item : MultitextItem }) {
         else if ('listItem' in item || 'type' in item && item.type == 'listItem') {
             return <Typography 
                 component='li'
+                
                 variant={ item.variant ? item.variant : 'h5' } 
                 fontWeight={ item.fontWeight } 
                 fontSize={ item.fontSize ? item.fontSize : '25px' }

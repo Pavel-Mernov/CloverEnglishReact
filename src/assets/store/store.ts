@@ -10,6 +10,7 @@ import { ArticlesContent } from "./ArticlesStore"
 import { TeachersStore } from "./TeachersStore"
 import { FeedbackStore } from "./FeedbackStore"
 import { FaqStore } from "./FaqStore"
+import { EngPriceStore } from "./Prices/EngPriceStore"
 
 
 interface LinkInfo {
@@ -53,7 +54,7 @@ export const Store = {
     feedback : FeedbackStore,
     faq : FaqStore,
     price : {
-        english : null,
+        english : EngPriceStore,
         family : null,
     },
 } 

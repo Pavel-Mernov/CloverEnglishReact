@@ -8,6 +8,7 @@ type TextProps = KeyProps & {
     fontSize ?: string,
     variant ?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body1',
     alignSelf ?: string,
+    uppercase ?: true,
 }
 
 type DefaultTextProps = TextProps & {
@@ -42,9 +43,11 @@ type ListItemProps = TextProps & ({
 type BoldTextProps = TextProps & ({
     type : 'bold',
     text : string,
+    color ?: string,
     component ?: any,
 } | {
     bold : string,
+    color ?: string,
     component ?: any,
 })
 

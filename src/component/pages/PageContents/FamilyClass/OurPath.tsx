@@ -1,6 +1,5 @@
 import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
 import title from "../../../../assets/images/FamilyClass/Title.png"
-import type { ParaLinkPageProps } from "../../ParaLinkPage/ParaLinkPage";
 import { Colors } from "../../../../assets/colors/Colors";
 
 const contents : MultitextItem[] = [
@@ -74,34 +73,34 @@ const contents : MultitextItem[] = [
     Break, Break,
 ]
 
-export const OurPathPage : ParaLinkPageProps = {
+export const OurPathPage = {
     headerImage : title,
     contents : contents as MultitextItem[],
     footerButtonItems : [
         {
             text: 'О семейных классах',
             backgroundColor: Colors.DarkGreen,
-            link : '/aboutfam'
-        },
+            link : '/aboutfam' as const
+        } as const,
         {
             text: "Домашнее задание",
             backgroundColor: Colors.DarkGreen,
-            link : '/homework',
-        },
+            link : '/homework' as const,
+        } as const,
         {
             text: "Давайте знакомиться",
             backgroundColor: Colors.LightGreen,
             link : '/letsmeet',
-        },
+        } as const,
         {
             text: "Изучения языка с нами",
             backgroundColor: Colors.DarkGreen,
             link : '/learneng',
-        },
+        } as const,
         {
             text : 'Цены на 2025 - 2026 учебный год',
             backgroundColor : Colors.RoseDark,
             link : '/price/family'
-        },
+        } as const,
     ]
 }

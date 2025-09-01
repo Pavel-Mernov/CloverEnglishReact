@@ -1,13 +1,17 @@
 import type { MultitextItem } from "../TextBlock/MultiText/MultiTextItem"
 
-export type TableTuple<N extends 2 | 3> 
+export type HeaderTuple<N extends 2 | 3> 
+    = (N extends 2 ? [string, string] : 
+        [string, string, string] )
+
+export type RowTuple<N extends 2 | 3> 
     = (N extends 2 ? [MultitextItem, MultitextItem] : 
         [MultitextItem, MultitextItem, MultitextItem] ) 
 
 export type GenericTableProps<N extends 2 | 3> =  {
     type ?: 'table',
-    header : TableTuple<N>,
-    rows : TableTuple<N>[]
+    header : HeaderTuple<N>,
+    rows : RowTuple<N>[]
 }
 
 export type LocalTableProps = GenericTableProps<2> | GenericTableProps<3>

@@ -1,4 +1,4 @@
-import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/HowWeLearn/Title.png"
 import carroll from "../../../../assets/images/English/HowWeLearn/Carrol.png"
 import cicero from "../../../../assets/images/English/HowWeLearn/Cicero.png"
@@ -103,7 +103,7 @@ const footerButtons : ButtonItem[] = [
         },
     ]
 
-export const HowWeLearnPage : ParaLinkPageProps = {
+export const HowWeLearnPage = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerButtons,

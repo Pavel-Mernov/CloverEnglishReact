@@ -5,6 +5,7 @@ import {
 } from "@mui/material";
 import { TextItem } from "../TextBlock/MultiText/TextItem";
 import { Colors } from "../../../assets/colors/Colors";
+import { TextBlock } from "../TextBlock/TextBlock";
 
 
 export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
@@ -12,20 +13,27 @@ export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ 
+      <Table style={{ 
                 width : '80%', 
                 alignItems : 'center', 
-                justifyContent : 'center',  
-                border : '1 px solid',
-                borderColor : Colors.RoseDark,
+                justifyContent : 'center', 
+                 
+                
                 padding : '10px',
             }}>
-        <TableHead>
+        <TableHead style={{ background : Colors.Gray }}>
           <TableRow>
             {
                 header.map((item, i) => {
                     return <TableCell key={`h_${i}`}>
-                        <TextItem item={ item } />
+                        <TextBlock 
+                          text={item}
+                          upperCase
+                          color='#fff'
+                          fontWeight='bold'
+                          variant="h2"
+                          fontSize='27px'                        
+                        />
                     </TableCell>
                 })
             }

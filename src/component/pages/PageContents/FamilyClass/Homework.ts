@@ -1,4 +1,4 @@
-import type { ButtonItem } from "../../ParaLinkPage/ParaLinkPage"
+import type { ButtonItem } from "../../MultiTextPage/MultiTextPage"
 import title from "../../../../assets/images/FamilyClass/Title.png"
 import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem"
 import { Colors } from "../../../../assets/colors/Colors"

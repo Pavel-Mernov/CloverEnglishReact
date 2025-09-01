@@ -1,4 +1,4 @@
-import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/FamilyClass/AboutFamGroup/title.png"
 import einstine from "../../../../assets/images/FamilyClass/AboutFamGroup/Enshtine2.png"
 import montesq from "../../../../assets/images/FamilyClass/AboutFamGroup/Montesq.png"
@@ -133,7 +133,7 @@ const footerItems : ButtonItem[] = [
     },    
 ]
 
-export const AboutFamGroup : ParaLinkPageProps = {
+export const AboutFamGroup = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerItems,

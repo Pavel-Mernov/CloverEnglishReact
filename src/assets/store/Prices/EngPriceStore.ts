@@ -1,5 +1,5 @@
 import { Break, type MultitextItem } from "../../../component/elements/TextBlock/MultiText/MultiTextItem";
-import { Colors } from "../../colors/Colors";
+
 import franklin from '../../images/Price/Franklin.png'
 
 const contents : MultitextItem[] = [
@@ -18,24 +18,7 @@ const contents : MultitextItem[] = [
     {
         type : 'table',
         header : [
-                {
-                    bold : 'занятия в группе',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
-                {
-                    bold : '1',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
-                {
-                    bold : '2',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
+                'занятия в группе', '1', '2'
             ],
         rows : [
             ['Максимальное количество учеников', '6', '6'],
@@ -50,24 +33,9 @@ const contents : MultitextItem[] = [
     {
         type : 'table',
         header : [
-                {
-                    bold : 'Индивидуальные занятия',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
-                {
-                    bold : '1',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
-                {
-                    bold : '2',
-                    color : Colors.Gray,
-                    fontSize : '25px',
-                    variant : 'h2',
-                }, 
+            'Индивидуальные занятия',
+            '1',
+            '2' 
             ],
         rows : [
             ['Продолжительность', '60 мин', '90 мин'],
@@ -75,6 +43,7 @@ const contents : MultitextItem[] = [
             
         ],
     },    
+    Break, Break,
 ]
 
 export const EngPriceStore = {

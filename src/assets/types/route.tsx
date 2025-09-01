@@ -5,7 +5,6 @@ import { Policy } from "../../component/pages/Page/Policy";
 import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
 import { BigTitlePage } from "../../component/pages/BigTitlePage/BigTitlePage";
 import { Store } from "../store/store";
-import { ParaLinkPage } from "../../component/pages/ParaLinkPage/ParaLinkPage";
 import { LearnEngPageContent } from "../../component/pages/PageContents/English/LearnEngPage";
 import { HowWeLearnPage } from "../../component/pages/PageContents/English/HowWeLearn";
 import { ActualPageContent } from "../../component/pages/PageContents/English/Actual";
@@ -17,6 +16,7 @@ import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/
 import { Page7Habits } from "../../component/pages/PageContents/Articles/7Habits";
 import { ProjectPage } from "../../component/pages/PageContents/Articles/Project";
 import { PricePage } from "../../component/pages/PricesPage/PricesPage";
+import { MultiTextPage } from "../../component/pages/MultiTextPage/MultiTextPage";
 
 export type SiteRoute = "/" |
           
@@ -82,9 +82,9 @@ const famClassPage = Page({ content : BigTitlePage({ store : Store.familyClass }
 
 const articlesPage = Page({ content : BigTitlePage({ store : Store.articles })  })
 
-const articleProjPage = Page({ content : ParaLinkPage( ProjectPage ) })
+const articleProjPage = Page({ content : MultiTextPage( ProjectPage ) })
 
-const article7habitsPage = Page({ content : ParaLinkPage( Page7Habits ) })
+const article7habitsPage = Page({ content : MultiTextPage( Page7Habits ) })
 
 const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
 
@@ -98,23 +98,23 @@ const galleryPage = Page({  })
 
 const pricePage = Page({ content : PricePage()  })
 
-const learnEngPage = Page({ content : ParaLinkPage( LearnEngPageContent) })
+const learnEngPage = Page({ content : MultiTextPage( LearnEngPageContent) })
 
-const howwelearnPage = Page({ content : ParaLinkPage( HowWeLearnPage )  })
+const howwelearnPage = Page({ content : MultiTextPage( HowWeLearnPage )  })
 
-const actualPage = Page({ content : ParaLinkPage( ActualPageContent ) })
+const actualPage = Page({ content : MultiTextPage( ActualPageContent ) })
 
-const aboutFamPage = Page({ content : ParaLinkPage( AboutFamGroup ) })
+const aboutFamPage = Page({ content : MultiTextPage( AboutFamGroup ) })
 
-const familyPricesPage = Page({  })
+const familyPricesPage = Page({   })
 
-const englishPricesPage = Page({  })
+const englishPricesPage = Page({ content : MultiTextPage( Store.price.english )  })
 
-const ourPathPage = Page({ content : ParaLinkPage( OurPathPage ) })
+const ourPathPage = Page({ content : MultiTextPage( OurPathPage ) })
 
-const aovsfgosPage = Page({ content : ParaLinkPage( AOvsFGOS )  })
+const aovsfgosPage = Page({ content : MultiTextPage( AOvsFGOS )  })
 
-const homeworkPage = Page({ content : ParaLinkPage( HomeworkContent )  })
+const homeworkPage = Page({ content : MultiTextPage( HomeworkContent )  })
 
 export const siteMap : SiteMap = {
   "/": mainPage,

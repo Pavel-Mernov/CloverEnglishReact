@@ -3,7 +3,6 @@ import title from "../../../../assets/images/English/learnEngWithUs/Title.png"
 import wilde from "../../../../assets/images/English/learnEngWithUs/Wilde.png"
 import mallen from "../../../../assets/images/English/learnEngWithUs/Mallen.png"
 import kushner from '../../../../assets/images/English/learnEngWithUs/Kushner.png'
-import type { ParaLinkPageProps } from "../../ParaLinkPage/ParaLinkPage"
 import { Colors } from "../../../../assets/colors/Colors"
 import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem"
 
@@ -18,7 +17,7 @@ const listItems = [
     'Статус призера или победителя олимпиады 1-го или 2-го уровня.',
 ]
 
-export const LearnEngPageContent : ParaLinkPageProps = {
+export const LearnEngPageContent = {
     headerImage: title,
     contents: [
         {
@@ -197,32 +196,32 @@ clever, что значит «умный».`,
         {
             text: "Давайте Знакомиться",
             backgroundColor: Colors.Gray,
-            link: '/letsmeet'
+            link: '/letsmeet' as const
         },
         {
             text: "Как мы учим",
             backgroundColor: Colors.LightGreen,
-            link: '/howwelearn',
+            link: '/howwelearn' as const,
         },
         {
             text: "Актуальность знаний английского",
             backgroundColor: Colors.LightGreen,
-            link: '/actual'
+            link: '/actual' as const
         },
         {
             text: "Отзывы",
             backgroundColor: Colors.RoseDark,
-            link: '/feedback'
+            link: '/feedback' as const
         },
         {
             text: "Цены на 2025-2026 учебный год",
             backgroundColor: Colors.Yellow,
-            link: '/price/english'
+            link: '/price/english' as const
         },  
         {
             text: "О семейных классах",
             backgroundColor: Colors.DarkGreen,
-            link: '/aboutfam'
+            link: '/aboutfam' as const
         },
     ],
 }

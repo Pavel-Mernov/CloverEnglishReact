@@ -1,4 +1,4 @@
-import type { ParaLinkPageProps, ButtonItem } from "../../ParaLinkPage/ParaLinkPage";
+import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/Actual/Title.png"
 import fellini from "../../../../assets/images/English/Actual/Fellini.png"
 import vitkg from "../../../../assets/images/English/Actual/Vitkgstein.png"
@@ -87,7 +87,7 @@ const footerButtons : ButtonItem[] = [
         },
     ]
 
-export const ActualPageContent : ParaLinkPageProps = {
+export const ActualPageContent = {
     headerImage: title,
     contents: contents,
     footerButtonItems: footerButtons,
