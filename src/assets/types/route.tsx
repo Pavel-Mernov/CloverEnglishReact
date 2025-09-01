@@ -98,7 +98,7 @@ const actualPage = Page({ content : MultiTextPage( Store.multitextContents.engli
 
 const aboutFamPage = Page({ content : MultiTextPage( Store.multitextContents.family.aboutFamGroup ) })
 
-const familyPricesPage = Page({   })
+const familyPricesPage = Page({  content : MultiTextPage( Store.price.family )   })
 
 const englishPricesPage = Page({ content : MultiTextPage( Store.price.english )  })
 

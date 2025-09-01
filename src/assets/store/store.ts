@@ -20,6 +20,7 @@ import { AOvsFGOS } from "./ParaPageContents/FamilyClass/AOvsFGOS"
 import { HomeworkContent } from "./ParaPageContents/FamilyClass/Homework"
 import { Page7Habits } from "./ParaPageContents/Articles/7Habits"
 import { ProjectPage } from "./ParaPageContents/Articles/Project"
+import { famPrices } from "./Prices/FamPriceStore"
 
 
 interface LinkInfo {
@@ -83,6 +84,6 @@ export const Store = {
     faq : FaqStore,
     price : {
         english : EngPriceStore,
-        family : null,
+        family : famPrices,
     },
 }
