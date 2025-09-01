@@ -21,6 +21,8 @@ import { HomeworkContent } from "./ParaPageContents/FamilyClass/Homework"
 import { Page7Habits } from "./ParaPageContents/Articles/7Habits"
 import { ProjectPage } from "./ParaPageContents/Articles/Project"
 import { famPrices } from "./Prices/FamPriceStore"
+import { famGalleryProps } from "./Gallery/FamGallery"
+import { engGalleryProps } from "./Gallery/EngGallery"
 
 
 interface LinkInfo {
@@ -86,4 +88,8 @@ export const Store = {
         english : EngPriceStore,
         family : famPrices,
     },
+    gallery : {
+        english : engGalleryProps,
+        family : famGalleryProps,
+    }
 }

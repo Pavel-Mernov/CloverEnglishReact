@@ -9,6 +9,7 @@ import type { MultitextItem } from "../../component/elements/TextBlock/MultiText
 
 import { PricePage } from "../../component/pages/PricesPage/PricesPage";
 import { MultiTextPage } from "../../component/pages/MultiTextPage/MultiTextPage";
+import { GalleryPage } from "../../component/pages/GalleryPage/GalleryPage";
 
 export type SiteRoute = "/" |
           
@@ -84,7 +85,10 @@ const feedbackPage = Page({ content : BigTitlePage({ store : Store.feedback })  
 
 const faqPage = Page({ content : BigTitlePage({ store : Store.faq }) })
 
-const galleryPage = Page({  })
+const galleryPage = Page({ content : GalleryPage({ source : [
+  Store.gallery.english, Store.gallery.family
+]
+}) })
 
 // const additionalPage = Page({  })
 
