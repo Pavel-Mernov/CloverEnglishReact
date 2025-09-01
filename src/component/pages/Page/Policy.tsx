@@ -1,6 +1,12 @@
 import { Stack, Typography } from "@mui/material";
 import type { JSX } from "react";
 import { LocalAppBar } from "./LocalAppBar";
+import { MultiTextBlock } from "../../elements/TextBlock/MultiText/MultitextBlock";
+import type { MultitextItem } from "../../elements/TextBlock/MultiText/MultiTextItem";
+
+const contents : MultitextItem[] = [
+
+]
 
 export function Policy() : JSX.Element {
 
@@ -14,6 +20,10 @@ export function Policy() : JSX.Element {
                 <Typography align="center" variant="h4" fontWeight='bold'>
                     Политика конфиденциальности персональных данных
                 </Typography>
+
+                <MultiTextBlock 
+                    children={contents}
+                    />
             </Stack>
         </Stack>
     )

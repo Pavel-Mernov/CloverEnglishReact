@@ -28,11 +28,19 @@ export function Bottom() : JSX.Element {
                 Любые упоминания статей с сайта требуют указания сайта www.cloverenglish.ru
             </Typography>
 
-        <LocalLink to="/policy" variant="h4" text="Политика Конфиденциальности" />
+        <Stack 
+            component='div' 
+            alignSelf='center' 
+            alignItems='center'
+            spacing='2%'
+            >
+            <LocalLink  to="/policy" variant="h4" text="Политика Конфиденциальности" />
 
-        <Typography variant="h4" align="center">
-            2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
-        </Typography>
+            <Typography variant="h4" align="center">
+                2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
+            </Typography>
+        </Stack>
+
     </Stack>
     )
 }
