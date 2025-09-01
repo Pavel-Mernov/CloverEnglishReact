@@ -72,7 +72,10 @@ export function TextItem(props :{ item : MultitextItem }) {
                 </Typography>
         }
         else if ('multitext' in item || 'type' in item && item.type == 'multitext') {
-            return <MultiTextBlock children={ 'multitext' in item ? item.multitext : item.text } />
+            return <MultiTextBlock 
+                children={ 'multitext' in item ? item.multitext : item.text } 
+                
+                />
         }
         else if ('imageSource' in item) {
             return <ImgMedia image={ item.imageSource } />

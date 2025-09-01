@@ -8,6 +8,7 @@ export function StandardTextBlock(props : Omit<TextBlockProps, 'color'>) {
         fontSize={ props.fontSize ? props.fontSize : defaultFontSize }
         component={ props.component ? props.component : 'p' }
         fontWeight={ props.fontWeight } 
+        alignSelf={ props.alignSelf }
         sx={ props.sx }
         />
 }
