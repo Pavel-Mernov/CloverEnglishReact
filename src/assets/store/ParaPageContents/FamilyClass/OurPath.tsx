@@ -1,6 +1,6 @@
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import title from "../../../../assets/images/FamilyClass/Title.png"
-import { Colors } from "../../../../assets/colors/Colors";
+import { Colors } from "../../../colors/Colors";
 
 const contents : MultitextItem[] = [
     Break, Break,

@@ -1,10 +1,10 @@
-import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
+import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/HowWeLearn/Title.png"
 import carroll from "../../../../assets/images/English/HowWeLearn/Carrol.png"
 import cicero from "../../../../assets/images/English/HowWeLearn/Cicero.png"
 import ruskin from "../../../../assets/images/English/HowWeLearn/Ruskin.png"
-import { Colors } from "../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Colors } from "../../../colors/Colors";
+import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : MultitextItem[] = [
     {

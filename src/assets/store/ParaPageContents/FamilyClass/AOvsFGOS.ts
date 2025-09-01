@@ -1,7 +1,7 @@
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import title from "../../../../assets/images/FamilyClass/Title.png"
-import { Colors } from "../../../../assets/colors/Colors";
-import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
+import { Colors } from "../../../colors/Colors";
+import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 
 const contents : MultitextItem[] = [
     {

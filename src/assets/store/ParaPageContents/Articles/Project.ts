@@ -1,4 +1,4 @@
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import elizaB from '../../../../assets/images/Teachers/Eliza_B.jpg'
 
 import img2 from "../../../../assets/images/Articles/Project/project2.jpg"

@@ -3,8 +3,8 @@ import title from "../../../../assets/images/English/learnEngWithUs/Title.png"
 import wilde from "../../../../assets/images/English/learnEngWithUs/Wilde.png"
 import mallen from "../../../../assets/images/English/learnEngWithUs/Mallen.png"
 import kushner from '../../../../assets/images/English/learnEngWithUs/Kushner.png'
-import { Colors } from "../../../../assets/colors/Colors"
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem"
+import { Colors } from "../../../colors/Colors"
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem"
 
 // const defaultTextSize = '25px'
 const roseTextSize = '25px'

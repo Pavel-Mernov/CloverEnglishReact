@@ -1,9 +1,9 @@
-import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
+import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/Actual/Title.png"
 import fellini from "../../../../assets/images/English/Actual/Fellini.png"
 import vitkg from "../../../../assets/images/English/Actual/Vitkgstein.png"
-import { Colors } from "../../../../assets/colors/Colors";
-import type { MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
+import { Colors } from "../../../colors/Colors";
+import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
 const contents : any[] = [
     {

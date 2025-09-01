@@ -1,4 +1,4 @@
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem"
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem"
 import mariaP from "../../../../assets/images/Teachers/Maria_P.png"
 
 const contents : MultitextItem[] = [

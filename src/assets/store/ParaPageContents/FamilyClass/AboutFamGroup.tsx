@@ -1,9 +1,9 @@
-import type { ButtonItem } from "../../MultiTextPage/MultiTextPage";
+import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/FamilyClass/AboutFamGroup/title.png"
 import einstine from "../../../../assets/images/FamilyClass/AboutFamGroup/Enshtine2.png"
 import montesq from "../../../../assets/images/FamilyClass/AboutFamGroup/Montesq.png"
-import { Break, type MultitextItem } from "../../../elements/TextBlock/MultiText/MultiTextItem";
-import { Colors } from "../../../../assets/colors/Colors";
+import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
+import { Colors } from "../../../colors/Colors";
 
 const contents : MultitextItem[] = [
     {

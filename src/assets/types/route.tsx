@@ -5,16 +5,8 @@ import { Policy } from "../../component/pages/Page/Policy";
 import { LetsMeetPage } from "../../component/pages/LetsMeet/LetsMeet";
 import { BigTitlePage } from "../../component/pages/BigTitlePage/BigTitlePage";
 import { Store } from "../store/store";
-import { LearnEngPageContent } from "../../component/pages/PageContents/English/LearnEngPage";
-import { HowWeLearnPage } from "../../component/pages/PageContents/English/HowWeLearn";
-import { ActualPageContent } from "../../component/pages/PageContents/English/Actual";
-import { AboutFamGroup } from "../../component/pages/PageContents/FamilyClass/AboutFamGroup";
 import type { MultitextItem } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
-import { OurPathPage } from "../../component/pages/PageContents/FamilyClass/OurPath";
-import { AOvsFGOS } from "../../component/pages/PageContents/FamilyClass/AOvsFGOS";
-import { HomeworkContent } from "../../component/pages/PageContents/FamilyClass/Homework";
-import { Page7Habits } from "../../component/pages/PageContents/Articles/7Habits";
-import { ProjectPage } from "../../component/pages/PageContents/Articles/Project";
+
 import { PricePage } from "../../component/pages/PricesPage/PricesPage";
 import { MultiTextPage } from "../../component/pages/MultiTextPage/MultiTextPage";
 
@@ -82,9 +74,9 @@ const famClassPage = Page({ content : BigTitlePage({ store : Store.familyClass }
 
 const articlesPage = Page({ content : BigTitlePage({ store : Store.articles })  })
 
-const articleProjPage = Page({ content : MultiTextPage( ProjectPage ) })
+const articleProjPage = Page({ content : MultiTextPage( Store.multitextContents.articles.project ) })
 
-const article7habitsPage = Page({ content : MultiTextPage( Page7Habits ) })
+const article7habitsPage = Page({ content : MultiTextPage( Store.multitextContents.articles.page7habits ) })
 
 const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
 
@@ -98,23 +90,23 @@ const galleryPage = Page({  })
 
 const pricePage = Page({ content : PricePage()  })
 
-const learnEngPage = Page({ content : MultiTextPage( LearnEngPageContent) })
+const learnEngPage = Page({ content : MultiTextPage( Store.multitextContents.english.learnEng ) })
 
-const howwelearnPage = Page({ content : MultiTextPage( HowWeLearnPage )  })
+const howwelearnPage = Page({ content : MultiTextPage( Store.multitextContents.english.howWeLearn )})
 
-const actualPage = Page({ content : MultiTextPage( ActualPageContent ) })
+const actualPage = Page({ content : MultiTextPage( Store.multitextContents.english.actual ) })
 
-const aboutFamPage = Page({ content : MultiTextPage( AboutFamGroup ) })
+const aboutFamPage = Page({ content : MultiTextPage( Store.multitextContents.family.aboutFamGroup ) })
 
 const familyPricesPage = Page({   })
 
 const englishPricesPage = Page({ content : MultiTextPage( Store.price.english )  })
 
-const ourPathPage = Page({ content : MultiTextPage( OurPathPage ) })
+const ourPathPage = Page({ content : MultiTextPage( Store.multitextContents.family.ourPath ) })
 
-const aovsfgosPage = Page({ content : MultiTextPage( AOvsFGOS )  })
+const aovsfgosPage = Page({ content : MultiTextPage( Store.multitextContents.family.aoVSfgos )  })
 
-const homeworkPage = Page({ content : MultiTextPage( HomeworkContent )  })
+const homeworkPage = Page({ content : MultiTextPage( Store.multitextContents.family.homework )  })
 
 export const siteMap : SiteMap = {
   "/": mainPage,
