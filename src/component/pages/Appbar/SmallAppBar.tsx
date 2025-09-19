@@ -9,13 +9,14 @@ export const SmallAppBar : React.FC = () => {
     const columnStackProps : SxProps = {
       display : 'flex',
       flexDirection : 'column',
+      // width : '100%',
       paddingTop : '5%',
       paddingInline : '2%',
       paddingBottom : '2%',
       background : Colors.PaleGreen,
     }
 
-    
+    const displayDirection = (window.screen.width >= 800) ? 'row' : 'column'
       
     return (
       <Stack
@@ -27,7 +28,7 @@ export const SmallAppBar : React.FC = () => {
         
 
         <Stack
-          direction='row' 
+          direction={ displayDirection } 
           // display='flex'
           justifyContent='space-between'
           >     
@@ -43,7 +44,7 @@ export const SmallAppBar : React.FC = () => {
 
         </Stack>
         <Stack
-          direction='row'
+          direction={ displayDirection }
           justifyContent='space-between'
           >
               <LocalLink text="Преподаватели" to="/teachers"/>

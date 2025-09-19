@@ -61,6 +61,7 @@ type SiteMap = {
 
 const mainPage = <Page 
   content = {<MainPageContent />}
+  spacing="0%"
 />
 
 const letsMeet = <Page 

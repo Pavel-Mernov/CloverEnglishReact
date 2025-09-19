@@ -13,7 +13,7 @@ const MainStackProps : SxProps = {
     paddingInline : '2%',
     paddingBottom : '2%',
     background : Colors.PaleGreen,
-    width : '100%',
+    // : '100%',
 }
 
 

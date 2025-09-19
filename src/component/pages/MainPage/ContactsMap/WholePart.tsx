@@ -27,6 +27,7 @@ export function ContactsAndMap() {
             alignItems='center'
             maxWidth='100%'
             padding='5%'
+            margin='5%'
             spacing='10%'
             alignSelf='center'
         >

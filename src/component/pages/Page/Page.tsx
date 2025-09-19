@@ -4,14 +4,19 @@ import { Bottom } from "./Bottom";
 import type { JSX } from "react";
 
 interface Props {
-    content ?: JSX.Element
+    content ?: JSX.Element,
+    spacing ?: string,
 }
 
 export function Page(props : Props) : JSX.Element {
 
 
     return (
-        <Stack spacing="3%">
+        <Stack 
+            spacing={ props.spacing ?? '3%' } 
+            alignItems='justify'
+            >
+            
             <LocalAppBar/>
 
             {props.content}

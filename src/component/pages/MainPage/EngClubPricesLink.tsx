@@ -1,70 +1,44 @@
 import Stack from "@mui/material/Stack"
 import { Colors } from "../../../assets/colors/Colors";
-import { RoundedButton } from "../../elements/ColorButton/RoundedButton";
-import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import logo from "../../../assets/images/logo/logobig.png"
+
+import background from "../../../assets/images/main/UpperBackground.png"
+import { Card, CardContent } from "@mui/material";
+import { EngClubPricesContent } from "./EngClubContent";
 
 
 
-const Img = styled("img")(({ theme }) => ({
-  maxWidth: "100%",
-  height: "auto",
-  display: "block",
-  marginTop: theme.spacing(2),
-}));
 
 export function EngClubPricesLink() {
     return (
-        <Stack 
-          // sx={{ background : Colors.LightGray }}
-          width='100%'
-          direction='row'
-          alignSelf='end'
-          spacing='25%'
-              >
-
-              
-                <Img 
-                  src={logo} 
-                  alt="logo"
-                  width='45%'
-                  />
-
-                <Stack 
-                  direction='column'
-                  width='100%'
-                >
-                  <Typography 
-                    variant="h2" 
-                    fontWeight='bold' 
-                    alignSelf='center'
-                    >
-                    АНГЛИЙСКИЙ КЛУБ
-                  </Typography>
-
-                  <Typography 
-                    alignSelf='center'
-                    variant="h1" fontWeight='bold' 
-                    color={Colors.RoseDark}
-                    >
-                    Клевер
-                  </Typography>
-                  
-                  <RoundedButton
-                      // upperCase
-                      marginTop='25px'
-                      // variant="h1"
-                      // fontWeight='bold'
-                      fontSize='35px' 
-                      color={Colors.Gray} 
-                      backgroundColor={Colors.PaleGreen} 
-                      content="цены 2025 - 2026" 
-                      onClick="/price"            
-                  /> 
-                </Stack>
-
+      <Stack
+        sx={{ 
+          background : Colors.PaleGreen, 
+          width : '100%', 
+          height : '100%' ,
+          borderTop : 'solid',
+          padding : '15%',
+          borderTopColor : Colors.DarkGreen,
+          borderTopWidth : '3px solid',
+        }}
+        
+        >
+        
+        <Card 
+          sx={{ 
+            backgroundImage : `url(${background})`,
+            backgroundSize : 'cover',
+            color : Colors.PaleGreen,
+            backgroundPosition : 'center',
+            
+          }}
+          >
+            <CardContent>
+              <EngClubPricesContent />
+            </CardContent>
           
-          //</Stack>
+            </Card>
+          </Stack>
+      
+
     );
 }
