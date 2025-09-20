@@ -16,7 +16,7 @@ export function EngClubPricesLink() {
           width : '100%', 
           height : '100%' ,
           borderTop : 'solid',
-          padding : '15%',
+          // padding : '15%',
           borderTopColor : Colors.DarkGreen,
           borderTopWidth : '3px solid',
         }}

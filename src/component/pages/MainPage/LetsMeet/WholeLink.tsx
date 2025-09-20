@@ -36,6 +36,8 @@ const RightColButton = (props : RightColProps) =>
         content: props.content,
 })
 
+const mainDirection = (window.screen.width >= 800) ? 'row' : 'column'
+
 export function LetsMeetLink() {
     
 
@@ -47,7 +49,7 @@ export function LetsMeetLink() {
                 <Stack
                     key='content'
                     display='flex'
-                    direction='row'
+                    direction={ mainDirection }
                     alignSelf='center'
                     width='100%'
                     spacing='10%'

@@ -11,11 +11,13 @@ const Img = styled("img")(({ theme }) => ({
   marginTop: theme.spacing(2),
 }));
 
+const mainDirection = (window.screen.width < 800) ? 'column' : 'row'
+
 export const EngClubPricesContent = () => {
     return (
         <Stack
             width='100%'
-            direction='row'
+            direction={ mainDirection }
             alignSelf='center'
             spacing='15%'
             paddingTop='5%'

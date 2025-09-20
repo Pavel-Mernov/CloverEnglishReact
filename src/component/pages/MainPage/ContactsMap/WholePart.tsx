@@ -18,12 +18,12 @@ const MapImage = (_ : KeyProps) => {
 
 
 
-
+const mainDirection = ( window.screen.width >= 800 ) ? 'row' : 'column'
 
 export function ContactsAndMap() {
     return (
         <Stack
-            direction='row'
+            direction={ mainDirection }
             alignItems='center'
             maxWidth='100%'
             padding='5%'
