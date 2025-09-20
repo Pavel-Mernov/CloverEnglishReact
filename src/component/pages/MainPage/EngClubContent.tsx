@@ -13,7 +13,7 @@ const Img = styled("img")(({ theme }) => ({
 
 const mainDirection = (window.screen.width < 800) ? 'column' : 'row'
 
-const fontSize = (window.screen.width < 800) ? '80' : 'auto'
+const fontSize = (window.screen.width < 800) ? '80%' : 'auto'
 
 export const EngClubPricesContent = () => {
     return (
