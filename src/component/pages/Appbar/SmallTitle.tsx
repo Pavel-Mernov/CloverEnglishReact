@@ -17,8 +17,11 @@ export const SmallTitle : FC = () => {
         objectFit: "contain" 
     }
 
+    const fontSize = (window.screen.width <= 800) ? '100' : '350'
+
     const textSx : SxProps = {
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
+        fontSize : fontSize
     }
 
     const navToMainPage = () => {
