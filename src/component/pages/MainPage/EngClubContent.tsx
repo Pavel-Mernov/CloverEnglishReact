@@ -13,6 +13,8 @@ const Img = styled("img")(({ theme }) => ({
 
 const mainDirection = (window.screen.width < 800) ? 'column' : 'row'
 
+const fontSize = (window.screen.width < 800) ? '80' : 'auto'
+
 export const EngClubPricesContent = () => {
     return (
         <Stack
@@ -41,6 +43,7 @@ export const EngClubPricesContent = () => {
                     variant="h2" 
                     fontWeight='bold' 
                     alignSelf='center'
+                    fontSize={ fontSize }
                     color={ Colors.RoseDark }
                     >
                     АНГЛИЙСКИЙ КЛУБ
@@ -49,7 +52,9 @@ export const EngClubPricesContent = () => {
                   <Typography 
                     key='2'
                     alignSelf='center'
-                    variant="h1" fontWeight='bold' 
+                    variant="h1" 
+                    fontSize={ fontSize }
+                    fontWeight='bold' 
                     color={Colors.RoseDark}
                     >
                     Клевер
