@@ -4,6 +4,8 @@ import { useState, type FC } from "react";
 import logoMain from "../../../assets/images/logo/logomain.png"
 import { useNavigate } from "react-router-dom";
 
+const displayDirection = (window.screen.width >= 800) ? 'row' : 'column'
+
 export const SmallTitle : FC = () => {
     const navigate = useNavigate();
     
@@ -26,7 +28,7 @@ export const SmallTitle : FC = () => {
     return (
         <Stack
             onClick={navToMainPage}
-            direction='row'
+            direction={ displayDirection }
             alignItems='center'
             spacing='2%'
             

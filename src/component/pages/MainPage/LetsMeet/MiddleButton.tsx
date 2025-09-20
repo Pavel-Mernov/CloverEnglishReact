@@ -7,6 +7,8 @@ interface Props {
     caption : string, 
 }
 
+const width = ( window.screen.width < 800 ) ? '60%' : 'auto'
+
 export function MiddleButton(props : Props) {
     const { link, caption } = props
 
@@ -15,6 +17,7 @@ export function MiddleButton(props : Props) {
             padding='10%'
             onClick={link}
             variant="h5"
+            width={ width }
             content={caption}
             backgroundColor={Colors.RoseDark}
             borderRadius='20vh'
