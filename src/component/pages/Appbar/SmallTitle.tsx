@@ -4,7 +4,9 @@ import { useState, type FC } from "react";
 import logoMain from "../../../assets/images/logo/logomain.png"
 import { useNavigate } from "react-router-dom";
 
-const displayDirection = (window.screen.width >= 800) ? 'row' : 'column'
+const displayDirection = 
+    'row'
+    // (window.screen.width >= 800) ? 'row' : 'column'
 
 export const SmallTitle : FC = () => {
     const navigate = useNavigate();
@@ -17,7 +19,7 @@ export const SmallTitle : FC = () => {
         objectFit: "contain" 
     }
 
-    const fontSize = (window.screen.width <= 800) ? '100' : '350'
+    const fontSize = (window.screen.width <= 800) ? '200' : '350'
 
     const textSx : SxProps = {
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
@@ -46,6 +48,7 @@ export const SmallTitle : FC = () => {
                 <Typography 
                     variant="h2"
                     sx={textSx}
+                    fontFamily='"Backwards Sans Regular Bold", sans-serif'
                     onMouseEnter={ () => setMouseEntered(true) }
                     onMouseLeave={ () => setMouseEntered(false) }
                     >

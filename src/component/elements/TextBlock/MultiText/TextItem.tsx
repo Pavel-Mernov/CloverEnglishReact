@@ -9,7 +9,6 @@ import type { MultitextItem } from "./MultiTextItem"
 import { TextBlock } from "../TextBlock"
 import { Stack } from "@mui/system"
 import { LocalTable } from "../../Table/LocalTable"
-import { OpenSansRegular } from "../../../../assets/fonts/fonts"
 
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props
@@ -63,7 +62,7 @@ export function TextItem(props :{ item : MultitextItem }) {
         else if ('listItem' in item || 'type' in item && item.type == 'listItem') {
             return <Typography 
                 component='li'
-                fontFamily={ OpenSansRegular }
+                // fontFamily={ OpenSansRegular }
                 variant={ item.variant ? item.variant : 'h5' } 
                 fontWeight={ item.fontWeight } 
                 fontSize={ item.fontSize ? item.fontSize : '25px' }

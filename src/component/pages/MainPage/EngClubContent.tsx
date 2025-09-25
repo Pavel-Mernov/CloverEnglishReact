@@ -44,6 +44,7 @@ export const EngClubPricesContent = () => {
                     fontWeight='bold' 
                     alignSelf='center'
                     fontSize={ fontSize }
+                    fontFamily='"Backwards Sans Regular Bold", sans-serif'
                     color={ Colors.RoseDark }
                     >
                     АНГЛИЙСКИЙ КЛУБ
@@ -53,7 +54,8 @@ export const EngClubPricesContent = () => {
                     key='2'
                     alignSelf='center'
                     variant="h1" 
-                    fontSize={ fontSize }
+                    fontFamily='"TT Berlinerins Trial", sans-serif'
+                    fontSize='250'
                     fontWeight='bold' 
                     color={Colors.RoseDark}
                     >

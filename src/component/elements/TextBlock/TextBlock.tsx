@@ -2,7 +2,6 @@ import { Typography, type TypographyOwnProps, type TypographyVariant } from "@mu
 import type { KeyProps } from "../../../assets/types/keyProps";
 import type { OwnProps } from "../../../assets/types/OwnProps";
 import { type SxProps, type TypographyProps } from "@mui/system";
-import { OpenSansRegular } from "../../../assets/fonts/fonts"
 
 type StandardTextBlockProps = KeyProps & { text : string }
 
@@ -23,14 +22,20 @@ export type TextBlockProps = OwnProps<TypographyProps & TypographyOwnProps,
 export function TextBlock(props : TextBlockProps) {
 
     const sx = props.upperCase ? { textTransform : 'upperCase'  } : {}
-    const { variant, component , alignSelf, fontWeight, fontFamily } = props
+    const { 
+        variant, 
+        component, 
+        alignSelf, 
+        fontWeight, 
+
+     } = props
 
     return (
         <Typography
             variant={variant}
             display='inline'
             component={ component  }
-            fontFamily={ fontFamily ?? OpenSansRegular }
+            // fontFamily={ fontFamily ?? OpenSansRegular }
             alignContent='stretch'
             justifyContent='stretch'
             textAlign='justify'
