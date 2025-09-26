@@ -2,7 +2,6 @@ import Stack from "@mui/material/Stack"
 import { Colors } from "../../../assets/colors/Colors";
 
 import background from "../../../assets/images/main/UpperBackground.png"
-import { Card, CardContent } from "@mui/material";
 import { EngClubPricesContent } from "./EngClubContent";
 
 
@@ -13,8 +12,8 @@ export function EngClubPricesLink() {
       <Stack
         sx={{ 
           background : Colors.PaleGreen, 
-          width : '100%', 
-          height : '100%' ,
+          width : '100vw', 
+          // height : '100%' ,
           borderTop : 'solid',
           // padding : '15%',
           borderTopColor : Colors.DarkGreen,
@@ -23,20 +22,22 @@ export function EngClubPricesLink() {
         
         >
         
-        <Card 
+        <Stack 
           sx={{ 
             backgroundImage : `url(${background})`,
             backgroundSize : 'cover',
-            color : Colors.PaleGreen,
+           backgroundColor : 'transparent',
+            // position : 'absolute',
             backgroundPosition : 'center',
-            
+            backgroundRepeat : 'no-repeat',
+            border: 'transparent',
+            zIndex : '0',
           }}
           >
-            <CardContent>
               <EngClubPricesContent />
-            </CardContent>
+            
           
-            </Card>
+            </Stack>
           </Stack>
       
 
