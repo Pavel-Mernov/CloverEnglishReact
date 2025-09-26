@@ -12,7 +12,7 @@ export function EngClubPricesLink() {
       <Stack
         sx={{ 
           background : Colors.PaleGreen, 
-          width : '100vw', 
+          width : '100%', 
           // height : '100%' ,
           borderTop : 'solid',
           // padding : '15%',
