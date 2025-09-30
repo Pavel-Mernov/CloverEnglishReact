@@ -10,16 +10,21 @@ const RightCol = (_ : KeyProps) => {
 
     const para2 = `Я работала с детьми разных возрастов и приобрела богатый опыт. Это помогло мне создать клуб «Clover English» и сейчас помогает развивать своё комфортное образовательное пространство.`
 
+    const maxWidth = (window.screen.width < 800) ? 'auto' : '70%'
+
+    const titleFontSize = (window.screen.width < 800) ? '28px' : 'auto'
+
     return (
         <Stack
             spacing='5%'
-            maxWidth='70%'
+            maxWidth={ maxWidth }
         >
             <Typography
                 key='1'
                 variant="h3"
                 fontWeight='bold'
-                marginTop='20px'
+                fontSize={ titleFontSize }
+                // marginTop='20px'
                 sx={{ marginTop : '10%' }}
                 color={Colors.RoseDark}
             >
