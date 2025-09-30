@@ -30,13 +30,15 @@ const mainDirection = ( window.screen.width >= 800 ) ? 'row' : 'column'
 
 const width = (window.screen.width <= 800) ? '100%' : 'auto'
 
+const padding = (window.screen.width < 800) ? '0' : '2%'
+
 export function ContactsAndMap() {
     return (
         <Stack
             direction={ mainDirection }
             alignItems='center'
             maxWidth='100%'
-            padding='2%'
+            padding={ padding }
             width={ width }
             marginTop='5%'
             marginBottom='5%'

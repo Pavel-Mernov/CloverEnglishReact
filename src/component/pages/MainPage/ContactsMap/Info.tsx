@@ -28,7 +28,7 @@ export const Info = (_ : { key ?: Key }) => {
             key='1'
             variant="h4"
             fontWeight='bold'
-            marginTop='20px'
+            // marginTop='20px'
             sx={{ marginTop : '10%' }}
             color={Colors.RoseDark}
         >

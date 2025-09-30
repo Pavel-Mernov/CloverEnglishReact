@@ -15,12 +15,34 @@ const Img = styled("img")(({ theme }) => ({
 
 const mainDirection = (window.screen.width < 800) ? 'column' : 'row'
 
+const mainWidth = (window.screen.width < 800) ? '100%' : '80%'
+
 // const fontSize = (window.screen.width < 800) ? '80%' : 'auto'
+
+const PriceButton = (props : { key ?: string | number }) => {
+
+  const fontSize = (window.screen.width < 800) ? '22px' : '35px'
+
+  const marginTop = (window.screen.width < 800) ? '10px' : '25px'
+
+  return              <RoundedButton
+                        // upperCase
+                        key={ props.key }
+                        marginTop={ marginTop }
+                        // variant="h1"
+                        // fontWeight='bold'
+                        fontSize={ fontSize } 
+                        color={Colors.Gray} 
+                        backgroundColor={Colors.PaleGreen} 
+                        content="цены 2025 - 2026" 
+                        onClick="/price"            
+                    />
+}
 
 export const EngClubPricesContent = () => {
     return (
         <Stack
-            width='80%'
+            width={ mainWidth }
             direction={ mainDirection }
             alignSelf='center'
             // spacing='3%'
@@ -70,7 +92,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize='290%'
+                      fontSize={ (window.screen.width < 800) ? '100%' : '290%' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
@@ -82,25 +104,14 @@ export const EngClubPricesContent = () => {
                       alignSelf='center'
                       variant="h1" 
                       fontFamily='"TT Berlinerins Trial", sans-serif'
-                      fontSize='240'
+                      fontSize={ (window.screen.width < 800) ? '135' : '240' }
                       fontWeight='bold' 
                       color={Colors.RoseDark}
                       >
                       Клевер
                     </Typography>
                     
-                    <RoundedButton
-                        // upperCase
-                        key='5'
-                        marginTop='25px'
-                        // variant="h1"
-                        // fontWeight='bold'
-                        fontSize='35px' 
-                        color={Colors.Gray} 
-                        backgroundColor={Colors.PaleGreen} 
-                        content="цены 2025 - 2026" 
-                        onClick="/price"            
-                    />
+                    <PriceButton key={ 5 } />
                   </Stack>
 
   

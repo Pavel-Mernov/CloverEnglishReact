@@ -33,13 +33,15 @@ const RightCol = (_ : KeyProps) => {
     )
 }
 
+const direction = (window.screen.width < 800) ? 'column' : 'row'
+
 export function TopTitle(_ : KeyProps) {
 
     return (
         <Stack
             spacing="1%"
             component='div'
-            direction='row'
+            direction={ direction }
             alignContent='center'
         >
             <CardMedia
