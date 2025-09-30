@@ -12,7 +12,7 @@ const RightCol = (_ : KeyProps) => {
 
     const maxWidth = (window.screen.width < 800) ? 'auto' : '70%'
 
-    const titleFontSize = (window.screen.width < 800) ? '28px' : 'auto'
+    const titleFontSize = (window.screen.width < 800) ? '35px' : 'auto'
 
     return (
         <Stack
