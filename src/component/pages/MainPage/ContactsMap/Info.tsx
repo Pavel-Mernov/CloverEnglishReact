@@ -17,9 +17,11 @@ export const Info = (_ : { key ?: Key }) => {
         component = 'img'
         />
 
+    const maxWidth = (window.screen.width < 800) ? 'auto' : '50%'
+
     return <Stack 
         component='div'
-        maxWidth='50%'
+        maxWidth={ maxWidth }
         spacing='6%'
         >
         <TitleImage key='0' />

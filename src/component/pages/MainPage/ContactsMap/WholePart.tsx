@@ -32,6 +32,8 @@ const width = (window.screen.width <= 800) ? '100%' : 'auto'
 
 const padding = (window.screen.width < 800) ? '0' : '2%'
 
+const spacing = (window.screen.width < 800) ? '0' : '5%'
+
 export function ContactsAndMap() {
     return (
         <Stack
@@ -42,7 +44,7 @@ export function ContactsAndMap() {
             width={ width }
             marginTop='5%'
             marginBottom='5%'
-            spacing='5%'
+            spacing={ spacing }
             alignSelf='center'
         >
             <MapImage key='0' />
