@@ -1,11 +1,12 @@
 
-import { Stack, type SxProps } from "@mui/material"
+import { Stack } from "@mui/material"
 import { Colors } from "../../../../assets/colors/Colors";
 import type { SiteRoute } from "../../../../assets/types/route";
 import { LeftLink } from "./LeftLink";
 import { MiddleButton } from "./MiddleButton";
 import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
+/*
 const MainStackProps : SxProps = {
     display : 'flex',
     flexDirection : 'column',
@@ -13,9 +14,12 @@ const MainStackProps : SxProps = {
     paddingInline : '2%',
     paddingBottom : '2%',
     background : Colors.PaleGreen,
+    alignItems : 'center',
+    alignSelf : 'center',
+    alignContent : 'center'
     // : '100%',
 }
-
+*/
 
 
 
@@ -42,18 +46,21 @@ export function LetsMeetLink() {
     
 
     return (
-        <Stack 
-            
-            sx={MainStackProps}
-            >
+
                 <Stack
                     key='content'
+                    component='div'
                     display='flex'
                     direction={ mainDirection }
-                    alignSelf='center'
-                    width='100%'
+                    sx={{
+                        background : Colors.PaleGreen,
+                    }}
+                    padding='5%'
+                    // background={Colors.PaleGreen}
+                    // width='100%'
                     spacing='10%'
                     alignItems='center'
+                    alignContent='center'
                 >
                 <LeftLink />
 
@@ -77,6 +84,7 @@ export function LetsMeetLink() {
                 <Stack
                     key='2' 
                     spacing='5%' 
+                    alignSelf='center'
                     >
                     
                     <RightColButton content='Преподаватели' link="/teachers" />
@@ -85,6 +93,5 @@ export function LetsMeetLink() {
                     <RightColButton link="/faq" content='Ответы на частые вопросы' />
                 </Stack>
             </Stack>
-        </Stack>
     );
 }

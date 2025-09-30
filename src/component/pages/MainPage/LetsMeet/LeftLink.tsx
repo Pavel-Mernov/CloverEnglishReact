@@ -55,10 +55,12 @@ const UpperButton = (_ : { key ?: Key }) => {
 }
 
 export function LeftLink() {
+    const maxWidth = (window.screen.width < 800) ? '100%' : '20%'
+
     return (
                     <ColorButton 
                         key='0'
-                        maxWidth='15%'
+                        maxWidth={ maxWidth }
                         onClick="/letsmeet"
                         backgroundColor={Colors.White}
                         borderRadius='3vh'

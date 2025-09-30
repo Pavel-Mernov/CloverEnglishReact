@@ -1,6 +1,7 @@
 
 import openSansRegular from "../../assets/fonts/OpenSans-Regular.ttf"
 import backRegular from "../fonts/TT Backwards Sans-Regular.ttf"
+import backBold from "../fonts/TT Backwards Sans-Bold.ttf"
 import berlinerins from "../fonts/TT Berlinerins Trial Grotesk.otf"
 
 interface FontInfo {
@@ -28,7 +29,17 @@ const fonts : FontInfo[] = [
     // fontStyle: 'bold',
     fontDisplay: 'swap',
     fontSize: '30px'
-  }, 
+  },
+  
+  {
+    fontFamily: 'Backwards Sans Bold Cond',
+    src: `url(${backBold}) format("truetype")`,
+    
+    fontWeight: '1000',
+    // fontStyle: 'bold',
+    fontDisplay: 'swap',
+    fontSize: '30px'
+  },
 
   {
     fontFamily : 'Open Sans',

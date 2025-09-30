@@ -20,7 +20,7 @@ const mainDirection = (window.screen.width < 800) ? 'column' : 'row'
 export const EngClubPricesContent = () => {
     return (
         <Stack
-            width='100%'
+            width='80%'
             direction={ mainDirection }
             alignSelf='center'
             // spacing='3%'
@@ -53,9 +53,9 @@ export const EngClubPricesContent = () => {
                     objectFit : 'stretch',
                     backgroundPosition : 'center',
                     pointerEvents : 'none',
-                    padding : '20%',
-                    paddingLeft : '25%',
-                    paddingRight : '25%',
+                    padding : '10%',
+                    // paddingLeft : '25%',
+                    // paddingRight : '25%',
                     width : '100%',
                     
 
@@ -68,10 +68,10 @@ export const EngClubPricesContent = () => {
                     <Typography 
                       key='1'
                       variant="h2" 
-                      fontWeight='bold' 
+                      // fontWeight='bold' 
                       alignSelf='center'
                       fontSize='290%'
-                      fontFamily='"Backwards Sans Regular Bold", sans-serif'
+                      fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
                       АНГЛИЙСКИЙ КЛУБ

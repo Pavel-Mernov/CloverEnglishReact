@@ -6,10 +6,16 @@ import type { KeyProps } from "../../../../assets/types/keyProps";
 
 
 const MapImage = (_ : KeyProps) => {
-    const width = (window.screen.width >= 800) ? '40%' : '100%'
+    const width = (window.screen.width >= 800) ? '45%' : '100%'
+
+    // const height = (window.screen.width >= 800) ? '20%' : 'auto'
 
     return <CardMedia 
-        sx={{ objectFit : 'contain', width : width }}
+        sx={{ 
+            objectFit : 'contain', 
+            width : width, 
+            // height : height 
+        }}
         component='img'
         image={map}
         // width='20px'
@@ -30,10 +36,11 @@ export function ContactsAndMap() {
             direction={ mainDirection }
             alignItems='center'
             maxWidth='100%'
-            padding='5%'
+            padding='2%'
             width={ width }
-            margin='5%'
-            spacing='10%'
+            marginTop='5%'
+            marginBottom='5%'
+            spacing='5%'
             alignSelf='center'
         >
             <MapImage key='0' />

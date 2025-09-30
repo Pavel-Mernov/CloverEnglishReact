@@ -74,6 +74,7 @@ const contents : MultitextItem[] = [
 ]
 
 export function Policy() : JSX.Element {
+    const fontSize = (window.screen.width < 800) ? '20px' : undefined
 
     return (
         <Stack 
@@ -87,6 +88,7 @@ export function Policy() : JSX.Element {
                 </Typography>
 
                 <MultiTextBlock 
+                    fontSize={ fontSize }
                     children={contents}
                     />
             </Stack>

@@ -4,6 +4,8 @@ import { Colors } from "../../../assets/colors/Colors";
 import { LocalLink } from "../../elements/Link/LocalLink";
 
 export function Bottom() : JSX.Element {
+    const fontSize = (window.screen.width < 800) ? '16px' : '20px'
+
     return (
     <Stack
         // position="fixed"
@@ -20,7 +22,9 @@ export function Bottom() : JSX.Element {
         // align="center"
     >
         <Typography
-            variant="h6">
+            variant="h6"
+            fontSize={ fontSize }
+            >
                 Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер 
                 и ни при каких условиях не является публичной офертой, 
                 определяемой положениями ч. 2 ст. 437 Гражданского кодекса Российской Федерации. 

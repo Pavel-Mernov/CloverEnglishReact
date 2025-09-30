@@ -31,6 +31,7 @@ export function EngClubPricesLink() {
             backgroundPosition : 'center',
             backgroundRepeat : 'no-repeat',
             border: 'transparent',
+            // height : '50%',
             zIndex : '0',
           }}
           >
