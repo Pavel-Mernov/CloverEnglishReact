@@ -57,9 +57,11 @@ export const EngClubPricesContent = () => {
                 <Img 
                   src={logo} 
                   alt="logo"
+                  
                   sx={{
                     maxWidth : '50%',
-                    maxHeight : '50%'
+                    maxHeight : '50%',
+                    alignSelf : 'center',
                   }}
                   />
 
@@ -92,7 +94,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize={ (window.screen.width < 800) ? '190%' : '290%' }
+                      fontSize={ (window.screen.width < 800) ? '220%' : '290%' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
