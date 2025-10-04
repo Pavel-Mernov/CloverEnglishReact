@@ -58,8 +58,8 @@ export const EngClubPricesContent = () => {
                   src={logo} 
                   alt="logo"
                   sx={{
-                    // maxWidth : '50%',
-                    // maxHeight : '50%'
+                    maxWidth : '50%',
+                    maxHeight : '50%'
                   }}
                   />
 
@@ -92,7 +92,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize={ (window.screen.width < 800) ? '100%' : '290%' }
+                      fontSize={ (window.screen.width < 800) ? '190%' : '290%' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
@@ -103,12 +103,12 @@ export const EngClubPricesContent = () => {
                       key='2'
                       alignSelf='center'
                       variant="h1" 
-                      fontFamily='"TT Berlinerins Trial", sans-serif'
+                      fontFamily='"TT Berlinerins", sans-serif'
                       fontSize={ (window.screen.width < 800) ? '135' : '240' }
-                      fontWeight='bold' 
+                      // fontWeight='' 
                       color={Colors.RoseDark}
                       >
-                      Клевер
+                      КЛЕВЕР
                     </Typography>
                     
                     <PriceButton key={ 5 } />

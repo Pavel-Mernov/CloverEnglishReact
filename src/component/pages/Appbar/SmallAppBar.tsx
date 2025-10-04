@@ -42,11 +42,6 @@ export const SmallAppBar : React.FC = () => {
 
               <LocalLink text="Отзывы" to="/feedback"/>
 
-        </Stack>
-        <Stack
-          direction={ displayDirection }
-          justifyContent='space-between'
-          >
               <LocalLink text="Преподаватели" to="/teachers"/>
               
               <LocalLink text="Ответы на вопросы" to="/faq"/>
@@ -55,7 +50,8 @@ export const SmallAppBar : React.FC = () => {
 
               <LocalLink text="Цены" to="/price"/>
 
-          </Stack>
+        </Stack>
+
       </Stack>
    )     
 }

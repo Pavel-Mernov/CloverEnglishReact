@@ -19,7 +19,7 @@ export const SmallTitle : FC = () => {
         objectFit: "contain" 
     }
 
-    const fontSize = (window.screen.width <= 800) ? '200' : '350'
+    const fontSize = (window.screen.width <= 800) ? '175' : '200'
 
     const textSx : SxProps = {
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
@@ -36,13 +36,13 @@ export const SmallTitle : FC = () => {
             direction={ displayDirection }
             alignItems='center'
             spacing='2%'
-            
+            alignSelf='start'
             >
                 <CardMedia 
                         sx={ImageStyle}
                         component="img"
                         
-                        // height="100px"
+                        height="100px"
                         image={logoMain}/>
 
                 <Typography 

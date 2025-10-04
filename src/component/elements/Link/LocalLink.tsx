@@ -43,7 +43,7 @@ export const LocalLink : FC<Props> = ({ text, to, variant, fontSize, color }) =>
                 component="a"
                 onClick={ onClick }
                 variant={ variant }
-                fontSize={ fontSize ? fontSize : '25px' }
+                fontSize={ fontSize ? fontSize : '18px' }
                 // display='inline'
                 onMouseEnter={() => setMouseEntered(true)}
                 onMouseLeave={() => setMouseEntered(false)}

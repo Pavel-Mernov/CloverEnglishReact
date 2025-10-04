@@ -2,7 +2,9 @@
 import openSansRegular from "../../assets/fonts/OpenSans-Regular.ttf"
 import backRegular from "../fonts/TT Backwards Sans-Regular.ttf"
 import backBold from "../fonts/TT Backwards Sans-Bold.ttf"
-import berlinerins from "../fonts/TT Berlinerins Trial Grotesk.otf"
+
+import berlinerins from "../fonts/TT-Berlinerins-Grotesk.ttf"
+import berlinerinsTrial from "../fonts/TT Berlinerins Trial Grotesk.otf"
 
 interface FontInfo {
   fontFamily : string,
@@ -16,9 +18,18 @@ interface FontInfo {
 const fonts : FontInfo[] = [
   {
     fontFamily: 'TT Berlinerins Trial',
-    src: `url(${berlinerins}) format("opentype")`,
+    src: `url(${berlinerinsTrial}) format("opentype")`,
     fontDisplay: 'swap',
     fontSize: '30px',
+    fontWeight : '1000',
+  }, 
+
+  {
+    fontFamily: 'TT Berlinerins',
+    src: `url(${berlinerins}) format("truetype")`,
+    fontDisplay: 'swap',
+    fontSize: '48px',
+    fontWeight : '1000',
   }, 
 
   {
@@ -35,8 +46,8 @@ const fonts : FontInfo[] = [
     fontFamily: 'Backwards Sans Bold Cond',
     src: `url(${backBold}) format("truetype")`,
     
-    fontWeight: '1000',
-    // fontStyle: 'bold',
+    fontWeight: '2000',
+    fontStyle: 'bold',
     fontDisplay: 'swap',
     fontSize: '30px'
   },
