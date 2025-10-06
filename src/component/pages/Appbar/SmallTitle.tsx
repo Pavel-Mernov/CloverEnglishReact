@@ -15,7 +15,7 @@ export const SmallTitle : FC = () => {
 
     const ImageStyle : SxProps = 
     { 
-        width: '10%',
+        width: (window.screen.width < 800) ? '40%' : '10%',
         objectFit: "contain" 
     }
 

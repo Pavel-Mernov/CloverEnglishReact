@@ -4,7 +4,7 @@ import { Colors } from "../../../assets/colors/Colors";
 import { LocalLink } from "../../elements/Link/LocalLink";
 
 export function Bottom() : JSX.Element {
-    const fontSize = (window.screen.width < 800) ? '16px' : '20px'
+    const fontSize = (window.screen.width < 800) ? '12px' : '16px'
 
     return (
     <Stack

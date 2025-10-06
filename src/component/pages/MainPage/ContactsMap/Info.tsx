@@ -7,7 +7,11 @@ import { Colors } from "../../../../assets/colors/Colors"
 export const Info = (_ : { key ?: Key }) => { 
 
     const InfoString = (props : { text ?: string, key ?: Key, marginTop ?: string | number }) =>
-        <Typography variant="h5" fontSize='170%' marginTop={props.marginTop}>
+        <Typography 
+            variant="h5" 
+            fontSize='170%' 
+            marginTop={props.marginTop}>
+
             { props.text }
         </Typography>
 
@@ -31,6 +35,7 @@ export const Info = (_ : { key ?: Key }) => {
         <Typography
             key='1'
             variant="h4"
+            fontSize={ (window.screen.width < 800) ? '170%' : 'auto' }
             fontWeight='bold'
             // marginTop='20px'
             sx={{ marginTop : '10%' }}
