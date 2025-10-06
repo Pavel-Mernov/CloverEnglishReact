@@ -5,8 +5,8 @@ import logoMain from "../../../assets/images/logo/logomain.png"
 import { useNavigate } from "react-router-dom";
 
 const displayDirection = 
-    'row'
-    // (window.screen.width >= 800) ? 'row' : 'column'
+    // 'row'
+    (window.screen.width >= 800) ? 'row' : 'column'
 
 export const SmallTitle : FC = () => {
     const navigate = useNavigate();
