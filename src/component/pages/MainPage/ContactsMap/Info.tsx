@@ -19,6 +19,8 @@ export const Info = (_ : { key ?: Key }) => {
 
     const maxWidth = (window.screen.width < 800) ? 'auto' : '50%'
 
+    const ourLocationColor = (window.screen.width < 800) ? '#000' : Colors.RoseDark
+
     return <Stack 
         component='div'
         maxWidth={ maxWidth }
@@ -32,7 +34,7 @@ export const Info = (_ : { key ?: Key }) => {
             fontWeight='bold'
             // marginTop='20px'
             sx={{ marginTop : '10%' }}
-            color={Colors.RoseDark}
+            color={ourLocationColor}
         >
             НАШЕ МЕСТОПОЛОЖЕНИЕ
         </Typography>
