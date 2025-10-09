@@ -1,6 +1,5 @@
 import { Stack, styled } from "@mui/system"
 import { Colors } from "../../../assets/colors/Colors"
-import { RoundedButton } from "../../elements/ColorButton/RoundedButton"
 import { Typography } from "@mui/material"
 import logo from "../../../assets/images/logo/logobig.png"
 import paint from "../../../assets/images/main/paint.png"
@@ -19,6 +18,7 @@ const mainWidth = (window.screen.width < 800) ? '100%' : '80%'
 
 // const fontSize = (window.screen.width < 800) ? '80%' : 'auto'
 
+/*
 const PriceButton = (props : { key ?: string | number }) => {
 
   const fontSize = (window.screen.width < 800) ? '22px' : '35px'
@@ -38,6 +38,8 @@ const PriceButton = (props : { key ?: string | number }) => {
                         onClick="/price"            
                     />
 }
+
+*/
 
 export const EngClubPricesContent = () => {
     return (
@@ -68,19 +70,19 @@ export const EngClubPricesContent = () => {
               
                 <Stack 
                   direction='column'
-                  width='100%'
-                  height = '100%'
+                  width='70%'
+                  height = '70%'
                   sx={{
                     // position : 'absolute',
                     backgroundImage : `url(${paint})`,
                     backgroundSize : 'stretch',
-                    objectFit : 'stretch',
+                    // objectFit : 'contain',
                     backgroundPosition : 'center',
                     pointerEvents : 'none',
-                    padding : '10%',
-                    // paddingLeft : '25%',
-                    // paddingRight : '25%',
-                    width : '100%',
+                    padding : '5%',
+                    paddingTop : '10%',
+                    paddingBottom : '8%',
+                    width : '70%',
                     
 
                     backgroundRepeat : 'no-repeat',
@@ -94,7 +96,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize={ (window.screen.width < 800) ? '220%' : '290%' }
+                      fontSize={ (window.screen.width < 800) ? '220%' : '50px' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
@@ -106,14 +108,14 @@ export const EngClubPricesContent = () => {
                       alignSelf='center'
                       variant="h1" 
                       fontFamily='"TT Berlinerins", sans-serif'
-                      fontSize={ (window.screen.width < 800) ? '135' : '240' }
+                      fontSize={ (window.screen.width < 800) ? '135' : '90px' }
                       // fontWeight='' 
                       color={Colors.RoseDark}
                       >
                       КЛЕВЕР
                     </Typography>
                     
-                    <PriceButton key={ 5 } />
+                    
                   </Stack>
 
   

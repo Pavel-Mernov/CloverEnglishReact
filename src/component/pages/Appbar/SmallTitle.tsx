@@ -19,7 +19,9 @@ export const SmallTitle : FC = () => {
         objectFit: "contain" 
     }
 
-    const fontSize = (window.screen.width < 800) ? '50px' : '200'
+    const fontSize = (window.screen.width < 800) ? '25px' : '200'
+
+    const variant = (window.screen.width < 800) ? 'h5' : 'h2'
 
     const textSx : SxProps = {
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
@@ -46,7 +48,7 @@ export const SmallTitle : FC = () => {
                         image={logoMain}/>
 
                 <Typography 
-                    variant="h2"
+                    variant={ variant }
                     sx={textSx}
                     fontFamily='"Backwards Sans Regular Bold", sans-serif'
                     onMouseEnter={ () => setMouseEntered(true) }
