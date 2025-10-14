@@ -3,8 +3,10 @@ import { Stack, Typography } from "@mui/material";
 import { Colors } from "../../../assets/colors/Colors";
 import { LocalLink } from "../../elements/Link/LocalLink";
 
+const isMobile = (window.screen.width < 800)
+
 export function Bottom() : JSX.Element {
-    const fontSize = (window.screen.width < 800) ? '12px' : '16px'
+    const fontSize = isMobile ? '12px' : '16px'
 
     return (
     <Stack
@@ -38,7 +40,15 @@ export function Bottom() : JSX.Element {
             alignItems='center'
             spacing='2%'
             >
-            <LocalLink  to="/policy" variant="h4" text="Политика Конфиденциальности" />
+            <LocalLink  
+                to="/policy" 
+                fontSize={ 
+                    isMobile ? '18px' :
+                    'auto' 
+                }
+                variant="h4" 
+                text="Политика Конфиденциальности" 
+                />
 
             <Typography variant="h4" align="center">
                 2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
