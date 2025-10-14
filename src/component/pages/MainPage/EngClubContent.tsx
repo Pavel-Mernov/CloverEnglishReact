@@ -1,4 +1,4 @@
-import { maxWidth, Stack, styled } from "@mui/system"
+import { Stack, styled } from "@mui/system"
 import { Colors } from "../../../assets/colors/Colors"
 import { Typography } from "@mui/material"
 import logo from "../../../assets/images/logo/logobig.png"
