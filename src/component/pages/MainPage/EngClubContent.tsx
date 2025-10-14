@@ -49,7 +49,7 @@ const paintSxMobile : SxProps = {
   padding : '2%',
   paddingTop : '12%',
   paddingBottom : '12%',
-  width : '100%',
+  maxWidth : '100%',
   // maxWidth : '100vw',
 }
 
