@@ -44,6 +44,13 @@ const paintSxBig =
 
     }
 
+const paintSxMobile = {
+  ...paintSxCommon,
+
+  padding : '30%',
+  width : '100%',
+}
+
 export const EngClubPricesContent = () => {
     return (
         <Stack
@@ -76,7 +83,7 @@ export const EngClubPricesContent = () => {
                   direction='column'
                   width='70%'
                   height = '70%'
-                  sx={isMobile ? paintSxCommon 
+                  sx={isMobile ? paintSxMobile 
                       : paintSxBig }
                 >
                     <Typography 
@@ -94,9 +101,10 @@ export const EngClubPricesContent = () => {
                     <Typography 
                       key='2'
                       alignSelf='center'
-                      variant="h1" 
-                      fontFamily='"TT Berlinerins", sans-serif'
-                      fontSize={ isMobile ? '135' : '90px' }
+                      variant={ isMobile ? 'h2' : "h1" } 
+                      fontFamily={ isMobile ? '"Backwards Sans Bold Cond", sans-serif' : '"TT Berlinerins", sans-serif' }
+                      
+                      fontSize={ isMobile ? '75' : '90px' }
                       // fontWeight='' 
                       color={Colors.RoseDark}
                       >
