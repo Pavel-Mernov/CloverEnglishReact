@@ -1,4 +1,4 @@
-import { Stack, styled } from "@mui/system"
+import { maxWidth, Stack, styled } from "@mui/system"
 import { Colors } from "../../../assets/colors/Colors"
 import { Typography } from "@mui/material"
 import logo from "../../../assets/images/logo/logobig.png"
@@ -48,7 +48,8 @@ const paintSxMobile = {
   ...paintSxCommon,
 
   padding : '30%',
-  width : '100%',
+  // width : '100%',
+  maxWidth : '100vw',
 }
 
 export const EngClubPricesContent = () => {
@@ -91,7 +92,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize={ isMobile ? '220%' : '50px' }
+                      fontSize={ isMobile ? '300%' : '50px' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
