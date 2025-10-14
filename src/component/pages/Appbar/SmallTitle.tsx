@@ -5,8 +5,10 @@ import logoMain from "../../../assets/images/logo/logomain.png"
 import { useNavigate } from "react-router-dom";
 
 const displayDirection = 
-    // 'row'
-    (window.screen.width >= 800) ? 'row' : 'column'
+    'row'
+    // (window.screen.width >= 800) ? 'row' : 'column'
+
+const isMobile = (window.screen.width < 800)
 
 export const SmallTitle : FC = () => {
     const navigate = useNavigate();
@@ -15,13 +17,13 @@ export const SmallTitle : FC = () => {
 
     const ImageStyle : SxProps = 
     { 
-        width: (window.screen.width < 800) ? '40%' : '10%',
+        width: isMobile ? '20%' : '10%',
         objectFit: "contain" 
     }
 
-    const fontSize = (window.screen.width < 800) ? '25px' : '200'
+    const fontSize = isMobile ? '25px' : '200'
 
-    const variant = (window.screen.width < 800) ? 'h5' : 'h2'
+    const variant = isMobile ? 'h5' : 'h2'
 
     const textSx : SxProps = {
         transform : isMouseEntered ? 'scale(1.01)' : 'scale(1)',
@@ -38,7 +40,7 @@ export const SmallTitle : FC = () => {
             direction={ displayDirection }
             alignItems='center'
             spacing='2%'
-            alignSelf='start'
+            alignSelf={ isMobile ? 'center' : 'start' }
             >
                 <CardMedia 
                         sx={ImageStyle}

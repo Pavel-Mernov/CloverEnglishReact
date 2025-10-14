@@ -4,11 +4,18 @@ import { SmallTitle } from "./SmallTitle"
 import { Colors } from "../../../assets/colors/Colors"
 import { LocalLink } from "../../elements/Link/LocalLink"
 
+const isMobile = (window.screen.width < 800)
+
 export const SmallAppBar : React.FC = () => {
 
     const columnStackProps : SxProps = {
       display : 'flex',
       flexDirection : 'column',
+
+      alignSelf : isMobile ? 'center' : 'auto',
+
+      
+
       // width : '100%',
       paddingTop : '5%',
       paddingInline : '2%',
@@ -16,7 +23,7 @@ export const SmallAppBar : React.FC = () => {
       background : Colors.PaleGreen,
     }
 
-    const displayDirection = (window.screen.width >= 800) ? 'row' : 'column'
+    const displayDirection = isMobile ? 'column' : 'row'
       
     return (
       <Stack
@@ -30,6 +37,7 @@ export const SmallAppBar : React.FC = () => {
         <Stack
           direction={ displayDirection } 
           // display='flex'
+          
           justifyContent='space-between'
           >     
               <LocalLink text="Давайте знакомиться" to="/letsmeet"/>
