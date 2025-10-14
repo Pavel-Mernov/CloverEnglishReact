@@ -39,7 +39,7 @@ const paintSxBig =
       paddingTop : '12%',
       paddingBottom : '10%',
       width : '70%',
-   
+      height : '70%',
 
 
     }
@@ -49,8 +49,8 @@ const paintSxMobile : SxProps = {
   padding : '2%',
   paddingTop : '30%',
   paddingBottom : '30%',
-  // width : '100%',
-  maxWidth : '100vw',
+  width : '100%',
+  // maxWidth : '100vw',
 }
 
 export const EngClubPricesContent = () => {
@@ -83,8 +83,8 @@ export const EngClubPricesContent = () => {
                 <Stack 
                   
                   direction='column'
-                  width='70%'
-                  height = '70%'
+                  // width={ isMobile ? '100%' : '70%'}
+                  // height = { isMobile ? 'auto' : '70%' }
                   sx={isMobile ? paintSxMobile 
                       : paintSxBig }
                 >
@@ -93,7 +93,7 @@ export const EngClubPricesContent = () => {
                       variant="h2" 
                       // fontWeight='bold' 
                       alignSelf='center'
-                      fontSize={ isMobile ? '300%' : '50px' }
+                      fontSize={ isMobile ? '240%' : '50px' }
                       fontFamily='"Backwards Sans Bold Cond", sans-serif'
                       color={ Colors.RoseDark }
                       >
