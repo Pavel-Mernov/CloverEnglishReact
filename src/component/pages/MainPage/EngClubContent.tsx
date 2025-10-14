@@ -18,24 +18,30 @@ const mainDirection = isMobile ? 'column' : 'row'
 
 const mainWidth = isMobile ? '100%' : '80%'
 
-const paintSx = 
-    {
+const paintSxCommon = {
       backgroundImage : `url(${paint})`,
       backgroundSize : 'stretch',
       // objectFit : 'contain',
       backgroundPosition : 'center',
       pointerEvents : 'none',
-      padding : isMobile ? '10%' : '5%',
-      paddingTop : '10%',
-      paddingBottom : '8%',
-                    width : '70%',
-   
-                    alignSelf : isMobile ? 'center' : 'auto',
 
-                    backgroundRepeat : 'no-repeat',
-                    backgroundColor : 'transparent',
-                    // color : Colors.PaleGreen,
-                    zIndex : '1',
+      backgroundRepeat : 'no-repeat',
+      backgroundColor : 'transparent',
+                    
+      zIndex : '1',
+}
+
+const paintSxBig = 
+    {
+      ...paintSxCommon,
+
+      padding : '5%',
+      paddingTop : '12%',
+      paddingBottom : '10%',
+      width : '70%',
+   
+
+
     }
 
 export const EngClubPricesContent = () => {
@@ -70,7 +76,8 @@ export const EngClubPricesContent = () => {
                   direction='column'
                   width='70%'
                   height = '70%'
-                  sx={paintSx}
+                  sx={isMobile ? paintSxCommon 
+                      : paintSxBig }
                 >
                     <Typography 
                       key='1'
