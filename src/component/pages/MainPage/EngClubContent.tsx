@@ -46,9 +46,9 @@ const paintSxBig =
 
 const paintSxMobile : SxProps = {
   ...paintSxCommon,
-  padding : '2%',
-  // paddingTop : '12%',
-  // paddingBottom : '12%',
+  padding : '8%',
+  paddingTop : '36%',
+  paddingBottom : '36%',
   // maxWidth : '100%',
   // maxWidth : '100vw',
 }
