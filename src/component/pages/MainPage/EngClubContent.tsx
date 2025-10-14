@@ -1,4 +1,4 @@
-import { Stack, styled } from "@mui/system"
+import { Stack, styled, type SxProps } from "@mui/system"
 import { Colors } from "../../../assets/colors/Colors"
 import { Typography } from "@mui/material"
 import logo from "../../../assets/images/logo/logobig.png"
@@ -44,10 +44,11 @@ const paintSxBig =
 
     }
 
-const paintSxMobile = {
+const paintSxMobile : SxProps = {
   ...paintSxCommon,
-
-  padding : '30%',
+  padding : '2%',
+  paddingTop : '30%',
+  paddingBottom : '30%',
   // width : '100%',
   maxWidth : '100vw',
 }
