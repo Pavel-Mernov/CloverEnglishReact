@@ -101,7 +101,7 @@ export function ParaContentLink(props : OuterProps) {
                         // position='absolute'
                         sx={{ 
                             transform : 'translateY(50%)',
-                            position : 'fixed' as const, 
+                            // position : 'fixed' as const, 
                         }}
                         text={ caption } />
             }
