@@ -1,13 +1,15 @@
-import { Typography } from "@mui/material";
+
 import type { OwnProps } from "../../../../assets/types/OwnProps";
-import type { TypographyProps } from "@mui/system";
+import type { SxProps, TypographyProps } from "@mui/system";
 
 import { TextItem } from "./TextItem";
 import type { MultitextItem } from "./MultiTextItem";
+import { Typography } from "@mui/material";
 
 type SpecProps = { 
     children : MultitextItem[], 
     alignSelf ?: string, 
+    sx ?: SxProps,
 }
 
 type MultiTextProps = OwnProps<TypographyProps, SpecProps, 'children'>

@@ -18,6 +18,10 @@ export interface MultiTextPageProps {
     footerButtonItems ?: ButtonItem[],
 }
 
+// const isMobile = (window.screen.width < 800)
+
+const mainWidth = (window.screen.width < 1920) ? '80%' : '80%'
+
 type Props = MultiTextPageProps
 
 export function MultiTextPage(props : Props) {
@@ -25,7 +29,7 @@ export function MultiTextPage(props : Props) {
     
     return <Stack
         component='div'
-        width='80%'
+        width={ mainWidth }
         alignSelf='center'
         alignItems='center'
         alignContent='center'

@@ -9,6 +9,8 @@ import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
 import { ImgMedia } from "./ImgMedia"
 import { useState } from "react"
 
+const isMobile = (window.screen.width < 800)
+
 interface SpecialProps {
     caption ?: string,
     text ?: MultitextItem | MultitextItem[],
@@ -72,6 +74,8 @@ export function ParaContentLink(props : OuterProps) {
         
     } // as SxProps
 
+    
+
     const innerProps = {
         alignContent : 'stretch',
         padding : '2%',
@@ -120,10 +124,14 @@ export function ParaContentLink(props : OuterProps) {
 
                     { text && <MultiTextBlock 
                         key='001' 
+                        sx={{
+                            marginTop : isMobile ? '10px' : '0'
+                        }}
                         children={ Array.isArray(text) 
                         ? 
                         text 
                         : [ text ] } 
+                        
                         /> 
                     }
 

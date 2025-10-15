@@ -14,6 +14,8 @@ type Props = OwnProps<StackProps & StackBaseProps, LocalProps, OmitProps>
 
 type OmitSxProps = Omit<SxProps, OmitProps>
 
+const isMobile = (window.screen.width < 800)
+
 export function Header(props : Props) {
         const { text, sx } = props
 
@@ -34,6 +36,8 @@ export function Header(props : Props) {
             borderRadius : '50vh',
         } as SxProps
 
+        const fontSize = isMobile ? '20px' : '25px'
+
         return (
             <Stack
                 component='a'
@@ -42,7 +46,7 @@ export function Header(props : Props) {
                 sx={newProps} >
                     <Typography
                         variant="h1"
-                        fontSize='25px'
+                        fontSize={ fontSize }
                         fontWeight='bold'>
                             { text }
                         </Typography>
