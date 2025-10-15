@@ -1,6 +1,6 @@
 
 import { Stack } from "@mui/material";
-import { EngClubPricesLink } from "./EngClubPricesLink";
+import { EngClubPricesLink } from "./PricesLink/EngClubPricesLink";
 import { LetsMeetLink } from "./LetsMeet/WholeLink";
 import { ContactsAndMap } from "./ContactsMap/WholePart";
 

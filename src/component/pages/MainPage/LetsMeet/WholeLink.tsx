@@ -46,15 +46,18 @@ export function LetsMeetLink() {
     
 
     return (
-
+        <Stack
+            sx={{
+                background : Colors.PaleGreen,
+                width : '100%',
+            }}
+        >
                 <Stack
                     key='content'
                     component='div'
                     display='flex'
                     direction={ mainDirection }
-                    sx={{
-                        background : Colors.PaleGreen,
-                    }}
+                    alignSelf='center'
                     padding='5%'
                     // background={Colors.PaleGreen}
                     // width='100%'
@@ -93,5 +96,6 @@ export function LetsMeetLink() {
                     <RightColButton link="/faq" content='Ответы на частые вопросы' />
                 </Stack>
             </Stack>
+        </Stack>
     );
 }

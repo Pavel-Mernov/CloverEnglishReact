@@ -1,8 +1,8 @@
 import Stack from "@mui/material/Stack"
-import { Colors } from "../../../assets/colors/Colors";
+import { Colors } from "../../../../assets/colors/Colors";
 
-import background from "../../../assets/images/main/UpperBackground.png"
-import { EngClubPricesContent } from "./EngClubContent";
+import background from "../../../../assets/images/main/UpperBackground.png"
+import { PricesContent } from "./PricesContent";
 
 
 
@@ -35,7 +35,7 @@ export function EngClubPricesLink() {
             zIndex : '0',
           }}
           >
-              <EngClubPricesContent />
+              <PricesContent />
             
           
             </Stack>
