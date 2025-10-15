@@ -64,7 +64,7 @@ export function ParaContentLink(props : OuterProps) {
         borderRadius : '20px',
         borderColor : Colors.LightGreen,
         alignContent : 'start',
-        marginTop : isMobile ? '20px' : 'auto',
+        
         // paddingTop : isMobile ? '15%' : '2%', 
         width : '100%',
         padding : '2%',
@@ -105,7 +105,13 @@ export function ParaContentLink(props : OuterProps) {
 
             <Stack sx={ outerProps as SxProps } spacing='2%'>
 
-                <Stack direction='row' spacing='2%'>
+                <Stack 
+                    direction='row' 
+                    spacing='2%'
+                    sx={{
+                        marginTop : isMobile ? '20px' : 'auto',
+                    }}
+                    >
                 {
                     image && <ImgMedia 
                         image={ image }
