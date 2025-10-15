@@ -1,7 +1,7 @@
 import { Stack, styled, type SxProps } from "@mui/system"
 
 import logo from "../../../../assets/images/logo/logobig.png"
-import paint from "../../../../assets/images/main/paint.png"
+
 import { EngClubCloverLayout } from "./EngClubCloverLayout";
 import paintEngClub from "../../../../assets/images/main/mazokEngClubMobile.png"
 
@@ -19,36 +19,11 @@ const mainDirection = isMobile ? 'column' : 'row'
 
 const mainWidth = isMobile ? '100%' : '80%'
 
-const paintSxCommon = {
-      backgroundImage : `url(${paint})`,
-      
-      objectFit : 'contain',
-      backgroundPosition : 'center',
-      pointerEvents : 'none',
-
-      backgroundRepeat : 'no-repeat',
-      backgroundColor : 'transparent',
-                    
-      zIndex : '1',
-}
-
-export const PaintSxBig = 
-    {
-      ...paintSxCommon,
 
 
-
-      padding : '5%',
-      paddingTop : '12%',
-      paddingBottom : '12%',
-      width : '70%',
-      height : '70%',
-
-
-    }
 
 const paintSxMobile : SxProps = {
-  ...paintSxCommon,
+  // ...paintSxCommon,
   padding : '8%',
   paddingTop : '36%',
   paddingBottom : '36%',

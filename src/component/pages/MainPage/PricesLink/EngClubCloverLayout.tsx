@@ -1,9 +1,29 @@
 import { Stack, Typography } from "@mui/material";
 import type { KeyProps } from "../../../../assets/types/keyProps";
 import { Colors } from "../../../../assets/colors/Colors";
-import { PaintSxBig } from "./PricesContent";
-
+import paint from "../../../../assets/images/main/paint.png"
 const isMobile = false // this is designed not for mobile version
+
+const paintSx = 
+    {
+      backgroundImage : `url(${paint})`,
+      
+      objectFit : 'contain',
+      backgroundPosition : 'center',
+      pointerEvents : 'none',
+
+      backgroundRepeat : 'no-repeat',
+      backgroundColor : 'transparent',
+                    
+      zIndex : '1',
+      padding : '5%',
+      paddingTop : '12%',
+      paddingBottom : '12%',
+      width : '70%',
+      height : '70%',
+
+
+    }
 
 export function EngClubCloverLayout(_ : KeyProps) {
     return (
@@ -12,7 +32,7 @@ export function EngClubCloverLayout(_ : KeyProps) {
                   direction='column'
                   // width={ isMobile ? '100%' : '70%'}
                   // height = { isMobile ? 'auto' : '70%' }
-                  sx={ PaintSxBig }
+                  sx={ paintSx }
                 >
                     <Typography 
                       key='1'
