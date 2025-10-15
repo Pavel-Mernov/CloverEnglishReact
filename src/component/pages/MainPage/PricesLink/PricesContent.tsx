@@ -24,9 +24,9 @@ const mainWidth = isMobile ? '100%' : '80%'
 
 const paintSxMobile : SxProps = {
   // ...paintSxCommon,
-  padding : '8%',
-  paddingTop : '36%',
-  paddingBottom : '36%',
+  // padding : '8%',
+  // paddingTop : '36%',
+  // paddingBottom : '36%',
   // maxWidth : '100%',
   // maxWidth : '100vw',
 }
