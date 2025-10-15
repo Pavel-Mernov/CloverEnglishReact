@@ -64,7 +64,7 @@ export function ParaContentLink(props : OuterProps) {
         borderRadius : '20px',
         borderColor : Colors.LightGreen,
         alignContent : 'start',
-        paddingTop : '2%', 
+        paddingTop : isMobile ? '4%' : '2%', 
         width : '100%',
         padding : '2%',
         'alignItems' : 'start',
