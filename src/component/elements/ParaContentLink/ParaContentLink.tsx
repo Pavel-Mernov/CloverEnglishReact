@@ -99,7 +99,10 @@ export function ParaContentLink(props : OuterProps) {
                     <Header
                         // ref={prevRef}
                         // position='absolute'
-                        sx={{ transform : 'translateY(50%)' }}
+                        sx={{ 
+                            transform : 'translateY(50%)',
+                            position : 'fixed' as const, 
+                        }}
                         text={ caption } />
             }
 
