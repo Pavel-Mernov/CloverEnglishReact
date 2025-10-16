@@ -1,12 +1,13 @@
 import { useState, type FC } from "react";
-import type { SiteRoute } from "../../../assets/types/route";
+import type { OnClickAction } from "../../../assets/types/route";
 import { createTheme, ThemeProvider, Typography, type SxProps, type TypographyVariant } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import type { KeyProps } from "../../../assets/types/keyProps";
 
 
-interface Props {
+type Props = KeyProps & {
     text : string,
-    to ?: SiteRoute,
+    to ?: OnClickAction,
     color ?: string,
     variant ?: TypographyVariant,
     fontSize ?: string | number,
@@ -29,9 +30,10 @@ export const LocalLink : FC<Props> = ({ text, to, variant, fontSize, color }) =>
     }
 
     const onClick = !to ? () => { } :
+        typeof to == 'string' ?
       () => {
         navigate(to)
-      }
+      } : to
 
     return (
         

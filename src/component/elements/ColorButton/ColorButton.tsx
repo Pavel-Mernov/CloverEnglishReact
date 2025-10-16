@@ -8,7 +8,7 @@ type SizeValue = string | number
 
 export interface ColorButtonProps {
     color ?: string,
-    backgroundColor : string,
+    backgroundColor ?: string,
     content : string | JSX.Element | JSX.Element[],
     onClick ?: OnClickAction,
     alignSelf ?: string,

@@ -4,11 +4,16 @@ import photo from "../../../../assets/images/main/letsmeet3.jpg"
 import type { Key } from "react";
 import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
+const isMobile = (window.screen.width < 800)
 
 const Photo = () => {
     return (
         <CardMedia 
-            sx={{ 'objectFit' : 'contain' }}
+            sx={{ 
+                'objectFit' : 'contain', 
+                width : isMobile ? '80%' : undefined,
+                
+            }}
             component="img"
             
             
@@ -37,8 +42,9 @@ const UpperButton = (_ : { key ?: Key }) => {
         color={Colors.Gray}
     >
         <Typography variant="h5" 
-            fontSize='100%' 
+            fontSize='150%' 
             key='0'
+            textAlign='center'
             alignSelf='center'
             alignItems='center'
             justifyContent='space-between'
@@ -47,6 +53,8 @@ const UpperButton = (_ : { key ?: Key }) => {
             >
             Давайте 
             
+            <br />
+
             знакомиться
         </Typography>
 
@@ -61,13 +69,14 @@ export function LeftLink() {
                     <ColorButton 
                         key='0'
                         maxWidth={ maxWidth }
+                        height={ isMobile ? 'auto' : '15%' }
                         onClick="/letsmeet"
                         backgroundColor={Colors.White}
                         borderRadius='3vh'
                         spacing='2%'
-                        padding='1%'
-                        paddingInline='3%'
-                        paddingTop='2%'
+                        padding={ isMobile ? '5%' : '2%' }
+                        paddingInline={ isMobile ? 'auto' : '5%' }
+                        paddingTop={ isMobile ? '5%' : '2%' }
                         content={[
                             <UpperButton key='0' />,
 

@@ -75,12 +75,12 @@ export function LetsMeetLink() {
                     >
                         <MiddleButton 
                             link='/englishlanguage' 
-                            caption='Английский язык' 
+                            imageSource='Английский язык' 
                             key='0'
                         />
                         <MiddleButton 
                             link='/familyclass' 
-                            caption='Семейный класс'
+                            imageSource='Семейный класс'
                             key='1'
                         />
                 </Stack>
