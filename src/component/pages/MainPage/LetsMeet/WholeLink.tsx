@@ -6,6 +6,9 @@ import { LeftLink } from "./LeftLink";
 import { MiddleButton } from "./MiddleButton";
 import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
+import engFile from "../../../../assets/images/main/EngFamIcons/Engfile.png"
+import famFile from "../../../../assets/images/main/EngFamIcons/Famfile.png"
+
 /*
 const MainStackProps : SxProps = {
     display : 'flex',
@@ -75,12 +78,12 @@ export function LetsMeetLink() {
                     >
                         <MiddleButton 
                             link='/englishlanguage' 
-                            imageSource='Английский язык' 
+                            imageSource={ engFile } 
                             key='0'
                         />
                         <MiddleButton 
                             link='/familyclass' 
-                            imageSource='Семейный класс'
+                            imageSource={ famFile }
                             key='1'
                         />
                 </Stack>
