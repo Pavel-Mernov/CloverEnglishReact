@@ -7,7 +7,7 @@ import { MiddleButton } from "./MiddleButton";
 import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
 import engFile from "../../../../assets/images/main/EngFamIcons/Engfile.png"
-import famFile from "../../../../assets/images/main/EngFamIcons/Famfile.png"
+import famFile from "../../../../assets/images/main/EngFamIcons/FamFile.png"
 
 /*
 const MainStackProps : SxProps = {
