@@ -12,6 +12,10 @@ function Image(props : { source : string }) {
     return (
         <CardMedia
             component='img'
+            sx={{
+                
+                width : '85%'
+            }}
             src={ props.source }
         />
     )
@@ -28,13 +32,7 @@ export function MiddleButton(props : Props) {
         <ColorButton
             padding='10%'
             onClick={link}
-            // variant="h5"
-            // width={ width }
             content={Image({ source : imageSource })}
-            // backgroundColor={Colors.RoseDark}
-            // borderRadius='20vh'
-            // fontWeight='bold'
-            // color={Colors.White}
         />
     )
 }

@@ -8,10 +8,10 @@ import phonePhoto from "../../../assets/images/main/contacts/phone.png"
 import { CardMedia } from "@mui/material";
 import { useState } from "react";
 
-function ContactButton(props : KeyProps & { image : string, link : string }) {
-    const { image, link } = props
+function ContactButton(props : KeyProps & { image : string, link : string, size ?: number | string }) {
+    const { image, link, size } = props
 
-    const size = '50px'
+    // const size = '50px'
 
     const [isMouseEntered, setMouseEntered] = useState(false)
 
@@ -49,7 +49,9 @@ function ContactButton(props : KeyProps & { image : string, link : string }) {
     )
 }
 
-export function ContactButtons() {
+export function ContactButtons(props : KeyProps & { size ?: number | string }) {
+
+    const { size } = props
 
     return (
         <Stack
@@ -59,16 +61,19 @@ export function ContactButtons() {
         >
             <ContactButton 
                 image={telegramPhoto} 
+                size={ size }
                 link="tg://resolve?domain=@YuliaKorolev/"            
             />
 
             <ContactButton 
                 image={whatsappPhoto} 
+                size={ size }
                 link="https://wa.me/+79165027198"            
             />
 
             <ContactButton 
                 image={phonePhoto} 
+                size={ size }
                 link="tel: +79165027198"            
             />
         </Stack>

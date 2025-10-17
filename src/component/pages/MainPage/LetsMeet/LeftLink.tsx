@@ -11,7 +11,7 @@ const Photo = () => {
         <CardMedia 
             sx={{ 
                 'objectFit' : 'contain', 
-                width : isMobile ? '80%' : undefined,
+                width : isMobile ? '65%' : undefined,
                 
             }}
             component="img"
@@ -26,7 +26,7 @@ const Photo = () => {
 const UpperButton = (_ : { key ?: Key }) => { 
     const sxProps : SxProps = {
         paddingInline : '10%',
-        paddingBlock : '5%',
+        paddingBlock : '1%',
         alignItems : 'center',
         alignContent : 'center',
         alignSelf : 'center',
@@ -73,8 +73,8 @@ export function LeftLink() {
                         onClick="/letsmeet"
                         backgroundColor={Colors.White}
                         borderRadius='3vh'
-                        spacing='2%'
-                        padding={ isMobile ? '5%' : '2%' }
+                        spacing='0'
+                        padding={ isMobile ? '8%' : '2%' }
                         paddingInline={ isMobile ? 'auto' : '5%' }
                         paddingTop={ isMobile ? '5%' : '2%' }
                         content={[

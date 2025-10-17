@@ -49,7 +49,7 @@ export const SmallTitle : FC<Props> = ({ onClickMenu }) => {
             
             width='100%'
 
-            alignSelf={ isMobile ? 'center' : 
+            justifyContent={ isMobile ? 'center' : 
                 'auto' }
             >
                 <CardMedia 
@@ -81,7 +81,7 @@ export const SmallTitle : FC<Props> = ({ onClickMenu }) => {
                 }
 
                 {
-                    (!isMobile) && <ContactButtons />
+                    (!isMobile) && <ContactButtons size='60px' />
                 }
         </Stack>
 

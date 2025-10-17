@@ -22,8 +22,8 @@ export const SmallAppBar : React.FC = () => {
 
       // width : '100%',
       paddingTop : isMobile ? 0 : '5%',
-      paddingInline : isMobile ? '1%' : '1%',
-      paddingBottom : isMobile ? '5%' : '2%',
+      paddingInline : isMobile ? '0%' : '1%',
+      paddingBottom : isMobile ? '3%' : '2%',
       background : Colors.PaleGreen,
     }
 
@@ -31,19 +31,25 @@ export const SmallAppBar : React.FC = () => {
       
     return (
       <Stack
-        spacing='1%'
+        spacing={ isMobile ? 'auto' : '1%' }
         width={ isMobile ? '100%' : 'auto' }
         sx={columnStackProps}
         >
-        <SmallTitle onClickMenu={() => setMenuOpen(!isMenuOpen)} />
+        <SmallTitle key='0' onClickMenu={() => setMenuOpen(!isMenuOpen)} />
 
+        {
+          isMobile && <ContactButtons key='01' size='40px' />
+        }
         
         { (!isMobile || isMenuOpen) &&
 
             <Stack
+              key='1'
               direction={ displayDirection } 
               sx={{
                 // maxWidth : '100%',
+                // marginTop : isMobile ? '30%' : 'auto',
+                paddingTop : isMobile ? '10%' : 'auto',
               }}
               display='flex'
               alignItems='center'
@@ -71,9 +77,7 @@ export const SmallAppBar : React.FC = () => {
 
         }
 
-        {
-          isMobile && <ContactButtons />
-        }
+
       </Stack>
    )     
 }
