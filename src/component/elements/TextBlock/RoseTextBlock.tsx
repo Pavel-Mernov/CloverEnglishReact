@@ -7,6 +7,7 @@ type Props = Omit<TextBlockProps, 'color'>
 export const RoseTextBlock = (props : Props) => {
     return <TextBlock
         text = {props.text} 
+        alignSelf={ props.alignSelf }
         fontFamily={ 
             props.fontFamily ?? 
             

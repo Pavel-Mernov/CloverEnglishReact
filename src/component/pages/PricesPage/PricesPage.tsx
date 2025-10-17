@@ -14,6 +14,7 @@ export function PricePage() {
         >
         
         <RoseTextBlock 
+            alignSelf='center'
             fontWeight='bold'
             key='1'
             text="Цены на 2025-2026 учебный год"
