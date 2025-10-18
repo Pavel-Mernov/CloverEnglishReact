@@ -29,6 +29,7 @@ export function TextItem(props :{ item : MultitextItem }) {
 
             return <RoseTextBlock 
                 text={ text } 
+                alignSelf={ item.alignSelf }
                 component={ item.component }
                 upperCase={ item.uppercase == true }
                 variant={ item.variant ? item.variant : 'h3' } 
@@ -78,7 +79,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 />
         }
         else if ('imageSource' in item) {
-            return <ImgMedia image={ item.imageSource } />
+            return <ImgMedia image={ item.imageSource } width={ item.width } sx={{ width : item.width }} />
         }
         else if ('list' in item) {
 

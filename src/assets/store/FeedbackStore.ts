@@ -11,7 +11,7 @@ export const FeedbackStore : PageStore = {
         roseText : 'Отзывы наших учеников',
         fontSize : '30px',
         variant : 'h2',
-        
+        alignSelf : 'center',
     },
     texts : [
         {

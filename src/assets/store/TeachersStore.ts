@@ -11,7 +11,7 @@ export const TeachersStore : PageStore = {
         roseText : 'Наша команда преподавателей',
         fontSize : '30px',
         variant : 'h2',
-        
+        alignSelf : 'center'
     },
     texts : [
         {

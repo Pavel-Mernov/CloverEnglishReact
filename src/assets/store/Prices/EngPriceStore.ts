@@ -2,10 +2,12 @@ import { Break, type MultitextItem } from "../../../component/elements/TextBlock
 
 import franklin from '../../images/Price/Franklin.png'
 
+const isMobile = (window.screen.width < 800)
+
 const contents : MultitextItem[] = [
     {
         imageSource : franklin,
-        width : '40%'
+        width : isMobile ? '80vw' : '40vw'
     },
     Break, Break,
     {

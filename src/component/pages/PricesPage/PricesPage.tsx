@@ -20,6 +20,7 @@ export function PricePage() {
             text="Цены на 2025-2026 учебный год"
             variant="h1"
             fontSize='35px'
+            
         />
 
         <Stack

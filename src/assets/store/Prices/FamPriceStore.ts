@@ -2,6 +2,8 @@ import { Break, type MultitextItem } from "../../../component/elements/TextBlock
 
 import royce from '../../images/Price/Rois.png'
 
+const isMobile = (window.screen.width < 800)
+
 const keys = [
         'Максимальное количество учеников',
         'Количество дней в неделю',
@@ -35,7 +37,6 @@ const values1 : Values = {
         multitext : [
             '165 000 р. за год.',
             Break, Break,
-            'Оплачивать можно по частям, но не менее 20 000 р. в месяц. Последняя оплате не позднее 1 апреля 2026 года.'
         ]
     }
 } 
@@ -63,11 +64,7 @@ const values2 : Values = {
     },
     "Стоимость учебного года 2025-2026": {
         multitext : [
-            '205 000 р. за год.',
-            Break, Break,
-            `Оплачивать можно по частям, но не
-                менее 25 000 р. в месяц. Последняя
-                оплате не позднее 1 апреля 2026 года.`,    
+            '205 000 р. за год.',  
         ]
     }
 }
@@ -79,14 +76,14 @@ const table2rows = keys.map(key => [ key as MultitextItem, values2[key] ] as con
 const contents : MultitextItem[] = [
     {
         imageSource : royce,
-        width : '40%'
+        width : isMobile ? '80vw' : '40vw'
     },
     Break, Break,
     {
         roseText: 'Цены на 2025-2026 учебный год'
     },
     {
-        roseText: 'Английский язык',
+        roseText: 'Семейный класс',
     },
     Break,
     {
@@ -97,7 +94,7 @@ const contents : MultitextItem[] = [
     Break, Break,
     {
         type : 'table',
-        header : ['Семейный класс', '2-3 класс'],
+        header : ['Семейный класс', '2 класс'],
         rows : table2rows
     },  
     Break, Break,
