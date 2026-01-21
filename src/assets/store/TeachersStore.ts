@@ -1,7 +1,6 @@
 import type { PageStore } from "./store";
 import annaP from '../../assets/images/Teachers/Anna_P.jpg'
 import mariaP from '../../assets/images/Teachers/Maria_P.png'
-import elizaB from "../../assets/images/Teachers/Eliza_B.jpg"
 import annaF from "../../assets/images/Teachers/Anna_F.jpg"
 
 import { Break } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
