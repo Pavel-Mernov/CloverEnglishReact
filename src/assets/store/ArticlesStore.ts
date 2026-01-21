@@ -1,7 +1,6 @@
 import { Break } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
 import type { PageStore } from "./store";
 import mariaP from "../../assets/images/Teachers/Maria_P.png"
-import elizaB from "../../assets/images/Teachers/Eliza_B.jpg"
 
 export const ArticlesContent : PageStore = {
     width : '90%',
@@ -10,7 +9,7 @@ export const ArticlesContent : PageStore = {
             
             caption : `Проектная деятельность в семейной школе`,
             onClick: "/articles/project",
-            image : elizaB,
+            
             text : [
                 {
                     multitext : [
