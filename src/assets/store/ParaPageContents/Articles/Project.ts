@@ -1,5 +1,4 @@
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
-import elizaB from '../../../../assets/images/Teachers/Eliza_B.jpg'
 
 import img2 from "../../../../assets/images/Articles/Project/project2.jpg"
 import img3 from "../../../../assets/images/Articles/Project/project3.jpg"
@@ -8,7 +7,7 @@ import img5 from "../../../../assets/images/Articles/Project/project5.jpg"
 
 const contents : MultitextItem[] = [
     {
-        image : elizaB,
+        image : '',
         text : [
             {
                 bold : 'Елизавета Бычковская',
@@ -22,7 +21,7 @@ const contents : MultitextItem[] = [
         ],
     },
     {
-        bold : 'Проектная деятельность в семейной школ',
+        bold : 'Проектная деятельность в семейной школе',
         fontSize : '30px',
         variant : 'h2',
     },
