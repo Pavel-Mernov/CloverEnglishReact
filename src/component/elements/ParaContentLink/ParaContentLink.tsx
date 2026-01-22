@@ -92,6 +92,8 @@ export function ParaContentLink(props : OuterProps) {
     const accordionText = (typeof onButtonClick == 'object' && 'addText' in onButtonClick) ?
         onButtonClick.addText : undefined
 
+    const defaultImageWidth = isMobile ? '90%' : '30%'
+
     return (
         <Stack alignContent='center' alignItems='center' width={ props.width }>
 
@@ -109,7 +111,7 @@ export function ParaContentLink(props : OuterProps) {
             <Stack sx={ outerProps as SxProps } spacing='2%'>
 
                 <Stack 
-                    direction='row' 
+                    direction={ isMobile ? 'column' : 'row' } 
                     spacing='2%'
                     sx={{
                         marginTop : isMobile ? '20px' : 'auto',
@@ -123,7 +125,7 @@ export function ParaContentLink(props : OuterProps) {
                         sx={{ 
                                 alignSelf : 'center', 
                                 marginTop : '50px', 
-                                maxWidth : imageWidth ? imageWidth :'30%',
+                                maxWidth : imageWidth ? imageWidth : defaultImageWidth,
                                 maxHeight : imageHeight, 
                             }}                    
                     />
@@ -154,7 +156,7 @@ export function ParaContentLink(props : OuterProps) {
                                 backgroundColor={Colors.Gray} 
                                 content={ buttonText ? buttonText : "Читать полностью" } 
                                 color="#fff"
-                                fontSize='25px' />
+                                fontSize={ isMobile ? '20px' : '25px' } />
                     }
 
 

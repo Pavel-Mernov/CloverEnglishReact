@@ -5,11 +5,14 @@ import annaF from "../../assets/images/Teachers/Anna_F.jpg"
 
 import { Break } from "../../component/elements/TextBlock/MultiText/MultiTextItem";
 
+const isMobile = (window.screen.width < 800)
+
 export const TeachersStore : PageStore = {
     titleSource : {
         roseText : 'Наша команда преподавателей',
-        fontSize : '30px',
+        fontSize : isMobile ? '27px' : '30px',
         variant : 'h2',
+        
         alignSelf : 'center'
     },
     texts : [

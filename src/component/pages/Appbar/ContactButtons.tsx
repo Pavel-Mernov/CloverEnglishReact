@@ -2,7 +2,6 @@ import { Stack } from "@mui/system";
 import type { KeyProps } from "../../../assets/types/keyProps";
 
 import telegramPhoto from "../../../assets/images/main/contacts/telegram.png"
-import whatsappPhoto from "../../../assets/images/main/contacts/whatsapp.png"
 import phonePhoto from "../../../assets/images/main/contacts/phone.png"
 
 import { CardMedia } from "@mui/material";
@@ -65,11 +64,7 @@ export function ContactButtons(props : KeyProps & { size ?: number | string }) {
                 link="tg://resolve?domain=@YuliaKorolev/"            
             />
 
-            <ContactButton 
-                image={whatsappPhoto} 
-                size={ size }
-                link="https://wa.me/+79165027198"            
-            />
+            
 
             <ContactButton 
                 image={phonePhoto} 

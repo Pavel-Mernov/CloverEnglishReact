@@ -51,7 +51,7 @@ export function Bottom() : JSX.Element {
                 />
 
             <Typography variant="h4" align="center">
-                2025 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
+                2026 АНГЛИЙСКИЙ КЛУБ "КЛЕВЕР"
             </Typography>
         </Stack>
 

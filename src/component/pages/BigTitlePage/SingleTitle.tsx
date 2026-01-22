@@ -8,10 +8,14 @@ import { ParaContentLink } from "../../elements/ParaContentLink/ParaContentLink"
 
 type Props = KeyProps & { store : PageStore }
 
+const isMobile = (window.screen.width < 800)
+
 export function SingleTitlePage(props : Props) {
     const { store } = props
 
     const { titleSource, texts, finalButtons, width } = store
+
+    const defaultTitleWidth = isMobile ? '75%' : '30%'
 
     return (
         <Stack
@@ -27,9 +31,9 @@ export function SingleTitlePage(props : Props) {
                         component='img'
                         sx={{ 
                             objectFit : 'contain', 
-                            width : titleSource.width ? titleSource.width : '30%' 
+                            width : titleSource.width ? titleSource.width : defaultTitleWidth 
                         }}
-                        width={ titleSource.width ? titleSource.width : '30%' }
+                        width={ titleSource.width ? titleSource.width : defaultTitleWidth }
                         image={ titleSource.imageSource }
                         />
             }
