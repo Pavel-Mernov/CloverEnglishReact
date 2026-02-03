@@ -105,6 +105,7 @@ export function ColorButton(props : Props) : JSX.Element {
                 {
                     typeof content === 'string' ?
                     <Typography 
+                        textAlign='center'
                         variant={variant}
                         fontWeight={fontWeight}
                         fontSize={fontSize}

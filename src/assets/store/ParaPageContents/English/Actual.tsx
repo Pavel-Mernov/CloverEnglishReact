@@ -5,11 +5,13 @@ import vitkg from "../../../../assets/images/English/Actual/Vitkgstein.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
+const isMobile = (window.screen.width < 800)
+
 const contents : any[] = [
     {
         
         imageSource : fellini,
-        width : '40%',
+        width : isMobile ? '100%' : '40%',
     } as MultitextItem,
     
     `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,
@@ -45,7 +47,7 @@ const contents : any[] = [
     } as MultitextItem,
     {
         imageSource : vitkg,
-        width : '50%',
+        width : isMobile ? '100%' : '50%',
     } as MultitextItem,
     `Несмотря на глобальные перемены, происходящие в мире, есть факторы, которые сложились давно и вряд ли изменятся в обозримом будущем. Один из них – это статус английского, как языка международного общения. Научное, деловое и культурное взаимодействие в мире происходит на английском языке – самом распространенном на всех континентах. И если мы хотим быть частью мирового сообщества, нам нужно знать английский.`,
     

@@ -6,10 +6,12 @@ import ruskin from "../../../../assets/images/English/HowWeLearn/Ruskin.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
+const isMobile = (window.screen.width < 800)
+
 const contents : MultitextItem[] = [
     {
         imageSource : carroll,
-        width : '60%'
+        width : isMobile ? '100%' : '60%'
     },
     'На занятия мы приглашаем школьников со 2-го по 11-й класс.',
     
@@ -20,7 +22,7 @@ const contents : MultitextItem[] = [
     
     {
         imageSource : cicero,
-        width : '70%',
+        width : isMobile ? '100%' : '70%',
     },
     {
         type : 'roseText',
@@ -64,7 +66,7 @@ const contents : MultitextItem[] = [
     },
     {
         imageSource : ruskin,
-        width : '70%',
+        width : isMobile ? '100%' : '70%',
     },
     `Ученикам с выраженным лингвистическим талантом и повышенным интересом к изучению языка мы предлагаем присоединится к олимпиадной группе и готовиться к всероссийской олимпиаде школьников, а также к перечневым (вузовским) олимпиадам 1-го и 2-го уровня`
     ,

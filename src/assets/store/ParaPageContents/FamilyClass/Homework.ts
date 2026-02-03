@@ -57,11 +57,6 @@ const footerButtons : ButtonItem[] = [
         link : '/aboutfam'
     },
     {
-        text : 'Наши преподаватели',
-        backgroundColor : Colors.RoseDark,
-        link : '/teachers'
-    },
-    {
         text : 'Отзывы',
         backgroundColor : Colors.RoseDark,
         link : '/feedback'

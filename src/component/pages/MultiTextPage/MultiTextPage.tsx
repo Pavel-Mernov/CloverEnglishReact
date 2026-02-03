@@ -18,7 +18,7 @@ export interface MultiTextPageProps {
     footerButtonItems ?: ButtonItem[],
 }
 
-// const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 800)
 
 const mainWidth = (window.screen.width < 1920) ? '80%' : '80%'
 
@@ -59,7 +59,7 @@ export function MultiTextPage(props : Props) {
 
 
         <Stack 
-            width='70%' 
+            width={ isMobile ? '90%' : '70%' }
             marginTop='50px'
             spacing='1%'
             key='2'

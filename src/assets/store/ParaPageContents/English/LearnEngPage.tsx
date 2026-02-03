@@ -9,6 +9,8 @@ import { Break, type MultitextItem } from "../../../../component/elements/TextBl
 // const defaultTextSize = '25px'
 const roseTextSize = '25px'
 
+const isMobile = (window.screen.width < 800)
+
 const listItems = [
     'Свободное общение на английском;',
     'Просмотр видеороликов и фильмов без перевода;',
@@ -22,7 +24,7 @@ export const LearnEngPageContent = {
     contents: [
         {
             imageSource : wilde,
-            width : '70%'
+            width : isMobile ? '120%' : '70%'
         },
         {
             multitext : [
@@ -63,7 +65,7 @@ Macmillan и многие другие), на свой многолетний о
             
             {
                 imageSource : mallen,
-                width : '50%',
+                width : isMobile ? '100%' : '50%',
             },
             {
                 multitext : [
@@ -181,7 +183,7 @@ clever, что значит «умный».`,
             },
             {
                 imageSource : kushner,
-                width : '60%'
+                width : isMobile ? '100%' : '60%'
             },
 
             `Современный мир меняется очень быстро, и чтобы успевать за всеми изменениями, надо постоянно приобретать новые знания. Школьные годы – это время, когда при правильном подходе к обучению дети вырабатывают привычку учиться, искать для себя новую, интересную и полезную информацию.`,

@@ -93,7 +93,7 @@ export function LetsMeetLink() {
                     alignSelf='center'
                     >
                     
-                    <RightColButton content='Преподаватели' link="/teachers" />
+                    
                     <RightColButton link="/feedback" content='Отзывы' />
                     <RightColButton link="/gallery" content='Галерея' />
                     <RightColButton link="/faq" content='Ответы на частые вопросы' />

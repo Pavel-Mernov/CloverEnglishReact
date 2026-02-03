@@ -17,6 +17,8 @@ export function SingleTitlePage(props : Props) {
 
     const defaultTitleWidth = isMobile ? '75%' : '30%'
 
+    const defaultBottomStackWidth = isMobile ? '90%' : '70%'
+
     return (
         <Stack
             alignItems='center'
@@ -50,7 +52,7 @@ export function SingleTitlePage(props : Props) {
                     <ParaContentLink 
                         key={ i }
                         image={ image }
-                        width={ width ? width : '70%' }
+                        width={ width ? width : defaultBottomStackWidth }
                         alignSelf='center'
                         paddingBottom='2%'
                         caption={ caption } 
@@ -62,7 +64,7 @@ export function SingleTitlePage(props : Props) {
                 )
             }
 
-            <Stack spacing='1%' width='70%' alignSelf='center'>
+            <Stack spacing='1%' width={ defaultBottomStackWidth } alignSelf='center'>
                 {
                     finalButtons?.map(({ link, text }, i) => 
                         <YellowButton key={i} link={ link } content={ text } />

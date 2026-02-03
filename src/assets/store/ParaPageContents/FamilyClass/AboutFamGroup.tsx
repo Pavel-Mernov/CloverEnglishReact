@@ -5,10 +5,11 @@ import montesq from "../../../../assets/images/FamilyClass/AboutFamGroup/Montesq
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import { Colors } from "../../../colors/Colors";
 
+const isMobile = (window.screen.width < 800)
 const contents : MultitextItem[] = [
     {
         imageSource : montesq,
-        width : '60%',
+        width : isMobile ? '100%' : '60%',
     },
     Break,
 
@@ -76,7 +77,7 @@ const contents : MultitextItem[] = [
             },
             {
                 imageSource : einstine,
-                width : '70%',
+                width : isMobile ? '100%' : '70%',
             },
 
             Break,

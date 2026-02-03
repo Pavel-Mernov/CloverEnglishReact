@@ -36,10 +36,6 @@ export function ButtonsStack(_ : KeyProps) {
                     content="о семейных классах"
                     link="/aboutfam" />
 
-                <WhiteTextButton
-                    backgroundColor={Colors.RoseDark}
-                    content="наши преподаватели"
-                    link="/teachers" />
 
                 <WhiteTextButton
                     backgroundColor={Colors.RoseDark}

@@ -10,9 +10,13 @@ type Props = KeyProps &
             sx ?: SxProps,
         }
 
+const isMobile = (window.screen.width < 800)
+
 export function ImgMedia(props : Props) {
 
     const { image, width, height, sx } = props
+
+    const defaultWidth = isMobile ? '90%' : '40%'
 
     return (
                     <CardMedia 
@@ -20,7 +24,7 @@ export function ImgMedia(props : Props) {
                         
                         component='img'
                         src={ image }
-                        width={ width ? width : '40%' }
+                        width={ width ? width : defaultWidth }
                         sx={ sx }
                     />
     )
