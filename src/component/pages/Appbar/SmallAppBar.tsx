@@ -64,8 +64,6 @@ export const SmallAppBar : React.FC = () => {
                   <LocalLink text="Статьи" to="/articles"/>
 
                   <LocalLink text="Отзывы" to="/feedback"/>
-
-                  <LocalLink text="Преподаватели" to="/teachers"/>
                   
                   <LocalLink text="Ответы на вопросы" to="/faq"/>
 

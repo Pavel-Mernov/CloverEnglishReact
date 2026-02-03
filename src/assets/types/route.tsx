@@ -29,7 +29,7 @@ export type SiteRoute = "/" |
 
           "/articles/7habits" |
 
-          "/teachers" |
+          // "/teachers" |
 
           "/feedback" |
 
@@ -80,8 +80,6 @@ const articleProjPage = Page({ content : MultiTextPage( Store.multitextContents.
 
 const article7habitsPage = Page({ content : MultiTextPage( Store.multitextContents.articles.page7habits ) })
 
-const teachersPage = Page({ content : BigTitlePage({ store : Store.teachers })   })
-
 const feedbackPage = Page({ content : BigTitlePage({ store : Store.feedback })  })
 
 const faqPage = Page({ content : BigTitlePage({ store : Store.faq }) })
@@ -122,7 +120,6 @@ export const siteMap : SiteMap = {
   "/articles": articlesPage,
   "/articles/7habits" : article7habitsPage,
   "/articles/project" : articleProjPage,
-  "/teachers": teachersPage,
   "/feedback": feedbackPage,
   "/faq": faqPage,
   "/gallery": galleryPage,
