@@ -35,7 +35,7 @@ const values1 : Values = {
     },
     "Стоимость учебного года 2025-2026": {
         multitext : [
-            '165 000 р. за год.',
+            '205 000 р. за год.',
             Break, Break,
         ]
     }
@@ -64,7 +64,7 @@ const values2 : Values = {
     },
     "Стоимость учебного года 2025-2026": {
         multitext : [
-            '205 000 р. за год.',  
+            '225 000 р. за год.',  
         ]
     }
 }
@@ -80,7 +80,7 @@ const contents : MultitextItem[] = [
     },
     Break, Break,
     {
-        roseText: 'Цены на 2025-2026 учебный год'
+        roseText: 'Цены на 2026-2027 учебный год'
     },
     {
         roseText: 'Семейный класс',
@@ -94,7 +94,7 @@ const contents : MultitextItem[] = [
     Break, Break,
     {
         type : 'table',
-        header : ['Семейный класс', '2 класс'],
+        header : ['Семейный класс', '2 и 3 классы'],
         rows : table2rows
     },  
     Break, Break,
