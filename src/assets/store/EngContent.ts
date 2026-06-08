@@ -82,7 +82,7 @@ export const EngContent : PageStore = {
         ],
         finalButtons : [
             {
-                text: "Цены 2025-26 учебный год",
+                text: "Цены 2026-27 учебный год",
                 link: "/price/english"
             },
             {

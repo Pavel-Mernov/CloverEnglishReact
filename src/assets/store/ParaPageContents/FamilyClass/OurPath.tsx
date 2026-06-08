@@ -98,7 +98,7 @@ export const OurPathPage = {
             link : '/learneng',
         } as const,
         {
-            text : 'Цены на 2025 - 2026 учебный год',
+            text : 'Цены на 2026 - 2027 учебный год',
             backgroundColor : Colors.RoseDark,
             link : '/price/family'
         } as const,

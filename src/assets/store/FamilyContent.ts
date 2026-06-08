@@ -45,7 +45,7 @@ export const FamilyContent : PageStore = {
         ],
         finalButtons : [
             {
-                text: "Цены 2025-26 учебный год",
+                text: "Цены 2026-27 учебный год",
                 link: "/price/family"
             },
             {

@@ -17,7 +17,7 @@ export function PricePage() {
             alignSelf='center'
             fontWeight='bold'
             key='1'
-            text="Цены на 2025-2026 учебный год"
+            text="Цены на 2026-2027 учебный год"
             variant="h1"
             fontSize='35px'
             

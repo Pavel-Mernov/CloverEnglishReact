@@ -1,8 +1,11 @@
 
 import title from "../../../../assets/images/English/learnEngWithUs/Title.png"
 import wilde from "../../../../assets/images/English/learnEngWithUs/Wilde.png"
+import wildeMobile from "../../../../assets/images/Mobile/Eng/wilde.png"
 import mallen from "../../../../assets/images/English/learnEngWithUs/Mallen.png"
+import MallenMobile from "../../../../assets/images/Mobile/Eng/mallen.png"
 import kushner from '../../../../assets/images/English/learnEngWithUs/Kushner.png'
+import kusherMobile from "../../../../assets/images/Mobile/Eng/kushner.png"
 import { Colors } from "../../../colors/Colors"
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem"
 
@@ -23,7 +26,7 @@ export const LearnEngPageContent = {
     headerImage: title,
     contents: [
         {
-            imageSource : wilde,
+            imageSource : isMobile ? wildeMobile : wilde,
             width : isMobile ? '120%' : '70%'
         },
         {
@@ -64,7 +67,7 @@ export const LearnEngPageContent = {
 Macmillan и многие другие), на свой многолетний опыт и здравый смысл.`,
             
             {
-                imageSource : mallen,
+                imageSource : isMobile ? MallenMobile : mallen,
                 width : isMobile ? '100%' : '50%',
             },
             {
@@ -182,7 +185,7 @@ clever, что значит «умный».`,
                 ]
             },
             {
-                imageSource : kushner,
+                imageSource : isMobile ? kusherMobile : kushner,
                 width : isMobile ? '100%' : '60%'
             },
 
@@ -216,7 +219,7 @@ clever, что значит «умный».`,
             link: '/feedback' as const
         },
         {
-            text: "Цены на 2025-2026 учебный год",
+            text: "Цены на 2026-2027 учебный год",
             backgroundColor: Colors.Yellow,
             link: '/price/english' as const
         },  
