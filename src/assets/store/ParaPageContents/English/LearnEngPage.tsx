@@ -68,7 +68,7 @@ Macmillan и многие другие), на свой многолетний о
             
             {
                 imageSource : isMobile ? MallenMobile : mallen,
-                width : isMobile ? '100%' : '50%',
+                width : isMobile ? '120%' : '50%',
             },
             {
                 multitext : [

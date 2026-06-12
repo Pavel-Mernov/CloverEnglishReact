@@ -25,7 +25,10 @@ export function ImgMedia(props : Props) {
                         component='img'
                         src={ image }
                         width={ width ? width : defaultWidth }
-                        sx={ sx }
+                        sx={ { 
+                            ...sx, 
+                            alignSelf : 'center'
+                        } }
                     />
     )
 }

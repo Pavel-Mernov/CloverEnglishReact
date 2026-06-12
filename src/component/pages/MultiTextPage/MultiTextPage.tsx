@@ -41,9 +41,11 @@ export function MultiTextPage(props : Props) {
             key='0'
             sx={{ 
                     objectFit : 'contain', 
-                    width : '50%'
+                    alignSelf : 'center',
+                    width : isMobile ? '100%' : '50%'
                 }}
             component='img'
+            
             src={ headerImage }
             alt="title"
             />

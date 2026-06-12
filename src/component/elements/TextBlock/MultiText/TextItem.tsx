@@ -10,6 +10,8 @@ import { TextBlock } from "../TextBlock"
 import { Stack } from "@mui/system"
 import { LocalTable } from "../../Table/LocalTable"
 
+const isMobile = (window.screen.width < 800)
+
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props
 
@@ -19,7 +21,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 text={ item.text } 
                 color={ item.color } 
                 upperCase={ item.uppercase == true }
-                fontSize={ item.fontSize ? item.fontSize : '25px' } 
+                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') } 
                 variant={ item.variant ? item.variant : 'h3' }
                 fontWeight={ item.fontWeight ? item.fontWeight : 'semiBold' }
                 />
@@ -34,7 +36,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 upperCase={ item.uppercase == true }
                 variant={ item.variant ? item.variant : 'h3' } 
                 fontWeight={ item.fontWeight ? item.fontWeight : 'bold' } 
-                fontSize={ item.fontSize ? item.fontSize : '25px' } 
+                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') } 
             
             />
         }
@@ -46,7 +48,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 variant={ item.variant ? item.variant : 'h3' } 
                 fontWeight='bold' 
                 fontFamily=''
-                fontSize={ item.fontSize ? item.fontSize : '28px' } 
+                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '24px' : '28px') } 
             
             />
         }
@@ -57,7 +59,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                     
                     variant={ ('variant' in item && item.variant) ? item.variant : 'h5' }
                     color={ Colors.DarkGreen }
-                    fontSize={ ('fontSize' in item && item.fontSize) ? item.fontSize : '30px' } 
+                    fontSize={ ('fontSize' in item && item.fontSize) ? item.fontSize : (isMobile ? '24px' : '30px') } 
                 />
         }
         else if ('listItem' in item || 'type' in item && item.type == 'listItem') {
@@ -66,7 +68,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 // fontFamily={ OpenSansRegular }
                 variant={ item.variant ? item.variant : 'h5' } 
                 fontWeight={ item.fontWeight } 
-                fontSize={ item.fontSize ? item.fontSize : '25px' }
+                fontSize={ item.fontSize ? item.fontSize : ( isMobile ? '20px' : '25px') }
                 alignSelf={ item.alignSelf ? item.alignSelf : 'start' }
                 >
                     { 'text' in item ? item.text : item.listItem }
@@ -93,7 +95,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                                 key={ idx }
                                 variant={ item.variant ? item.variant : 'h5' } 
                                 fontWeight={ item.fontWeight } 
-                                fontSize={ item.fontSize ? item.fontSize : '25px' }
+                                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' :'25px') }
                                 alignSelf={ item.alignSelf ? item.alignSelf : 'justify' }
                                 >
                                     { it }
@@ -111,7 +113,11 @@ export function TextItem(props :{ item : MultitextItem }) {
                     direction='row'
                     spacing='5%'
                     >
-                        <ImgMedia image={ item.image } width='30%' sx={{ objectFit : 'contain' }} />
+                        <ImgMedia 
+                            image={ item.image } 
+                            width='30%' 
+                            sx={{ objectFit : 'contain' }} 
+                        />
 
                         <MultiTextBlock children={ item.text } />
                     </Stack>
@@ -129,7 +135,7 @@ export function TextItem(props :{ item : MultitextItem }) {
 
         return <StandardTextBlock
                 text={ item.text }
-                fontSize={ item.fontSize ? item.fontSize : '25px' }
+                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') }
                 fontWeight={ item.fontWeight }
                 variant={ item.variant }
                 // color={ item.color }
