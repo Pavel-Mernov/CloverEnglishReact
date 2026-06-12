@@ -42,7 +42,7 @@ export function MultiTextPage(props : Props) {
             sx={{ 
                     objectFit : 'contain', 
                     alignSelf : 'center',
-                    width : isMobile ? '100%' : '50%'
+                    width : isMobile ? '98vw' : '50%'
                 }}
             component='img'
             
