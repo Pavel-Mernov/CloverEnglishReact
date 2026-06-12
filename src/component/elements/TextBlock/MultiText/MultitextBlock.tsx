@@ -15,7 +15,6 @@ type SpecProps = {
 type MultiTextProps = OwnProps<TypographyProps, SpecProps, 'children'>
 
 
-
 export function MultiTextBlock(props : MultiTextProps) {
     const { children, alignSelf } = props
 
@@ -23,7 +22,8 @@ export function MultiTextBlock(props : MultiTextProps) {
         <Typography 
             component='span' 
             alignSelf={ alignSelf ? alignSelf : 'start'} 
-            textAlign='start' 
+            textAlign='start'
+            
             display='inline'
             >
             {

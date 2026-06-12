@@ -52,6 +52,9 @@ export function MultiTextPage(props : Props) {
         }
         <Stack 
             spacing='2%'
+            sx={{
+                width : isMobile ? '90%' : 'auto'
+            }}
             key='01'
             >
         {
