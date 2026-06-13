@@ -1,8 +1,11 @@
 import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/HowWeLearn/Title.png"
 import carroll from "../../../../assets/images/English/HowWeLearn/Carrol.png"
+import carrollMobile from "../../../../assets/images/Mobile/Eng/carroll.png"
 import cicero from "../../../../assets/images/English/HowWeLearn/Cicero.png"
+import ciceroMobile from "../../../../assets/images/Mobile/Eng/cicero.png"
 import ruskin from "../../../../assets/images/English/HowWeLearn/Ruskin.png"
+import ruskinMobile from "../../../images/Mobile/Eng/ruskin.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
@@ -10,8 +13,8 @@ const isMobile = (window.screen.width < 800)
 
 const contents : MultitextItem[] = [
     {
-        imageSource : carroll,
-        width : isMobile ? '100%' : '60%'
+        imageSource : isMobile ? carrollMobile : carroll,
+        width : isMobile ? '90vw' : '60%'
     },
     'На занятия мы приглашаем школьников со 2-го по 11-й класс.',
     
@@ -21,8 +24,8 @@ const contents : MultitextItem[] = [
     'Учителя всегда сохраняют спокойствие, доброжелательно поддерживают учеников, особенно когда у них что-то не получается, и настойчиво ведут детей к достижению положительного результата. Это основа нашей работы.',
     
     {
-        imageSource : cicero,
-        width : isMobile ? '100%' : '70%',
+        imageSource : isMobile ? ciceroMobile : cicero,
+        width : isMobile ? '90vw' : '70%',
     },
     {
         type : 'roseText',
@@ -65,8 +68,8 @@ const contents : MultitextItem[] = [
         ],
     },
     {
-        imageSource : ruskin,
-        width : isMobile ? '100%' : '70%',
+        imageSource : isMobile ? ruskinMobile : ruskin,
+        width : isMobile ? '90vw' : '70%',
     },
     `Ученикам с выраженным лингвистическим талантом и повышенным интересом к изучению языка мы предлагаем присоединится к олимпиадной группе и готовиться к всероссийской олимпиаде школьников, а также к перечневым (вузовским) олимпиадам 1-го и 2-го уровня`
     ,
