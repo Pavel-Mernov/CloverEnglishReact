@@ -1,7 +1,9 @@
 import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 import title from "../../../../assets/images/English/Actual/Title.png"
 import fellini from "../../../../assets/images/English/Actual/Fellini.png"
+import felliniMobile from "../../../images/Mobile/Eng/fellini.png"
 import vitkg from "../../../../assets/images/English/Actual/Vitkgstein.png"
+import vitkgMobile from "../../../images/Mobile/Eng/Wittgenstein.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
@@ -10,8 +12,8 @@ const isMobile = (window.screen.width < 800)
 const contents : any[] = [
     {
         
-        imageSource : fellini,
-        width : isMobile ? '100%' : '40%',
+        imageSource : isMobile ? felliniMobile : fellini,
+        width : isMobile ? '90vw' : '40%',
     } as MultitextItem,
     
     `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,
@@ -46,8 +48,8 @@ const contents : any[] = [
     ]
     } as MultitextItem,
     {
-        imageSource : vitkg,
-        width : isMobile ? '100%' : '50%',
+        imageSource : isMobile ? vitkgMobile : vitkg,
+        width : isMobile ? '90vw' : '50%',
     } as MultitextItem,
     `Несмотря на глобальные перемены, происходящие в мире, есть факторы, которые сложились давно и вряд ли изменятся в обозримом будущем. Один из них – это статус английского, как языка международного общения. Научное, деловое и культурное взаимодействие в мире происходит на английском языке – самом распространенном на всех континентах. И если мы хотим быть частью мирового сообщества, нам нужно знать английский.`,
     
