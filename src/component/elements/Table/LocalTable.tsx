@@ -7,6 +7,7 @@ import { TextItem } from "../TextBlock/MultiText/TextItem";
 import { Colors } from "../../../assets/colors/Colors";
 import { TextBlock } from "../TextBlock/TextBlock";
 
+const isMobile = (window.screen.width < 800)
 
 export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
     const { header, rows } = props
@@ -14,12 +15,15 @@ export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
   return (
     <TableContainer component={Paper}>
       <Table style={{ 
-                width : '80%', 
+                width : isMobile ? '300%' : '80%', 
                 alignItems : 'center', 
                 justifyContent : 'center', 
-                 
+                
+                
                 
                 padding : '10px',
+
+                ...(isMobile ? { overflowX : 'auto' } : {})
             }}>
         <TableHead style={{ background : Colors.Gray }}>
           <TableRow>
