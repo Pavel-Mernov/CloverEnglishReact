@@ -17,7 +17,7 @@ export function SingleTitlePage(props : Props) {
 
     const defaultTitleWidth = isMobile ? '75%' : '30%'
 
-    const defaultBottomStackWidth = isMobile ? '90%' : '70%'
+    const defaultBottomStackWidth = isMobile ? '80vw' : '70%'
 
     return (
         <Stack
