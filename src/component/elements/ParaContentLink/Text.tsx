@@ -24,7 +24,7 @@ export function Text(props : Props) {
     const { text, fontWeight } = props
 
     return (typeof text === 'string') ?
-        <LocalTextBlock text={text} />
+        <LocalTextBlock text={text} fontWeight={fontWeight} />
         :
 
         <Stack spacing='3%'>

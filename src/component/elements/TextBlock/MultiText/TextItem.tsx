@@ -93,10 +93,10 @@ export function TextItem(props :{ item : MultitextItem }) {
                             return <Typography 
                                 component='li'
                                 key={ idx }
-                                variant={ item.variant ? item.variant : 'h5' } 
+                                variant={ item.variant ?? 'h5' } 
                                 fontWeight={ item.fontWeight } 
-                                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' :'25px') }
-                                alignSelf={ item.alignSelf ? item.alignSelf : 'justify' }
+                                fontSize={ item.fontSize ?? (isMobile ? '20px' :'25px') }
+                                alignSelf={ item.alignSelf ?? 'start' }
                                 >
                                     { it }
                                 </Typography>

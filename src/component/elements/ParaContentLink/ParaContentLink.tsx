@@ -80,6 +80,8 @@ export function ParaContentLink(props : OuterProps) {
     const innerProps = {
         alignContent : 'stretch',
         padding : '2%',
+        paddingInline : isMobile ? '10px' : '2%' ,
+        paddingTop : isMobile ? '30px' : '20px',
         
     } as SxProps
 
@@ -114,7 +116,7 @@ export function ParaContentLink(props : OuterProps) {
                     direction={ isMobile ? 'column' : 'row' } 
                     spacing='2%'
                     sx={{
-                        marginTop : isMobile ? '20px' : 'auto',
+                        marginTop : isMobile ? '50px' : 'auto',
                     }}
                     >
                 {
@@ -137,6 +139,7 @@ export function ParaContentLink(props : OuterProps) {
                     { text && <MultiTextBlock 
                         key='001' 
                         sx={{
+                            paddingInline : '10px',
                             marginTop : isMobile ? '10px' : '0'
                         }}
                         children={ Array.isArray(text) 

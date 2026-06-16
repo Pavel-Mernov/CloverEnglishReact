@@ -46,6 +46,7 @@ export function Header(props : Props) {
                 sx={newProps} >
                     <Typography
                         variant="h1"
+                        textAlign='center'
                         fontSize={ fontSize }
                         fontWeight='bold'>
                             { text }
