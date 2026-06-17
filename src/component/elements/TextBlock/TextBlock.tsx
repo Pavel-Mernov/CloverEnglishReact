@@ -39,7 +39,7 @@ export function TextBlock(props : TextBlockProps) {
             alignContent='stretch'
             justifyContent='stretch'
             textAlign='justify'
-            alignSelf={ alignSelf ? alignSelf : 'start' }
+            alignSelf={ alignSelf ?? 'start' }
             fontWeight={fontWeight}
             fontSize={props.fontSize}
             color={ props.color }

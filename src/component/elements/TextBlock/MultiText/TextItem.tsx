@@ -20,8 +20,8 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <TextBlock 
                 text={ item.text } 
                 color={ item.color } 
-                upperCase={ item.uppercase == true }
-                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') } 
+                upperCase={ item.uppercase === true }
+                fontSize={ item.fontSize ?? (isMobile ? '20px' : '25px') } 
                 variant={ item.variant ? item.variant : 'h3' }
                 fontWeight={ item.fontWeight ? item.fontWeight : 'semiBold' }
                 />
@@ -34,9 +34,9 @@ export function TextItem(props :{ item : MultitextItem }) {
                 alignSelf={ item.alignSelf }
                 component={ item.component }
                 upperCase={ item.uppercase == true }
-                variant={ item.variant ? item.variant : 'h3' } 
-                fontWeight={ item.fontWeight ? item.fontWeight : 'bold' } 
-                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') } 
+                variant={ item.variant ?? 'h3' } 
+                fontWeight={ item.fontWeight ?? 'bold' } 
+                fontSize={ item.fontSize ?? (isMobile ? '20px' : '25px') } 
             
             />
         }
@@ -48,7 +48,7 @@ export function TextItem(props :{ item : MultitextItem }) {
                 variant={ item.variant ? item.variant : 'h3' } 
                 fontWeight='bold' 
                 fontFamily=''
-                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '24px' : '28px') } 
+                fontSize={ item.fontSize ?? (isMobile ? '24px' : '28px') } 
             
             />
         }
@@ -66,10 +66,10 @@ export function TextItem(props :{ item : MultitextItem }) {
             return <Typography 
                 component='li'
                 // fontFamily={ OpenSansRegular }
-                variant={ item.variant ? item.variant : 'h5' } 
-                fontWeight={ item.fontWeight } 
-                fontSize={ item.fontSize ? item.fontSize : ( isMobile ? '20px' : '25px') }
-                alignSelf={ item.alignSelf ? item.alignSelf : 'start' }
+                variant={ item.variant ?? 'h5' } 
+                fontWeight={ item.fontWeight ?? 'normal' } 
+                fontSize={ item.fontSize ?? ( isMobile ? '22px' : '25px') }
+                alignSelf={ item.alignSelf ?? 'start' }
                 >
                     { 'text' in item ? item.text : item.listItem }
                 </Typography>
@@ -135,11 +135,11 @@ export function TextItem(props :{ item : MultitextItem }) {
 
         return <StandardTextBlock
                 text={ item.text }
-                fontSize={ item.fontSize ? item.fontSize : (isMobile ? '20px' : '25px') }
+                fontSize={ item.fontSize ?? (isMobile ? '20px' : '25px') }
                 fontWeight={ item.fontWeight }
                 variant={ item.variant }
                 // color={ item.color }
-                alignSelf={ item.alignSelf ? item.alignSelf : 'start' }
+                alignSelf={ item.alignSelf ?? 'start' }
             />
     }
     

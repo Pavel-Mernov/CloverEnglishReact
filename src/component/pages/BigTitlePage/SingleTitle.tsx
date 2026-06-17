@@ -33,9 +33,9 @@ export function SingleTitlePage(props : Props) {
                         component='img'
                         sx={{ 
                             objectFit : 'contain', 
-                            width : titleSource.width ? titleSource.width : defaultTitleWidth 
+                            width : titleSource.width ?? defaultTitleWidth 
                         }}
-                        width={ titleSource.width ? titleSource.width : defaultTitleWidth }
+                        width={ titleSource.width ?? defaultTitleWidth }
                         image={ titleSource.imageSource }
                         />
             }

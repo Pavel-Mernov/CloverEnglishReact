@@ -13,15 +13,19 @@ export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
     const { header, rows } = props
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} 
+      sx={{
+        width : isMobile ? '120vw' : '80%',
+      }}
+    >
       <Table style={{ 
-                width : isMobile ? '300%' : '80%', 
+                 
                 alignItems : 'center', 
                 justifyContent : 'center', 
                 
                 
                 
-                padding : '10px',
+                padding : isMobile ? '2px' : '10px',
 
                 ...(isMobile ? { overflowX : 'auto' } : {})
             }}>
@@ -36,7 +40,7 @@ export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
                           color='#fff'
                           fontWeight='bold'
                           variant="h2"
-                          fontSize='27px'                        
+                          fontSize={ isMobile ? '22px' : '27px' }                        
                         />
                     </TableCell>
                 })

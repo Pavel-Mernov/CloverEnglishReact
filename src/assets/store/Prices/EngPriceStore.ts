@@ -1,13 +1,14 @@
 import { Break, type MultitextItem } from "../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
 import franklin from '../../images/Price/Franklin.png'
+import franklinMobile from "../../images/Mobile/Price/Franklin.png"
 
 const isMobile = (window.screen.width < 800)
 
 const contents : MultitextItem[] = [
     {
-        imageSource : franklin,
-        width : isMobile ? '80vw' : '40vw'
+        imageSource : isMobile ? franklinMobile : franklin,
+        width : isMobile ? '90vw' : '40vw'
     },
     Break, Break,
     {
