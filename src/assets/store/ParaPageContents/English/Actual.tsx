@@ -7,13 +7,17 @@ import vitkgMobile from "../../../images/Mobile/Eng/Wittgenstein.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
-const isMobile = (window.screen.width < 600)
+const { width } = window.screen
+
+const isMobile = (width < 600)
+
+const isTablet = (width >= 600) && (width < 1024)
 
 const contents : any[] = [
     {
         
         imageSource : isMobile ? felliniMobile : fellini,
-        width : isMobile ? '90vw' : '40%',
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '40%',
     } as MultitextItem,
     
     `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,

@@ -20,7 +20,7 @@ export interface MultiTextPageProps {
 
 const isMobile = (window.screen.width < 600)
 
-const mainWidth = (window.screen.width < 1536) ? '80%' : '80%'
+const mainWidth = (window.screen.width < 1536) ? '80%' : '60%'
 
 type Props = MultiTextPageProps
 

@@ -9,12 +9,15 @@ import ruskinMobile from "../../../images/Mobile/Eng/ruskin.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
-const isMobile = (window.screen.width < 600)
+const { width } = window.screen
+
+const isMobile = (width < 600)
+const isTablet = (width >= 600) && (width < 1024)
 
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? carrollMobile : carroll,
-        width : isMobile ? '90vw' : '60%'
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '60%'
     },
     'На занятия мы приглашаем школьников со 2-го по 11-й класс.',
     
@@ -25,7 +28,7 @@ const contents : MultitextItem[] = [
     
     {
         imageSource : isMobile ? ciceroMobile : cicero,
-        width : isMobile ? '90vw' : '70%',
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
     },
     {
         type : 'roseText',
@@ -69,7 +72,7 @@ const contents : MultitextItem[] = [
     },
     {
         imageSource : isMobile ? ruskinMobile : ruskin,
-        width : isMobile ? '90vw' : '70%',
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
     },
     `Ученикам с выраженным лингвистическим талантом и повышенным интересом к изучению языка мы предлагаем присоединится к олимпиадной группе и готовиться к всероссийской олимпиаде школьников, а также к перечневым (вузовским) олимпиадам 1-го и 2-го уровня`
     ,

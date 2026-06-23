@@ -7,11 +7,14 @@ import montesqMobile from "../../../images/Mobile/Family/montesq.png"
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import { Colors } from "../../../colors/Colors";
 
-const isMobile = (window.screen.width < 600)
+const { width } = window.screen;
+const isMobile = (width < 600);
+const isTablet = (width >= 600) && (width < 1024);
+
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? montesqMobile : montesq,
-        width : isMobile ? '90vw' : '60%',
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '60%',
     },
     Break,
 
@@ -79,7 +82,7 @@ const contents : MultitextItem[] = [
             },
             {
                 imageSource : isMobile ? einstineMobile  : einstine,
-                width : isMobile ? '90vw' : '70%',
+                width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
             },
 
             Break,
