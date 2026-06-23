@@ -77,7 +77,7 @@ const table2rows = keys.map(key => [ key as MultitextItem, values2[key] ] as con
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? royceMobile : royce,
-        width : isMobile ? '90vw' : '40vw'
+        width : { xs : '90vw', sm : '80vw', md : '40vw' }
     },
     Break, Break,
     {

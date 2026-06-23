@@ -11,13 +11,12 @@ const { width } = window.screen
 
 const isMobile = (width < 600)
 
-const isTablet = (width >= 600) && (width < 1024)
 
 const contents : any[] = [
     {
         
         imageSource : isMobile ? felliniMobile : fellini,
-        width : isMobile ? '90vw' : isTablet ? '80vw' : '40%',
+        width : { xs : '90vw', sm : '80vw', md : '40%' },
     } as MultitextItem,
     
     `Сейчас многие задаются вопросом, зачем в наше время школьникам дополнительно изучать английский язык:`,
@@ -53,7 +52,7 @@ const contents : any[] = [
     } as MultitextItem,
     {
         imageSource : isMobile ? vitkgMobile : vitkg,
-        width : isMobile ? '90vw' : '50%',
+        width : { xs : '90vw', sm : '80vw', md : '50%' },
     } as MultitextItem,
     `Несмотря на глобальные перемены, происходящие в мире, есть факторы, которые сложились давно и вряд ли изменятся в обозримом будущем. Один из них – это статус английского, как языка международного общения. Научное, деловое и культурное взаимодействие в мире происходит на английском языке – самом распространенном на всех континентах. И если мы хотим быть частью мирового сообщества, нам нужно знать английский.`,
     

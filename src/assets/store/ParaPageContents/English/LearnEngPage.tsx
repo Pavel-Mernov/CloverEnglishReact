@@ -14,7 +14,6 @@ import { Break, type MultitextItem } from "../../../../component/elements/TextBl
 const { width } = window.screen
 
 const isMobile = (width < 600)
-const isTablet = (width >= 600) && (width < 1024)
 
 const roseTextSize = isMobile ? '20px' : '25px'
 
@@ -31,7 +30,7 @@ export const LearnEngPageContent = {
     contents: [
         {
             imageSource : isMobile ? wildeMobile : wilde,
-            width : isMobile ? '90vw' : isTablet ? '80vw' : '70%'
+            width : { xs : '90vw', sm : '80vw', md : '70%' }
         },
         {
             multitext : [
@@ -72,7 +71,7 @@ Macmillan и многие другие), на свой многолетний о
             
             {
                 imageSource : isMobile ? MallenMobile : mallen,
-                width : isMobile ? '90vw' : isTablet ? '80vw' : '50%',
+                width : { xs : '90vw', sm : '80vw', md : '50%' },
             },
             {
                 multitext : [
@@ -190,7 +189,7 @@ clever, что значит «умный».`,
             },
             {
                 imageSource : isMobile ? kusherMobile : kushner,
-                width : isMobile ? '100vw' : isTablet ? '80vw' : '60%'
+                width : { xs : '100vw', sm : '80vw', md : '60%' }
             },
 
             `Современный мир меняется очень быстро, и чтобы успевать за всеми изменениями, надо постоянно приобретать новые знания. Школьные годы – это время, когда при правильном подходе к обучению дети вырабатывают привычку учиться, искать для себя новую, интересную и полезную информацию.`,

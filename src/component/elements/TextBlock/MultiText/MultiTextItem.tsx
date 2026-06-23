@@ -1,5 +1,6 @@
 import type { KeyProps } from "../../../../assets/types/keyProps"
 import type { SiteRoute } from "../../../../assets/types/route"
+import type { SizeType } from "../../../../assets/types/sizeType"
 import type { LocalTableProps } from "../../Table/types"
 
 type TextProps = KeyProps & {
@@ -53,7 +54,7 @@ type BoldTextProps = TextProps & ({
 
 type ImageItemProps = {
     imageSource : string,
-    width ?: string | number
+    width ?: string | number | SizeType,
 }
 
 type ImageTextItemProps = {

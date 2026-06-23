@@ -9,12 +9,13 @@ import { Colors } from "../../../colors/Colors";
 
 const { width } = window.screen;
 const isMobile = (width < 600);
-const isTablet = (width >= 600) && (width < 1024);
+
 
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? montesqMobile : montesq,
-        width : isMobile ? '90vw' : isTablet ? '80vw' : '60%',
+        width : { xs : '90vw', sm : '80vw', md : '60%' }
+        // isMobile ? '90vw' : isTablet ? '80vw' : '60%',
     },
     Break,
 
@@ -82,7 +83,7 @@ const contents : MultitextItem[] = [
             },
             {
                 imageSource : isMobile ? einstineMobile  : einstine,
-                width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
+                width : { xs : '90vw', sm : '80vw', md : '70%' },
             },
 
             Break,
