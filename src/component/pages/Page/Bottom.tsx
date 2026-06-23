@@ -3,7 +3,7 @@ import { Stack, Typography } from "@mui/material";
 import { Colors } from "../../../assets/colors/Colors";
 import { LocalLink } from "../../elements/Link/LocalLink";
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function Bottom() : JSX.Element {
     const fontSize = isMobile ? '12px' : '16px'

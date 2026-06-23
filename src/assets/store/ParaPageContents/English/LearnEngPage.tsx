@@ -12,7 +12,7 @@ import { Break, type MultitextItem } from "../../../../component/elements/TextBl
 // const defaultTextSize = '25px'
 
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 const roseTextSize = isMobile ? '20px' : '25px'
 

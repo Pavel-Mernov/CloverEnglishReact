@@ -5,7 +5,7 @@ import logo from "../../../../assets/images/logo/logobig.png"
 import { EngClubCloverLayout } from "./EngClubCloverLayout";
 import paintEngClub from "../../../../assets/images/main/mazokEngClubMobile.png"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 const Img = styled("img")(({ theme }) => ({
   // maxWidth: "100%",

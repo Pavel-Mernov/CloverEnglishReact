@@ -3,7 +3,7 @@ import { Break, type MultitextItem } from "../../../component/elements/TextBlock
 import franklin from '../../images/Price/Franklin.png'
 import franklinMobile from "../../images/Mobile/Price/Franklin.png"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 const contents : MultitextItem[] = [
     {

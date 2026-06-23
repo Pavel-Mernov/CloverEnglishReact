@@ -18,9 +18,9 @@ export interface MultiTextPageProps {
     footerButtonItems ?: ButtonItem[],
 }
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
-const mainWidth = (window.screen.width < 1920) ? '80%' : '80%'
+const mainWidth = (window.screen.width < 1536) ? '80%' : '80%'
 
 type Props = MultiTextPageProps
 

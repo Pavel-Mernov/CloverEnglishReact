@@ -9,7 +9,7 @@ import { MultiTextBlock } from "../TextBlock/MultiText/MultitextBlock"
 import { ImgMedia } from "./ImgMedia"
 import { useState } from "react"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 interface SpecialProps {
     caption ?: string,

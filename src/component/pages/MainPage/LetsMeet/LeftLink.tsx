@@ -4,7 +4,7 @@ import photo from "../../../../assets/images/main/letsmeet3.jpg"
 import type { Key } from "react";
 import { ColorButton } from "../../../elements/ColorButton/ColorButton";
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 const Photo = () => {
     return (
@@ -63,7 +63,7 @@ const UpperButton = (_ : { key ?: Key }) => {
 }
 
 export function LeftLink() {
-    const maxWidth = (window.screen.width < 800) ? '100%' : '20%'
+    const maxWidth = isMobile ? '100%' : '20%'
 
     return (
                     <ColorButton 

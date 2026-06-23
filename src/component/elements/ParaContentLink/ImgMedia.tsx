@@ -10,7 +10,7 @@ type Props = KeyProps &
             sx ?: SxProps,
         }
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function ImgMedia(props : Props) {
 

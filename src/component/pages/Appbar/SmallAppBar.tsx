@@ -6,7 +6,7 @@ import { LocalLink } from "../../elements/Link/LocalLink"
 import { useState } from "react"
 import { ContactButtons } from "./ContactButtons"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export const SmallAppBar : React.FC = () => {
 

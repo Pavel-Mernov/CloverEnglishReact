@@ -9,7 +9,7 @@ import ruskinMobile from "../../../images/Mobile/Eng/ruskin.png"
 import { Colors } from "../../../colors/Colors";
 import type { MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 const contents : MultitextItem[] = [
     {

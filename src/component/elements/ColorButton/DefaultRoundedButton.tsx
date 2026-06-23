@@ -3,7 +3,7 @@ import type { KeyProps } from "../../../assets/types/keyProps"
 import type { SiteRoute } from "../../../assets/types/route"
 import { RoundedButton } from "./RoundedButton"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 type BaseProps = KeyProps & { content : string, link ?: SiteRoute  }
 

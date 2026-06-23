@@ -10,7 +10,7 @@ const displayDirection =
     'row'
     // (window.screen.width >= 800) ? 'row' : 'column'
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 type Props = {
     onClickMenu : () => void,

@@ -7,7 +7,7 @@ import montesqMobile from "../../../images/Mobile/Family/montesq.png"
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
 import { Colors } from "../../../colors/Colors";
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? montesqMobile : montesq,

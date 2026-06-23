@@ -7,7 +7,7 @@ import { TextItem } from "../TextBlock/MultiText/TextItem";
 import { Colors } from "../../../assets/colors/Colors";
 import { TextBlock } from "../TextBlock/TextBlock";
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function LocalTable<N extends 2 | 3>(props : GenericTableProps<N>) {
     const { header, rows } = props

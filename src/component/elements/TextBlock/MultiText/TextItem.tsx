@@ -10,7 +10,7 @@ import { TextBlock } from "../TextBlock"
 import { Stack } from "@mui/system"
 import { LocalTable } from "../../Table/LocalTable"
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function TextItem(props :{ item : MultitextItem }) {
     const { item } = props

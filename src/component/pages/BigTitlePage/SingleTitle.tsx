@@ -8,7 +8,7 @@ import { ParaContentLink } from "../../elements/ParaContentLink/ParaContentLink"
 
 type Props = KeyProps & { store : PageStore }
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function SingleTitlePage(props : Props) {
     const { store } = props

@@ -14,7 +14,7 @@ type Props = OwnProps<StackProps & StackBaseProps, LocalProps, OmitProps>
 
 type OmitSxProps = Omit<SxProps, OmitProps>
 
-const isMobile = (window.screen.width < 800)
+const isMobile = (window.screen.width < 600)
 
 export function Header(props : Props) {
         const { text, sx } = props
