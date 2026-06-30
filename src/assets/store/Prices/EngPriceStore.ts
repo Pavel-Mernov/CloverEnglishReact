@@ -7,10 +7,12 @@ const { width } = window.screen
 
 const isMobile = (width < 600)
 
+const isTablet = (width >= 600 && width < 1200)
+
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? franklinMobile : franklin,
-        width : { xs : '90vw', sm : '80vw', md : '40vw' }
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '40vw'
     },
     Break, Break,
     {

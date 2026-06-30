@@ -8,14 +8,15 @@ import { Break, type MultitextItem } from "../../../../component/elements/TextBl
 import { Colors } from "../../../colors/Colors";
 
 const { width } = window.screen;
+
 const isMobile = (width < 600);
 
+const isTablet = (width >= 600 && width < 1200)
 
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? montesqMobile : montesq,
-        width : { xs : '90vw', sm : '80vw', md : '60%' }
-        // isMobile ? '90vw' : isTablet ? '80vw' : '60%',
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '60%',
     },
     Break,
 
@@ -83,7 +84,7 @@ const contents : MultitextItem[] = [
             },
             {
                 imageSource : isMobile ? einstineMobile  : einstine,
-                width : { xs : '90vw', sm : '80vw', md : '70%' },
+                width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
             },
 
             Break,

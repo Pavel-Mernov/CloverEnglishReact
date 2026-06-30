@@ -3,7 +3,11 @@ import { Break, type MultitextItem } from "../../../component/elements/TextBlock
 import royce from '../../images/Price/Rois.png'
 import royceMobile from '../../images/Mobile/Price/Rois.png'
 
-const isMobile = (window.screen.width < 600)
+const { width } = window.screen
+
+const isMobile = (width < 600)
+
+const isTablet = (width >= 600 && width < 1200)
 
 const keys = [
         'Максимальное количество учеников',
@@ -77,7 +81,7 @@ const table2rows = keys.map(key => [ key as MultitextItem, values2[key] ] as con
 const contents : MultitextItem[] = [
     {
         imageSource : isMobile ? royceMobile : royce,
-        width : { xs : '90vw', sm : '80vw', md : '40vw' }
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '40vw'
     },
     Break, Break,
     {
