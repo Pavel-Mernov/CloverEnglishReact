@@ -1,5 +1,5 @@
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem";
-import title from "../../../../assets/images/FamilyClass/Title.png"
+import title from "../../../images/FamilyClass/AoVsFgos/Title.png"
 import { Colors } from "../../../colors/Colors";
 import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 
@@ -89,7 +89,7 @@ const contents : MultitextItem[] = [
 
 
 export const AOvsFGOS = {
-    header : title,
+    headerImage : title,
     contents : contents,
     footerButtonItems : [
         {
