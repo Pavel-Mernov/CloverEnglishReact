@@ -3,6 +3,15 @@ import title from "../../../../assets/images/FamilyClass/Title.png"
 import { Colors } from "../../../colors/Colors";
 import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage";
 
+import pelevin from "../../../images/FamilyClass/AoVsFgos/Pelevin.png"
+import pelevinMobile from "../../../images/Mobile/Family/pelevin.png"
+
+const { width } = window.screen
+
+const isMobile = (width < 600);
+
+const isTablet = (width >= 600 && width < 1200)
+
 const contents : MultitextItem[] = [
     {
         multitext : [
@@ -24,7 +33,12 @@ const contents : MultitextItem[] = [
     },
     Break, Break,
     {
+        imageSource : isMobile ? pelevinMobile : pelevin,
+        width : isMobile ? '90vw' : isTablet ? '80vw' : '60vw',
+    },
+    {
         multitext : [
+
             `Почему сейчас количество семейных школ растет?`,
             Break,
             'Потому что увеличивается спрос на альтернативные образовательные услуги.',
