@@ -1,9 +1,23 @@
 import type { ButtonItem } from "../../../../component/pages/MultiTextPage/MultiTextPage"
-import title from "../../../../assets/images/FamilyClass/Title.png"
+import title from "../../../../assets/images/FamilyClass/HomeWork/Title.png"
+
 import { Break, type MultitextItem } from "../../../../component/elements/TextBlock/MultiText/MultiTextItem"
 import { Colors } from "../../../colors/Colors"
 
+import copyright from "../../../images/FamilyClass/HomeWork/Copyright.png"
+
+const { width } = window.screen
+
+const isMobile = (width < 600);
+
+const isTablet = (width >= 600 && width < 1200)
+
 const contents : MultitextItem[] = [
+    Break, Break,
+    {
+        imageSource : copyright,
+        width : isMobile ? '95vw' : isTablet ? '80vw' : '60vw'
+    },
     Break, Break,
     'Споры о том, нужно ли задавать детям задание на дом или нет, ведутся давно. Есть аргументы и за, и против - и все они разумны.',
     Break, Break,
