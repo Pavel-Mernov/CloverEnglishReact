@@ -32,7 +32,7 @@ export const LearnEngPageContent = {
     contents: [
         {
             imageSource : isMobile ? wildeMobile : wilde,
-            width : isMobile ? '90vw' : isTablet ? '80vw' : '70%',
+            width : isMobile ? '90vw' : isTablet ? '80vw' : '50vw',
             
         },
         {
@@ -74,7 +74,7 @@ Macmillan и многие другие), на свой многолетний о
             
             {
                 imageSource : isMobile ? MallenMobile : mallen,
-                width : isMobile ? '90vw' : isTablet ? '80vw' : '50%',
+                width : isMobile ? '90vw' : isTablet ? '80vw' : '50vw',
                 
             },
             {
@@ -193,7 +193,7 @@ clever, что значит «умный».`,
             },
             {
                 imageSource : isMobile ? kusherMobile : kushner,
-                width : isMobile ? '100vw' : isTablet ? '80vw' : '60%',
+                width : isMobile ? '100vw' : isTablet ? '80vw' : '50vw',
                 // { xs : '100vw', sm : '80vw', md : '60%' }
             },
 
